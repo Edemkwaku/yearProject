@@ -1,0 +1,23 @@
+C:\Users\EdemKwaku\AppData\Local\Temporary Projects\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe.config
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe.config
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.pdb
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.xml
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI2.dll
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.vbprojResolveAssemblyReference.cache
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AddClass.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AdminMenu.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Resources.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.vbproj.GenerateResource.Cache
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.exe
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.xml
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.pdb
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AddStudent.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Attendance.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.TakeAttendance.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Sign_In.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.EmailForm.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI.dll
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.NornalUserPage.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Lecturers_Page.resources
+D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Report.resources
