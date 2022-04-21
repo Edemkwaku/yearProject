@@ -1,25 +1,45 @@
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe.config
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.pdb
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.xml
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI.dll
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI2.dll
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AddClass.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AddStudent.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AdminMenu.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Attendance.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Courses.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.EmailForm.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Lecturers_Page.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Lecturers.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Manage_Student.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Resources.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.NornalUserPage.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Report.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Sign_In.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.TakeAttendance.resources
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbproj.GenerateResource.Cache
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.exe
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.xml
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.pdb
-D:\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbprojResolveAssemblyReference.cache
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe.config
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.exe
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance Monitoring System.pdb
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.exe
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.pdb
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Attendance Monitoring System.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Guna.UI2.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AddClass.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.AdminMenu.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Attendance.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Courses.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.EmailForm.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Lecturers_Page.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Lecturers.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Manage_Student.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Resources.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.NornalUserPage.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Report.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Sign_In.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.TakeAttendance.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Users.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbproj.GenerateResource.Cache
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Department.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Faculty.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.Venue.resources
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Google.Protobuf.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Buffers.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Memory.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Google.Protobuf.pdb
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\Google.Protobuf.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Buffers.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Memory.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbproj.Attendance Monitoring System.exe.config
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.ResetPassword.resources

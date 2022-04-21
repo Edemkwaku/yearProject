@@ -122,9 +122,9 @@ Partial Class Lecturers_Page
         Me.Label1.ForeColor = System.Drawing.Color.Plum
         Me.Label1.Location = New System.Drawing.Point(12, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 21)
+        Me.Label1.Size = New System.Drawing.Size(125, 21)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Course Representative Page"
+        Me.Label1.Text = "Lecturers  Page"
         '
         'GunaPanel5
         '

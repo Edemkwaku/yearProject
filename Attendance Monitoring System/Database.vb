@@ -1,7 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Guna.UI2.WinForms.Guna2DataGridView
 Public Class Database
 
-    Private DatabaseConnection As New MySqlConnection("server=localhost;port=3306;username=root;password=myDB")
+    Private DatabaseConnection As New MySqlConnection("server=localhost;username=root;database=mdatabase")
     Private DatabaseCommand As MySqlCommand
 
     ' Database Data
@@ -46,6 +47,7 @@ Public Class Database
             DatabaseTable = New DataTable
             DatabaseAdapter = New MySqlDataAdapter(DatabaseCommand)
             RecordCount = DatabaseAdapter.Fill(DatabaseTable)
+
         Catch ex As Exception
             ' Capture Error
             exception = "ExecuteQuery Error: " & vbNewLine & ex.Message
@@ -53,6 +55,12 @@ Public Class Database
             ' Close Connection
             If DatabaseConnection.State = ConnectionState.Open Then DatabaseConnection.Close()
         End Try
+    End Sub
+
+    'sub to updating tables
+    Sub updateTable(queryString As String, DataGrid As Guna.UI2.WinForms.Guna2DataGridView)
+        ExecuteQuery(queryString)
+        DataGrid.DataSource = DatabaseTable
     End Sub
 
     ' Add parameters

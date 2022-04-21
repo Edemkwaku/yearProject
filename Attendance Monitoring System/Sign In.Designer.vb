@@ -27,10 +27,9 @@ Partial Class Sign_In
         Me.buttonClose = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.checkLecturer = New Guna.UI.WinForms.GunaRadioButton()
-        Me.checkAdmin = New Guna.UI.WinForms.GunaRadioButton()
+        Me.txtforgetpassword = New Guna.UI.WinForms.GunaLabel()
         Me.button_SignIn = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUserPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -86,10 +85,9 @@ Partial Class Sign_In
         '
         'Guna2Panel2
         '
-        Me.Guna2Panel2.Controls.Add(Me.checkLecturer)
-        Me.Guna2Panel2.Controls.Add(Me.checkAdmin)
+        Me.Guna2Panel2.Controls.Add(Me.txtforgetpassword)
         Me.Guna2Panel2.Controls.Add(Me.button_SignIn)
-        Me.Guna2Panel2.Controls.Add(Me.txtPassword)
+        Me.Guna2Panel2.Controls.Add(Me.txtUserPassword)
         Me.Guna2Panel2.Controls.Add(Me.txtUsername)
         Me.Guna2Panel2.Controls.Add(Me.Label3)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
@@ -100,33 +98,16 @@ Partial Class Sign_In
         Me.Guna2Panel2.Size = New System.Drawing.Size(391, 203)
         Me.Guna2Panel2.TabIndex = 3
         '
-        'checkLecturer
+        'txtforgetpassword
         '
-        Me.checkLecturer.BaseColor = System.Drawing.SystemColors.Control
-        Me.checkLecturer.CheckedOffColor = System.Drawing.Color.Gray
-        Me.checkLecturer.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.checkLecturer.FillColor = System.Drawing.Color.White
-        Me.checkLecturer.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.checkLecturer.ForeColor = System.Drawing.Color.Blue
-        Me.checkLecturer.Location = New System.Drawing.Point(261, 148)
-        Me.checkLecturer.Name = "checkLecturer"
-        Me.checkLecturer.Size = New System.Drawing.Size(130, 20)
-        Me.checkLecturer.TabIndex = 4
-        Me.checkLecturer.Text = "Sign In as Lecturer"
-        '
-        'checkAdmin
-        '
-        Me.checkAdmin.BaseColor = System.Drawing.SystemColors.Control
-        Me.checkAdmin.CheckedOffColor = System.Drawing.Color.Gray
-        Me.checkAdmin.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.checkAdmin.FillColor = System.Drawing.Color.White
-        Me.checkAdmin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.checkAdmin.ForeColor = System.Drawing.Color.Blue
-        Me.checkAdmin.Location = New System.Drawing.Point(141, 148)
-        Me.checkAdmin.Name = "checkAdmin"
-        Me.checkAdmin.Size = New System.Drawing.Size(122, 20)
-        Me.checkAdmin.TabIndex = 4
-        Me.checkAdmin.Text = "Sign In as Admin"
+        Me.txtforgetpassword.AutoSize = True
+        Me.txtforgetpassword.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtforgetpassword.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.txtforgetpassword.Location = New System.Drawing.Point(223, 116)
+        Me.txtforgetpassword.Name = "txtforgetpassword"
+        Me.txtforgetpassword.Size = New System.Drawing.Size(105, 17)
+        Me.txtforgetpassword.TabIndex = 4
+        Me.txtforgetpassword.Text = "forget password"
         '
         'button_SignIn
         '
@@ -136,7 +117,7 @@ Partial Class Sign_In
         Me.button_SignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button_SignIn.ForeColor = System.Drawing.Color.Green
         Me.button_SignIn.HoverState.Parent = Me.button_SignIn
-        Me.button_SignIn.Location = New System.Drawing.Point(22, 139)
+        Me.button_SignIn.Location = New System.Drawing.Point(133, 141)
         Me.button_SignIn.Name = "button_SignIn"
         Me.button_SignIn.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.button_SignIn.ShadowDecoration.Depth = 20
@@ -144,45 +125,45 @@ Partial Class Sign_In
         Me.button_SignIn.ShadowDecoration.Parent = Me.button_SignIn
         Me.button_SignIn.Size = New System.Drawing.Size(105, 30)
         Me.button_SignIn.TabIndex = 3
-        Me.button_SignIn.Text = "LogIn"
+        Me.button_SignIn.Text = "Login"
         '
-        'txtPassword
+        'txtUserPassword
         '
-        Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(133, 80)
-        Me.txtPassword.MaxLength = 50
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(201, 27)
-        Me.txtPassword.TabIndex = 1
-        Me.txtPassword.UseSystemPasswordChar = True
+        Me.txtUserPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserPassword.Location = New System.Drawing.Point(133, 80)
+        Me.txtUserPassword.MaxLength = 50
+        Me.txtUserPassword.Name = "txtUserPassword"
+        Me.txtUserPassword.Size = New System.Drawing.Size(201, 29)
+        Me.txtUserPassword.TabIndex = 1
+        Me.txtUserPassword.UseSystemPasswordChar = True
         '
         'txtUsername
         '
-        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.Location = New System.Drawing.Point(133, 37)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(201, 27)
+        Me.txtUsername.Size = New System.Drawing.Size(201, 29)
         Me.txtUsername.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(18, 87)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 20)
+        Me.Label3.Size = New System.Drawing.Size(84, 20)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Password :-"
+        Me.Label3.Text = "Password :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(18, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 20)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Username :-"
+        Me.Label2.Text = "Username :"
         '
         'Panel1
         '
@@ -252,7 +233,7 @@ Partial Class Sign_In
     Friend WithEvents buttonClose As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUserPassword As TextBox
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -261,7 +242,6 @@ Partial Class Sign_In
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel2 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel3 As Guna.UI.WinForms.GunaPanel
-    Friend WithEvents checkLecturer As Guna.UI.WinForms.GunaRadioButton
-    Friend WithEvents checkAdmin As Guna.UI.WinForms.GunaRadioButton
     Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
+    Friend WithEvents txtforgetpassword As Guna.UI.WinForms.GunaLabel
 End Class
