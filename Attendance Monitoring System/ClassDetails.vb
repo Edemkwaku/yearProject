@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class ClassDetails
-    Inherits AddStudentDetails
+
     Private coursecode As String
     Private coursename As String
     Private courselecturer As String

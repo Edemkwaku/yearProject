@@ -126,7 +126,6 @@
     <Compile Include="AddClass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentDetails.vb" />
     <Compile Include="AdminMenu.vb">
       <SubType>Form</SubType>
     </Compile>
