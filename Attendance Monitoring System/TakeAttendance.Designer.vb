@@ -39,7 +39,6 @@ Partial Class TakeAttendance
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
-        Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -47,27 +46,28 @@ Partial Class TakeAttendance
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Purple
-        Me.Guna2Panel1.Controls.Add(Me.buttonClose)
-        Me.Guna2Panel1.Controls.Add(Me.t)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(628, 30)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(628, 5)
         Me.Guna2Panel1.TabIndex = 2
         '
         'buttonClose
         '
-        Me.buttonClose.BackColor = System.Drawing.Color.Green
+        Me.buttonClose.BackColor = System.Drawing.SystemColors.Control
+        Me.buttonClose.BorderColor = System.Drawing.Color.Red
+        Me.buttonClose.BorderThickness = 1
         Me.buttonClose.CheckedState.Parent = Me.buttonClose
         Me.buttonClose.CustomImages.Parent = Me.buttonClose
-        Me.buttonClose.FillColor = System.Drawing.Color.Red
+        Me.buttonClose.FillColor = System.Drawing.SystemColors.Control
         Me.buttonClose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonClose.ForeColor = System.Drawing.Color.White
+        Me.buttonClose.ForeColor = System.Drawing.Color.Black
         Me.buttonClose.HoverState.BorderColor = System.Drawing.Color.Red
-        Me.buttonClose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.buttonClose.HoverState.FillColor = System.Drawing.Color.Red
+        Me.buttonClose.HoverState.ForeColor = System.Drawing.Color.White
         Me.buttonClose.HoverState.Parent = Me.buttonClose
-        Me.buttonClose.Location = New System.Drawing.Point(592, 0)
+        Me.buttonClose.Location = New System.Drawing.Point(583, 8)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.ShadowDecoration.Parent = Me.buttonClose
         Me.buttonClose.Size = New System.Drawing.Size(36, 30)
@@ -77,11 +77,11 @@ Partial Class TakeAttendance
         't
         '
         Me.t.AutoSize = True
-        Me.t.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.t.ForeColor = System.Drawing.Color.Plum
-        Me.t.Location = New System.Drawing.Point(19, 3)
+        Me.t.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.t.ForeColor = System.Drawing.Color.Purple
+        Me.t.Location = New System.Drawing.Point(252, 8)
         Me.t.Name = "t"
-        Me.t.Size = New System.Drawing.Size(137, 21)
+        Me.t.Size = New System.Drawing.Size(176, 30)
         Me.t.TabIndex = 0
         Me.t.Text = "Take Attendance"
         '
@@ -89,7 +89,7 @@ Partial Class TakeAttendance
         '
         Me.Panel1.BackColor = System.Drawing.Color.Purple
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 261)
+        Me.Panel1.Location = New System.Drawing.Point(0, 316)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(628, 5)
         Me.Panel1.TabIndex = 4
@@ -102,7 +102,7 @@ Partial Class TakeAttendance
         Me.Guna2Panel2.Controls.Add(Me.TextBox1)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(21, 52)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(26, 105)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
@@ -112,11 +112,18 @@ Partial Class TakeAttendance
         '
         'btnSubmit
         '
+        Me.btnSubmit.BorderColor = System.Drawing.Color.Green
+        Me.btnSubmit.BorderRadius = 2
+        Me.btnSubmit.BorderThickness = 1
         Me.btnSubmit.CheckedState.Parent = Me.btnSubmit
         Me.btnSubmit.CustomImages.Parent = Me.btnSubmit
         Me.btnSubmit.FillColor = System.Drawing.Color.White
         Me.btnSubmit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.Color.Green
+        Me.btnSubmit.HoverState.BorderColor = System.Drawing.Color.Lime
+        Me.btnSubmit.HoverState.FillColor = System.Drawing.Color.Green
+        Me.btnSubmit.HoverState.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSubmit.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnSubmit.HoverState.Parent = Me.btnSubmit
         Me.btnSubmit.Location = New System.Drawing.Point(51, 133)
         Me.btnSubmit.Name = "btnSubmit"
@@ -139,12 +146,12 @@ Partial Class TakeAttendance
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(15, 82)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 20)
+        Me.Label2.Size = New System.Drawing.Size(85, 20)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Student ID :-"
+        Me.Label2.Text = "Student ID "
         '
         'Guna2Panel3
         '
@@ -157,7 +164,7 @@ Partial Class TakeAttendance
         Me.Guna2Panel3.Controls.Add(Me.Label3)
         Me.Guna2Panel3.Controls.Add(Me.Label5)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(310, 52)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(310, 105)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.Guna2Panel3.ShadowDecoration.Enabled = True
@@ -182,7 +189,6 @@ Partial Class TakeAttendance
         Me.txtDate.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDate.Location = New System.Drawing.Point(124, 142)
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.ReadOnly = True
         Me.txtDate.Size = New System.Drawing.Size(152, 27)
         Me.txtDate.TabIndex = 1
         '
@@ -191,63 +197,64 @@ Partial Class TakeAttendance
         Me.txtLecturer.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLecturer.Location = New System.Drawing.Point(124, 93)
         Me.txtLecturer.Name = "txtLecturer"
-        Me.txtLecturer.ReadOnly = True
         Me.txtLecturer.Size = New System.Drawing.Size(152, 27)
         Me.txtLecturer.TabIndex = 1
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(11, 93)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 20)
+        Me.Label4.Size = New System.Drawing.Size(100, 20)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Class Lecture :-"
+        Me.Label4.Text = "Class Lecture "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(64, 149)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 20)
+        Me.Label3.Size = New System.Drawing.Size(45, 20)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Date :-"
+        Me.Label3.Text = "Date "
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(63, 42)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 20)
+        Me.Label5.Size = New System.Drawing.Size(46, 20)
         Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Class :-"
+        Me.Label5.Text = "Class "
         '
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GunaPanel1.Location = New System.Drawing.Point(0, 30)
+        Me.GunaPanel1.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 231)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 311)
         Me.GunaPanel1.TabIndex = 7
         '
         'GunaPanel2
         '
         Me.GunaPanel2.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel2.Location = New System.Drawing.Point(623, 30)
+        Me.GunaPanel2.Location = New System.Drawing.Point(623, 5)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(5, 231)
+        Me.GunaPanel2.Size = New System.Drawing.Size(5, 311)
         Me.GunaPanel2.TabIndex = 8
         '
         'TakeAttendance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(628, 266)
+        Me.ClientSize = New System.Drawing.Size(628, 321)
+        Me.Controls.Add(Me.t)
+        Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.GunaPanel2)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Controls.Add(Me.Guna2Panel3)
@@ -258,13 +265,12 @@ Partial Class TakeAttendance
         Me.Name = "TakeAttendance"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "TakeAttendance"
-        Me.Guna2Panel1.ResumeLayout(False)
-        Me.Guna2Panel1.PerformLayout()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

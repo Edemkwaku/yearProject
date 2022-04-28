@@ -37,13 +37,12 @@ Partial Class Faculty
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.btnRefresh = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.FacultyDataGrid = New System.Windows.Forms.DataGridView()
         Me.Guna2Panel1.SuspendLayout()
-        Me.GunaPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.FacultyDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,7 +61,7 @@ Partial Class Faculty
         Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.Image = Nothing
         Me.btnClear.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnClear.Location = New System.Drawing.Point(253, 20)
+        Me.btnClear.Location = New System.Drawing.Point(253, 14)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnClear.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -70,7 +69,7 @@ Partial Class Faculty
         Me.btnClear.OnHoverImage = Nothing
         Me.btnClear.OnPressedColor = System.Drawing.Color.Black
         Me.btnClear.Radius = 3
-        Me.btnClear.Size = New System.Drawing.Size(110, 36)
+        Me.btnClear.Size = New System.Drawing.Size(110, 29)
         Me.btnClear.TabIndex = 14
         Me.btnClear.Text = "CLEAR"
         Me.btnClear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -88,7 +87,7 @@ Partial Class Faculty
         Me.btnAdd.ForeColor = System.Drawing.Color.White
         Me.btnAdd.Image = Nothing
         Me.btnAdd.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnAdd.Location = New System.Drawing.Point(18, 20)
+        Me.btnAdd.Location = New System.Drawing.Point(18, 14)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAdd.OnHoverBorderColor = System.Drawing.Color.Green
@@ -96,7 +95,7 @@ Partial Class Faculty
         Me.btnAdd.OnHoverImage = Nothing
         Me.btnAdd.OnPressedColor = System.Drawing.Color.Black
         Me.btnAdd.Radius = 3
-        Me.btnAdd.Size = New System.Drawing.Size(110, 36)
+        Me.btnAdd.Size = New System.Drawing.Size(110, 29)
         Me.btnAdd.TabIndex = 16
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -115,7 +114,7 @@ Partial Class Faculty
         Me.btnDelete.ForeColor = System.Drawing.Color.White
         Me.btnDelete.Image = Nothing
         Me.btnDelete.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnDelete.Location = New System.Drawing.Point(370, 20)
+        Me.btnDelete.Location = New System.Drawing.Point(370, 14)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnDelete.OnHoverBorderColor = System.Drawing.Color.Red
@@ -123,7 +122,7 @@ Partial Class Faculty
         Me.btnDelete.OnHoverImage = Nothing
         Me.btnDelete.OnPressedColor = System.Drawing.Color.Black
         Me.btnDelete.Radius = 3
-        Me.btnDelete.Size = New System.Drawing.Size(110, 36)
+        Me.btnDelete.Size = New System.Drawing.Size(110, 29)
         Me.btnDelete.TabIndex = 13
         Me.btnDelete.Text = "DELETE"
         Me.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -136,10 +135,10 @@ Partial Class Faculty
         Me.Guna2Panel1.Controls.Add(Me.btnDelete)
         Me.Guna2Panel1.Controls.Add(Me.btnUpdate)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Guna2Panel1.Location = New System.Drawing.Point(5, 419)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(5, 438)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(502, 71)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(502, 52)
         Me.Guna2Panel1.TabIndex = 31
         '
         'btnUpdate
@@ -156,7 +155,7 @@ Partial Class Faculty
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
         Me.btnUpdate.Image = Nothing
         Me.btnUpdate.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnUpdate.Location = New System.Drawing.Point(135, 20)
+        Me.btnUpdate.Location = New System.Drawing.Point(135, 14)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Orange
@@ -164,7 +163,7 @@ Partial Class Faculty
         Me.btnUpdate.OnHoverImage = Nothing
         Me.btnUpdate.OnPressedColor = System.Drawing.Color.Black
         Me.btnUpdate.Radius = 3
-        Me.btnUpdate.Size = New System.Drawing.Size(110, 36)
+        Me.btnUpdate.Size = New System.Drawing.Size(110, 29)
         Me.btnUpdate.TabIndex = 15
         Me.btnUpdate.Text = "UPDATE"
         Me.btnUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -173,9 +172,9 @@ Partial Class Faculty
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel1.Location = New System.Drawing.Point(507, 26)
+        Me.GunaPanel1.Location = New System.Drawing.Point(507, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 464)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 485)
         Me.GunaPanel1.TabIndex = 30
         '
         'GunaPanel2
@@ -191,17 +190,18 @@ Partial Class Faculty
         '
         Me.btnCose.AnimationHoverSpeed = 0.07!
         Me.btnCose.AnimationSpeed = 0.03!
-        Me.btnCose.BaseColor = System.Drawing.Color.Red
+        Me.btnCose.BaseColor = System.Drawing.SystemColors.Control
         Me.btnCose.BorderColor = System.Drawing.Color.Red
+        Me.btnCose.BorderSize = 1
         Me.btnCose.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnCose.FocusedColor = System.Drawing.Color.Empty
-        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCose.ForeColor = System.Drawing.Color.White
+        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCose.ForeColor = System.Drawing.Color.Black
         Me.btnCose.Image = Nothing
         Me.btnCose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnCose.Location = New System.Drawing.Point(472, 2)
+        Me.btnCose.Location = New System.Drawing.Point(465, 9)
         Me.btnCose.Name = "btnCose"
-        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.Red
         Me.btnCose.OnHoverBorderColor = System.Drawing.Color.Red
         Me.btnCose.OnHoverForeColor = System.Drawing.Color.White
         Me.btnCose.OnHoverImage = Nothing
@@ -214,32 +214,30 @@ Partial Class Faculty
         'GunaLabel1
         '
         Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel1.ForeColor = System.Drawing.Color.Plum
-        Me.GunaLabel1.Location = New System.Drawing.Point(7, 2)
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.Purple
+        Me.GunaLabel1.Location = New System.Drawing.Point(181, 5)
         Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(152, 21)
+        Me.GunaLabel1.Size = New System.Drawing.Size(182, 30)
         Me.GunaLabel1.TabIndex = 2
-        Me.GunaLabel1.Text = "Manage Faaculties"
+        Me.GunaLabel1.Text = "Manage Faculties"
         '
         'GunaPanel3
         '
         Me.GunaPanel3.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GunaPanel3.Location = New System.Drawing.Point(0, 26)
+        Me.GunaPanel3.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel3.Name = "GunaPanel3"
-        Me.GunaPanel3.Size = New System.Drawing.Size(5, 469)
+        Me.GunaPanel3.Size = New System.Drawing.Size(5, 490)
         Me.GunaPanel3.TabIndex = 27
         '
         'GunaPanel4
         '
         Me.GunaPanel4.BackColor = System.Drawing.Color.Purple
-        Me.GunaPanel4.Controls.Add(Me.btnCose)
-        Me.GunaPanel4.Controls.Add(Me.GunaLabel1)
         Me.GunaPanel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.GunaPanel4.Location = New System.Drawing.Point(0, 0)
         Me.GunaPanel4.Name = "GunaPanel4"
-        Me.GunaPanel4.Size = New System.Drawing.Size(512, 26)
+        Me.GunaPanel4.Size = New System.Drawing.Size(512, 5)
         Me.GunaPanel4.TabIndex = 26
         '
         'txtFname
@@ -277,20 +275,10 @@ Partial Class Faculty
         Me.Panel1.Controls.Add(Me.txtId)
         Me.Panel1.Controls.Add(Me.GunaLabel3)
         Me.Panel1.Controls.Add(Me.GunaLabel2)
-        Me.Panel1.Location = New System.Drawing.Point(5, 251)
+        Me.Panel1.Location = New System.Drawing.Point(5, 255)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(502, 142)
+        Me.Panel1.Size = New System.Drawing.Size(502, 156)
         Me.Panel1.TabIndex = 29
-        '
-        'GunaLabel3
-        '
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.Location = New System.Drawing.Point(87, 102)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(107, 20)
-        Me.GunaLabel3.TabIndex = 12
-        Me.GunaLabel3.Text = "Faculty-Name"
         '
         'btnRefresh
         '
@@ -303,7 +291,7 @@ Partial Class Faculty
         Me.btnRefresh.Location = New System.Drawing.Point(389, 5)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.ShadowDecoration.Parent = Me.btnRefresh
-        Me.btnRefresh.Size = New System.Drawing.Size(54, 25)
+        Me.btnRefresh.Size = New System.Drawing.Size(63, 25)
         Me.btnRefresh.TabIndex = 32
         Me.btnRefresh.Text = "Refresh"
         '
@@ -350,11 +338,21 @@ Partial Class Faculty
         Me.txtsearch.Size = New System.Drawing.Size(200, 25)
         Me.txtsearch.TabIndex = 30
         '
+        'GunaLabel3
+        '
+        Me.GunaLabel3.AutoSize = True
+        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel3.Location = New System.Drawing.Point(87, 102)
+        Me.GunaLabel3.Name = "GunaLabel3"
+        Me.GunaLabel3.Size = New System.Drawing.Size(107, 20)
+        Me.GunaLabel3.TabIndex = 12
+        Me.GunaLabel3.Text = "Faculty-Name"
+        '
         'FacultyDataGrid
         '
         Me.FacultyDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.FacultyDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.FacultyDataGrid.Location = New System.Drawing.Point(23, 45)
+        Me.FacultyDataGrid.Location = New System.Drawing.Point(23, 51)
         Me.FacultyDataGrid.Name = "FacultyDataGrid"
         Me.FacultyDataGrid.ReadOnly = True
         Me.FacultyDataGrid.Size = New System.Drawing.Size(462, 185)
@@ -365,6 +363,8 @@ Partial Class Faculty
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(512, 495)
+        Me.Controls.Add(Me.GunaLabel1)
+        Me.Controls.Add(Me.btnCose)
         Me.Controls.Add(Me.FacultyDataGrid)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.GunaPanel1)
@@ -377,12 +377,11 @@ Partial Class Faculty
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Faculty"
         Me.Guna2Panel1.ResumeLayout(False)
-        Me.GunaPanel4.ResumeLayout(False)
-        Me.GunaPanel4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.FacultyDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnClear As Guna.UI.WinForms.GunaButton

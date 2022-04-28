@@ -1,6 +1,6 @@
 ﻿Public Class Attendance
     Dim Student As New Database
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Hide()
     End Sub
 

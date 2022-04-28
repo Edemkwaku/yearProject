@@ -22,7 +22,7 @@ Partial Class Manage_Student
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnDelete = New Guna.UI.WinForms.GunaButton()
         Me.btnClear = New Guna.UI.WinForms.GunaButton()
         Me.btnUpdate = New Guna.UI.WinForms.GunaButton()
@@ -58,7 +58,6 @@ Partial Class Manage_Student
         Me.btnRefresh = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.GunaPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
@@ -225,48 +224,47 @@ Partial Class Manage_Student
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel1.Location = New System.Drawing.Point(768, 26)
+        Me.GunaPanel1.Location = New System.Drawing.Point(768, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 633)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 654)
         Me.GunaPanel1.TabIndex = 7
         '
         'GunaLabel1
         '
         Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel1.ForeColor = System.Drawing.Color.Plum
-        Me.GunaLabel1.Location = New System.Drawing.Point(7, 2)
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.Purple
+        Me.GunaLabel1.Location = New System.Drawing.Point(311, 8)
         Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(136, 21)
+        Me.GunaLabel1.Size = New System.Drawing.Size(175, 30)
         Me.GunaLabel1.TabIndex = 2
         Me.GunaLabel1.Text = "Manage Student"
         '
         'GunaPanel4
         '
         Me.GunaPanel4.BackColor = System.Drawing.Color.Purple
-        Me.GunaPanel4.Controls.Add(Me.btnCose)
-        Me.GunaPanel4.Controls.Add(Me.GunaLabel1)
         Me.GunaPanel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.GunaPanel4.Location = New System.Drawing.Point(5, 0)
         Me.GunaPanel4.Name = "GunaPanel4"
-        Me.GunaPanel4.Size = New System.Drawing.Size(768, 26)
+        Me.GunaPanel4.Size = New System.Drawing.Size(768, 5)
         Me.GunaPanel4.TabIndex = 4
         '
         'btnCose
         '
         Me.btnCose.AnimationHoverSpeed = 0.07!
         Me.btnCose.AnimationSpeed = 0.03!
-        Me.btnCose.BaseColor = System.Drawing.Color.Red
+        Me.btnCose.BaseColor = System.Drawing.SystemColors.Control
         Me.btnCose.BorderColor = System.Drawing.Color.Red
+        Me.btnCose.BorderSize = 1
         Me.btnCose.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnCose.FocusedColor = System.Drawing.Color.Empty
-        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCose.ForeColor = System.Drawing.Color.White
+        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCose.ForeColor = System.Drawing.Color.Black
         Me.btnCose.Image = Nothing
         Me.btnCose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnCose.Location = New System.Drawing.Point(728, 0)
+        Me.btnCose.Location = New System.Drawing.Point(726, 9)
         Me.btnCose.Name = "btnCose"
-        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.Red
         Me.btnCose.OnHoverBorderColor = System.Drawing.Color.Red
         Me.btnCose.OnHoverForeColor = System.Drawing.Color.White
         Me.btnCose.OnHoverImage = Nothing
@@ -377,9 +375,9 @@ Partial Class Manage_Student
         Me.Panel1.Controls.Add(Me.GunaLabel4)
         Me.Panel1.Controls.Add(Me.GunaLabel3)
         Me.Panel1.Controls.Add(Me.GunaLabel2)
-        Me.Panel1.Location = New System.Drawing.Point(5, 325)
+        Me.Panel1.Location = New System.Drawing.Point(5, 345)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(763, 252)
+        Me.Panel1.Size = New System.Drawing.Size(763, 232)
         Me.Panel1.TabIndex = 8
         '
         'femaleRadio
@@ -509,20 +507,19 @@ Partial Class Manage_Student
         Me.StudentsDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.StudentsDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
         Me.StudentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.Padding = New System.Windows.Forms.Padding(3)
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentsDataGrid.DefaultCellStyle = DataGridViewCellStyle4
-        Me.StudentsDataGrid.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StudentsDataGrid.Location = New System.Drawing.Point(5, 26)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentsDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        Me.StudentsDataGrid.Location = New System.Drawing.Point(5, 42)
         Me.StudentsDataGrid.Name = "StudentsDataGrid"
         Me.StudentsDataGrid.ReadOnly = True
-        Me.StudentsDataGrid.Size = New System.Drawing.Size(763, 228)
+        Me.StudentsDataGrid.Size = New System.Drawing.Size(763, 243)
         Me.StudentsDataGrid.TabIndex = 19
         '
         'btnRefresh
@@ -533,10 +530,10 @@ Partial Class Manage_Student
         Me.btnRefresh.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRefresh.ForeColor = System.Drawing.Color.White
         Me.btnRefresh.HoverState.Parent = Me.btnRefresh
-        Me.btnRefresh.Location = New System.Drawing.Point(600, 276)
+        Me.btnRefresh.Location = New System.Drawing.Point(600, 301)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.ShadowDecoration.Parent = Me.btnRefresh
-        Me.btnRefresh.Size = New System.Drawing.Size(54, 25)
+        Me.btnRefresh.Size = New System.Drawing.Size(64, 25)
         Me.btnRefresh.TabIndex = 29
         Me.btnRefresh.Text = "Refresh"
         '
@@ -549,7 +546,7 @@ Partial Class Manage_Student
         Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearch.ForeColor = System.Drawing.Color.White
         Me.btnSearch.HoverState.Parent = Me.btnSearch
-        Me.btnSearch.Location = New System.Drawing.Point(343, 276)
+        Me.btnSearch.Location = New System.Drawing.Point(343, 301)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
         Me.btnSearch.Size = New System.Drawing.Size(75, 25)
@@ -573,7 +570,7 @@ Partial Class Manage_Student
         Me.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtsearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtsearch.HoverState.Parent = Me.txtsearch
-        Me.txtsearch.Location = New System.Drawing.Point(145, 276)
+        Me.txtsearch.Location = New System.Drawing.Point(145, 301)
         Me.txtsearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtsearch.Name = "txtsearch"
         Me.txtsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -588,6 +585,8 @@ Partial Class Manage_Student
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(773, 664)
+        Me.Controls.Add(Me.GunaLabel1)
+        Me.Controls.Add(Me.btnCose)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtsearch)
@@ -602,14 +601,13 @@ Partial Class Manage_Student
         Me.Name = "Manage_Student"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Manage_Student"
-        Me.GunaPanel4.ResumeLayout(False)
-        Me.GunaPanel4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         CType(Me.StudentsDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

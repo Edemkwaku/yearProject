@@ -10,6 +10,10 @@
         txtpassconfirm.Visible = False
         lblerror.Visible = False
         btnDone.Visible = False
+        btnLogin.Visible = False
+        txtpassconfirm.Clear()
+        txtpassword.Clear()
+        txtusername.Clear()
     End Sub
 
     'continue button
@@ -68,13 +72,18 @@
                 iExit = MessageBox.Show("Something went wrong", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
-        Sign_In.Show()
-        Me.Hide()
+
+        btnLogin.Visible = True
     End Sub
 
     'button close
     Private Sub btnclose_Click(sender As Object, e As EventArgs) Handles btnclose.Click
         Me.Hide()
         Sign_In.Show()
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Sign_In.Show()
+        Me.Hide()
     End Sub
 End Class

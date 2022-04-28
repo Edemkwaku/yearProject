@@ -13,6 +13,7 @@ Public Class Lecturers
         tab.HasException()
 
         updateTable()
+        clear()
     End Sub
 
     'Update Button
@@ -45,6 +46,7 @@ Public Class Lecturers
             End Try
 
         End If
+        clear()
     End Sub
 
     Private Sub LecturersDataGrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles LecturersDataGrid.CellClick
@@ -68,6 +70,55 @@ Public Class Lecturers
     'refresh button
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         updateTable()
+    End Sub
+
+    'email text box
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
+        Dim a As String
+        Dim count As Integer = 0
+        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
+            email = txtEmail.Text
+            If (email.Contains("@") = False Or email.Contains(".") = False) Then
+                MsgBox("Enter valid Email", MsgBoxStyle.Information, "Error")
+                txtEmail.Clear()
+            Else
+                For x = 0 To email.Length - 1
+                    a = email.Substring(x, 1)
+                    If a.Equals("@") Then
+                        count += 1
+                    End If
+                Next
+                If count > 1 Then
+                    MsgBox("Invalid Email format", MsgBoxStyle.Information, "Error")
+                    txtEmail.Clear()
+                End If
+            End If
+
+        End If
+    End Sub
+
+    'phone number validation
+    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
+
+        End If
+    End Sub
+
+    'clear button 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        clear()
+    End Sub
+
+    'clear button sub 
+    Sub clear()
+        txtPhone.Clear()
+        txtId.Clear()
+        txtFname.Clear()
+        txtEmail.Clear()
+        txtDoB.Text = Today.Date
+        txtsearch.Clear()
+        maleRadio.Checked = False
+        femaleRadio.Checked = False
     End Sub
 
     'search button
@@ -108,6 +159,14 @@ Public Class Lecturers
 
         If txtId.Text = "" Or txtFname.Text = "" Or txtDoB.Value.ToString = "" Or txtEmail.Text = "" Or txtPhone.Text = "" Then
             MsgBox("All fields are Required", MsgBoxStyle.Information, "Required fild")
+        ElseIf IsNumeric(txtPhone.Text) = False Then
+            MsgBox("Only numbers Accepted", MsgBoxStyle.Information, "Error")
+            txtPhone.Clear()
+        ElseIf Len(Trim(txtPhone.Text)) <> 10 Then
+            MsgBox("Only 10 digits Allowed", MsgBoxStyle.Critical, "Error")
+        ElseIf Not txtPhone.Text.StartsWith(0) Then
+            MsgBox("Phone number should start with 0 ", MsgBoxStyle.Critical, "Error")
+            txtPhone.Clear()
 
         Else
             If maleRadio.Checked = True Then
@@ -135,6 +194,7 @@ Public Class Lecturers
             updateTable()
 
         End If
+        clear()
     End Sub
 
     'update sub

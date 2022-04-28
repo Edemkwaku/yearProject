@@ -11,7 +11,7 @@ Public Class EmailForm
                 .Credentials = New Net.NetworkCredential(SenderEmail, "Edem9815*")
                 .Port = 587
                 .EnableSsl = True
-                .Host = "smtpServer.gmail.com"
+                .Host = "smtp.gmail.com"
             End With
             email = New MailMessage
             With email

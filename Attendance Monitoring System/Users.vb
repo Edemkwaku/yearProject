@@ -1,4 +1,5 @@
-﻿Public Class Users
+﻿Imports System.Security.Cryptography
+Public Class Users
     Dim query As New Database
     Dim iExit As DialogResult
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -16,6 +17,28 @@
         UpdateDatabaseRecord()
     End Sub
 
+    'Decrypt function
+    Public Function DecryptData(ByVal encrypteddata As String) As String
+        Dim encryptedBytes() As Byte = Convert.FromBase64String(encrypteddata)
+        Dim ms As New System.IO.MemoryStream
+        Dim decStream As New CryptoStream(ms, TripleDES.Create, System.Security.Cryptography.CryptoStreamMode.Write)
+
+        decStream.Write(encryptedBytes, 0, encryptedBytes.Length)
+        decStream.FlushFinalBlock()
+
+        Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
+    End Function
+
+    'Encrypt Funtion
+    Public Function EncryptData(ByVal plaintext As String) As String
+        Dim plaintextBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(plaintext)
+        Dim ms As New System.IO.MemoryStream
+        Dim encStream As New CryptoStream(ms, TripleDES.Create(), System.Security.Cryptography.CryptoStreamMode.Read)
+
+        encStream.Write(plaintextBytes, 0, plaintextBytes.Length)
+        encStream.FlushFinalBlock()
+        Return Convert.ToBase64String(ms.ToArray)
+    End Function
 
 
 

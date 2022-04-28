@@ -38,7 +38,6 @@ Partial Class Sign_In
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel3 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
-        Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.GunaPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -46,26 +45,27 @@ Partial Class Sign_In
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Purple
-        Me.Guna2Panel1.Controls.Add(Me.buttonClose)
-        Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(440, 25)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(440, 5)
         Me.Guna2Panel1.TabIndex = 2
         '
         'buttonClose
         '
+        Me.buttonClose.BorderColor = System.Drawing.Color.Red
+        Me.buttonClose.BorderThickness = 1
         Me.buttonClose.CheckedState.Parent = Me.buttonClose
         Me.buttonClose.CustomImages.Parent = Me.buttonClose
-        Me.buttonClose.FillColor = System.Drawing.Color.Red
+        Me.buttonClose.FillColor = System.Drawing.SystemColors.Control
         Me.buttonClose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonClose.ForeColor = System.Drawing.Color.White
+        Me.buttonClose.ForeColor = System.Drawing.Color.Black
         Me.buttonClose.HoverState.BorderColor = System.Drawing.Color.Red
-        Me.buttonClose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.buttonClose.HoverState.FillColor = System.Drawing.Color.Red
+        Me.buttonClose.HoverState.ForeColor = System.Drawing.Color.White
         Me.buttonClose.HoverState.Parent = Me.buttonClose
-        Me.buttonClose.Location = New System.Drawing.Point(404, 0)
+        Me.buttonClose.Location = New System.Drawing.Point(395, 9)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.ShadowDecoration.Parent = Me.buttonClose
         Me.buttonClose.Size = New System.Drawing.Size(36, 30)
@@ -75,13 +75,13 @@ Partial Class Sign_In
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(19, 0)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Purple
+        Me.Label1.Location = New System.Drawing.Point(185, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 21)
+        Me.Label1.Size = New System.Drawing.Size(83, 30)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Log In"
+        Me.Label1.Text = "Sign In"
         '
         'Guna2Panel2
         '
@@ -105,9 +105,9 @@ Partial Class Sign_In
         Me.txtforgetpassword.ForeColor = System.Drawing.Color.RoyalBlue
         Me.txtforgetpassword.Location = New System.Drawing.Point(223, 116)
         Me.txtforgetpassword.Name = "txtforgetpassword"
-        Me.txtforgetpassword.Size = New System.Drawing.Size(105, 17)
+        Me.txtforgetpassword.Size = New System.Drawing.Size(107, 17)
         Me.txtforgetpassword.TabIndex = 4
-        Me.txtforgetpassword.Text = "forget password"
+        Me.txtforgetpassword.Text = "Forget password"
         '
         'button_SignIn
         '
@@ -179,9 +179,9 @@ Partial Class Sign_In
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel1.Controls.Add(Me.GunaPanel2)
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel1.Location = New System.Drawing.Point(435, 25)
+        Me.GunaPanel1.Location = New System.Drawing.Point(435, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 286)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 306)
         Me.GunaPanel1.TabIndex = 6
         '
         'GunaPanel2
@@ -190,16 +190,16 @@ Partial Class Sign_In
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.GunaPanel2.Location = New System.Drawing.Point(0, 0)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(5, 286)
+        Me.GunaPanel2.Size = New System.Drawing.Size(5, 306)
         Me.GunaPanel2.TabIndex = 7
         '
         'GunaPanel3
         '
         Me.GunaPanel3.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GunaPanel3.Location = New System.Drawing.Point(0, 25)
+        Me.GunaPanel3.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel3.Name = "GunaPanel3"
-        Me.GunaPanel3.Size = New System.Drawing.Size(5, 286)
+        Me.GunaPanel3.Size = New System.Drawing.Size(5, 306)
         Me.GunaPanel3.TabIndex = 4
         '
         'GunaDragControl1
@@ -211,6 +211,8 @@ Partial Class Sign_In
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(440, 316)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.GunaPanel3)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Controls.Add(Me.Panel1)
@@ -220,12 +222,11 @@ Partial Class Sign_In
         Me.Name = "Sign_In"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign_In"
-        Me.Guna2Panel1.ResumeLayout(False)
-        Me.Guna2Panel1.PerformLayout()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.GunaPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
