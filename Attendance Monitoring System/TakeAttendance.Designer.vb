@@ -28,12 +28,12 @@ Partial Class TakeAttendance
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSubmit = New Guna.UI2.WinForms.Guna2Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.courseCombo = New System.Windows.Forms.ComboBox()
+        Me.comboLecturer = New System.Windows.Forms.ComboBox()
         Me.ClassComboBox = New System.Windows.Forms.ComboBox()
-        Me.txtDate = New System.Windows.Forms.TextBox()
-        Me.txtLecturer = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -79,7 +79,7 @@ Partial Class TakeAttendance
         Me.t.AutoSize = True
         Me.t.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.t.ForeColor = System.Drawing.Color.Purple
-        Me.t.Location = New System.Drawing.Point(252, 8)
+        Me.t.Location = New System.Drawing.Point(252, 15)
         Me.t.Name = "t"
         Me.t.Size = New System.Drawing.Size(176, 30)
         Me.t.TabIndex = 0
@@ -99,7 +99,7 @@ Partial Class TakeAttendance
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderRadius = 5
         Me.Guna2Panel2.Controls.Add(Me.btnSubmit)
-        Me.Guna2Panel2.Controls.Add(Me.TextBox1)
+        Me.Guna2Panel2.Controls.Add(Me.txtID)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.White
         Me.Guna2Panel2.Location = New System.Drawing.Point(26, 105)
@@ -112,6 +112,7 @@ Partial Class TakeAttendance
         '
         'btnSubmit
         '
+        Me.btnSubmit.BackColor = System.Drawing.Color.Transparent
         Me.btnSubmit.BorderColor = System.Drawing.Color.Green
         Me.btnSubmit.BorderRadius = 2
         Me.btnSubmit.BorderThickness = 1
@@ -132,16 +133,16 @@ Partial Class TakeAttendance
         Me.btnSubmit.ShadowDecoration.Enabled = True
         Me.btnSubmit.ShadowDecoration.Parent = Me.btnSubmit
         Me.btnSubmit.Size = New System.Drawing.Size(136, 36)
-        Me.btnSubmit.TabIndex = 2
-        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.TabIndex = 4
+        Me.btnSubmit.Text = "Mark"
         '
-        'TextBox1
+        'txtID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(108, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 27)
-        Me.TextBox1.TabIndex = 1
+        Me.txtID.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(108, 82)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(151, 27)
+        Me.txtID.TabIndex = 1
         '
         'Label2
         '
@@ -157,9 +158,9 @@ Partial Class TakeAttendance
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel3.BorderRadius = 5
+        Me.Guna2Panel3.Controls.Add(Me.courseCombo)
+        Me.Guna2Panel3.Controls.Add(Me.comboLecturer)
         Me.Guna2Panel3.Controls.Add(Me.ClassComboBox)
-        Me.Guna2Panel3.Controls.Add(Me.txtDate)
-        Me.Guna2Panel3.Controls.Add(Me.txtLecturer)
         Me.Guna2Panel3.Controls.Add(Me.Label4)
         Me.Guna2Panel3.Controls.Add(Me.Label3)
         Me.Guna2Panel3.Controls.Add(Me.Label5)
@@ -172,33 +173,41 @@ Partial Class TakeAttendance
         Me.Guna2Panel3.Size = New System.Drawing.Size(297, 183)
         Me.Guna2Panel3.TabIndex = 6
         '
+        'courseCombo
+        '
+        Me.courseCombo.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.courseCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.courseCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.courseCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.courseCombo.FormattingEnabled = True
+        Me.courseCombo.Location = New System.Drawing.Point(125, 140)
+        Me.courseCombo.Name = "courseCombo"
+        Me.courseCombo.Size = New System.Drawing.Size(151, 29)
+        Me.courseCombo.TabIndex = 3
+        '
+        'comboLecturer
+        '
+        Me.comboLecturer.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.comboLecturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comboLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.comboLecturer.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboLecturer.FormattingEnabled = True
+        Me.comboLecturer.Location = New System.Drawing.Point(125, 91)
+        Me.comboLecturer.Name = "comboLecturer"
+        Me.comboLecturer.Size = New System.Drawing.Size(151, 29)
+        Me.comboLecturer.TabIndex = 3
+        '
         'ClassComboBox
         '
         Me.ClassComboBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ClassComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ClassComboBox.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClassComboBox.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClassComboBox.FormattingEnabled = True
         Me.ClassComboBox.Location = New System.Drawing.Point(125, 40)
         Me.ClassComboBox.Name = "ClassComboBox"
-        Me.ClassComboBox.Size = New System.Drawing.Size(151, 28)
+        Me.ClassComboBox.Size = New System.Drawing.Size(151, 29)
         Me.ClassComboBox.TabIndex = 2
-        '
-        'txtDate
-        '
-        Me.txtDate.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDate.Location = New System.Drawing.Point(124, 142)
-        Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(152, 27)
-        Me.txtDate.TabIndex = 1
-        '
-        'txtLecturer
-        '
-        Me.txtLecturer.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLecturer.Location = New System.Drawing.Point(124, 93)
-        Me.txtLecturer.Name = "txtLecturer"
-        Me.txtLecturer.Size = New System.Drawing.Size(152, 27)
-        Me.txtLecturer.TabIndex = 1
         '
         'Label4
         '
@@ -214,11 +223,11 @@ Partial Class TakeAttendance
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(64, 149)
+        Me.Label3.Location = New System.Drawing.Point(51, 144)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 20)
+        Me.Label3.Size = New System.Drawing.Size(56, 20)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Date "
+        Me.Label3.Text = "Course"
         '
         'Label5
         '
@@ -280,15 +289,15 @@ Partial Class TakeAttendance
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnSubmit As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtID As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtDate As TextBox
-    Friend WithEvents txtLecturer As TextBox
     Friend WithEvents ClassComboBox As ComboBox
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel2 As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents comboLecturer As ComboBox
+    Friend WithEvents courseCombo As ComboBox
 End Class

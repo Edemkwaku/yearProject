@@ -22,9 +22,9 @@ Partial Class Users
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -44,6 +44,7 @@ Partial Class Users
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.UsersDataGrid = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.UsersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -227,6 +228,7 @@ Partial Class Users
         Me.Panel2.Controls.Add(Me.studentRole)
         Me.Panel2.Controls.Add(Me.AdminRole)
         Me.Panel2.Controls.Add(Me.lectureRule)
+        Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.txtUsername)
         Me.Panel2.Controls.Add(Me.GunaLabel3)
@@ -245,7 +247,7 @@ Partial Class Users
         Me.studentRole.CheckedState.InnerColor = System.Drawing.Color.White
         Me.studentRole.CheckedState.InnerOffset = -4
         Me.studentRole.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.studentRole.Location = New System.Drawing.Point(193, 92)
+        Me.studentRole.Location = New System.Drawing.Point(193, 124)
         Me.studentRole.Name = "studentRole"
         Me.studentRole.Size = New System.Drawing.Size(74, 21)
         Me.studentRole.TabIndex = 26
@@ -266,7 +268,7 @@ Partial Class Users
         Me.AdminRole.CheckedState.InnerColor = System.Drawing.Color.White
         Me.AdminRole.CheckedState.InnerOffset = -4
         Me.AdminRole.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AdminRole.Location = New System.Drawing.Point(35, 92)
+        Me.AdminRole.Location = New System.Drawing.Point(35, 124)
         Me.AdminRole.Name = "AdminRole"
         Me.AdminRole.Size = New System.Drawing.Size(66, 21)
         Me.AdminRole.TabIndex = 26
@@ -287,7 +289,7 @@ Partial Class Users
         Me.lectureRule.CheckedState.InnerColor = System.Drawing.Color.White
         Me.lectureRule.CheckedState.InnerOffset = -4
         Me.lectureRule.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lectureRule.Location = New System.Drawing.Point(111, 92)
+        Me.lectureRule.Location = New System.Drawing.Point(111, 124)
         Me.lectureRule.Name = "lectureRule"
         Me.lectureRule.Size = New System.Drawing.Size(70, 21)
         Me.lectureRule.TabIndex = 26
@@ -337,30 +339,30 @@ Partial Class Users
         '
         'UsersDataGrid
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.UsersDataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.UsersDataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.UsersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.UsersDataGrid.BackgroundColor = System.Drawing.Color.White
         Me.UsersDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.UsersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.UsersDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.UsersDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UsersDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.UsersDataGrid.ColumnHeadersHeight = 20
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.UsersDataGrid.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.UsersDataGrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.UsersDataGrid.EnableHeadersVisualStyles = False
         Me.UsersDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UsersDataGrid.Location = New System.Drawing.Point(385, 72)
@@ -391,6 +393,14 @@ Partial Class Users
         Me.UsersDataGrid.ThemeStyle.RowsStyle.Height = 22
         Me.UsersDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UsersDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(109, 81)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(192, 25)
+        Me.TextBox1.TabIndex = 24
         '
         'Users
         '
@@ -440,4 +450,5 @@ Partial Class Users
     Friend WithEvents lectureRule As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents UsersDataGrid As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents AdminRole As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents TextBox1 As TextBox
 End Class

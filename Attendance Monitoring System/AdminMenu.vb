@@ -215,12 +215,18 @@ Public Class AdminMenu
 
     End Sub
 
+    'student details button
     Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
         studentDetails.Visible = True
     End Sub
 
+    'close button
     Private Sub btnCose_Click(sender As Object, e As EventArgs) Handles btnCose.Click
         studentDetails.Visible = False
     End Sub
 
+    'Class button
+    Private Sub btnClass_Click(sender As Object, e As EventArgs) Handles btnClass.Click
+        AddClass.ShowDialog()
+    End Sub
 End Class

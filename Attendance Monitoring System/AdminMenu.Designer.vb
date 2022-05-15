@@ -43,6 +43,7 @@ Partial Class AdminMenu
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnClass = New Guna.UI.WinForms.GunaButton()
         Me.btnGenerateReports = New Guna.UI.WinForms.GunaButton()
         Me.btnManageCourses = New Guna.UI.WinForms.GunaButton()
         Me.btnStudentAttendance = New Guna.UI.WinForms.GunaButton()
@@ -283,6 +284,7 @@ Partial Class AdminMenu
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Purple
+        Me.Panel3.Controls.Add(Me.btnClass)
         Me.Panel3.Controls.Add(Me.btnGenerateReports)
         Me.Panel3.Controls.Add(Me.btnManageCourses)
         Me.Panel3.Controls.Add(Me.btnStudentAttendance)
@@ -302,6 +304,31 @@ Partial Class AdminMenu
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(118, 713)
         Me.Panel3.TabIndex = 12
+        '
+        'btnClass
+        '
+        Me.btnClass.AnimationHoverSpeed = 0.07!
+        Me.btnClass.AnimationSpeed = 0.03!
+        Me.btnClass.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnClass.BorderColor = System.Drawing.Color.Black
+        Me.btnClass.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btnClass.FocusedColor = System.Drawing.Color.Empty
+        Me.btnClass.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.btnClass.ForeColor = System.Drawing.Color.White
+        Me.btnClass.Image = Nothing
+        Me.btnClass.ImageSize = New System.Drawing.Size(20, 20)
+        Me.btnClass.Location = New System.Drawing.Point(0, 157)
+        Me.btnClass.Name = "btnClass"
+        Me.btnClass.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnClass.OnHoverBorderColor = System.Drawing.Color.Transparent
+        Me.btnClass.OnHoverForeColor = System.Drawing.Color.White
+        Me.btnClass.OnHoverImage = Nothing
+        Me.btnClass.OnPressedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnClass.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.btnClass.Size = New System.Drawing.Size(118, 35)
+        Me.btnClass.TabIndex = 12
+        Me.btnClass.Text = "Class"
+        Me.btnClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnGenerateReports
         '
@@ -1124,4 +1151,5 @@ Partial Class AdminMenu
     Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnCose As Guna.UI.WinForms.GunaButton
     Friend WithEvents ComboBox As ComboBox
+    Friend WithEvents btnClass As Guna.UI.WinForms.GunaButton
 End Class
