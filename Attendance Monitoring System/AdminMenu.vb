@@ -1,4 +1,5 @@
-﻿Public Class AdminMenu
+﻿Imports MySql.Data.MySqlClient
+Public Class AdminMenu
     Dim table As New Database
     Dim tab As New Database
     Dim iExit As DialogResult
@@ -26,19 +27,20 @@
 
     Private Sub AdminMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDate.Text = (Today.Day & "-" & Today.Month & "-" & Today.Year)
-
+        studentDetails.Visible = False
         txt_Time.Text = (TimeOfDay)
         Dim signin As New Sign_In
         Dim user As String = username
         lblusername.Text = "Welcome " & user
-        'populate Datagrids with data
+
 
         fetchDataFromDatabase()
-        'DataGridStudent.DataSource = tab.DatabaseTable
-    End Sub
 
-    Private Sub btnManageCourse_Click(sender As Object, e As EventArgs)
-        Courses.ShowDialog()
+        ComboBox.Items.Add("---select---")
+        ComboBox.Items.Add("Lecturer")
+        ComboBox.Items.Add("Student")
+        ComboBox.SelectedIndex = 0
+
     End Sub
 
     Private Sub btnManageStudent_Click(sender As Object, e As EventArgs)
@@ -73,47 +75,35 @@
 
     'Fetch Data From Database
     Sub fetchDataFromDatabase()
-        Dim signIn As New Sign_In
 
-        'fetch students data
-        tab.ExecuteQuery("select student.stuID AS 'STUDENT-ID', concat(student.fName,' ',student.lName) AS NAME,
-                          student.DoB,gender.gender AS GENDER,programme.proName AS PROGRAMME,student.phone AS PHONE,student.email AS EMAIL
-                          from student,gender,programme WHERE student.genderID=gender.genderID AND student.programme=programme.proID ;")
-        If tab.HasException(True) Then Exit Sub
-        studentsData.DataSource = tab.DatabaseTable
+        'count students 
+        tab.ExecuteQuery("select * from student;")
+        student.Text = tab.RecordCount
 
-        'fetch lectures data
-        tab.ExecuteQuery("select lecturer.lecID AS ID,lecturer.fullName AS NAME,
-                          gender.gender AS GENDER,lecturer.phone AS PHONE, lecturer.email AS EMAIL
-                          from lecturer JOIN gender ON lecturer.gender=gender.genderID ;")
-        If tab.HasException(True) Then Exit Sub
-        LecturersData.DataSource = tab.DatabaseTable
+        'count lectures
+        tab.ExecuteQuery("select * from lecturer;")
+        lectures.Text = tab.RecordCount
 
-        'fetch and display courses
-        tab.ExecuteQuery("select courseID AS CODE,courseName AS COURSE,duration AS CREDIT,start_time AS TIME from course ;")
-        If tab.HasException(True) Then Exit Sub
-        CoursesData.DataSource = tab.DatabaseTable
+        'count courses
+        tab.ExecuteQuery("select * from course ;")
+        course.Text = tab.RecordCount
 
-        'fetch and display programmes
-        tab.ExecuteQuery("select proID as ID, proName as PROGRAMME from programme ;")
-        If tab.HasException(True) Then Exit Sub
-        'programmesData.DataSource = tab.DatabaseTable
-
-        'fetch and display venues
-        tab.ExecuteQuery("select venueID AS ID, venueName AS VENUE from venue ;")
-        If tab.HasException(True) Then Exit Sub
-        'venueData.DataSource = tab.DatabaseTable
+        'count programmes
+        tab.ExecuteQuery("select * from programme ;")
+        programmes.Text = tab.RecordCount
 
 
-        'fetch and display facultis
-        tab.ExecuteQuery("select facultyID AS ID, facultyName AS FACULTY from faculty ;")
-        If tab.HasException(True) Then Exit Sub
-        facultyData.DataSource = tab.DatabaseTable
+        'count venues
+        tab.ExecuteQuery("select count(venueID) from venue ;")
+        venues.Text = tab.RecordCount
 
+        'count faculties
+        tab.ExecuteQuery("select * from faculty ;")
+        faculties.Text = tab.RecordCount
 
-        tab.ExecuteQuery("select deptID AS ID, deptName AS FACULTY from department ;")
-        If tab.HasException(True) Then Exit Sub
-        deptData.DataSource = tab.DatabaseTable
+        'count department
+        tab.ExecuteQuery("select * from department ;")
+        departments.Text = tab.RecordCount
 
     End Sub
 
@@ -142,42 +132,95 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        Report.ShowDialog()
-    End Sub
-
-    Private Sub btnManageCourses_Click(sender As Object, e As EventArgs) Handles btnManageCourses.Click
-        Courses.ShowDialog()
-    End Sub
-
-    Private Sub btnStudentAttendance_Click(sender As Object, e As EventArgs) Handles btnStudentAttendance.Click
-        Attendance.ShowDialog()
-    End Sub
-
-    Private Sub btnManageLecturers_Click(sender As Object, e As EventArgs) Handles btnManageLecturers.Click
-        Lecturers.ShowDialog()
-    End Sub
-
-    Private Sub btnManageStudent_Click_1(sender As Object, e As EventArgs) Handles btnManageStudent.Click
-        Manage_Student.ShowDialog()
-    End Sub
-
-
-    Private Sub Panel5_MouseHover(sender As Object, e As EventArgs) Handles Panel5.MouseHover
-        fetchDataFromDatabase()
-    End Sub
-
-    Private Sub Panel8_Click(sender As Object, e As EventArgs) Handles Panel8.Click, Panel7.Click, Panel14.Click, Panel11.Click, Panel10.Click
-        fetchDataFromDatabase()
-    End Sub
-
-    Private Sub Panel8_MouseHover(sender As Object, e As EventArgs) Handles Panel8.MouseHover
-        fetchDataFromDatabase()
-    End Sub
-
+    'Logout button
     Private Sub buttonLogout_Click_1(sender As Object, e As EventArgs) Handles buttonLogout.Click
         Me.Hide()
         Sign_In.Show()
 
     End Sub
+
+    'Lecture button
+    Private Sub btnManageLecturers_Click_1(sender As Object, e As EventArgs) Handles btnManageLecturers.Click
+        Lecturers.ShowDialog()
+    End Sub
+
+    'Student Details button
+    Private Sub btnManageStudent_Click_2(sender As Object, e As EventArgs) Handles btnManageStudent.Click
+        Manage_Student.ShowDialog()
+    End Sub
+
+    'Attendance button
+    Private Sub btnStudentAttendance_Click_1(sender As Object, e As EventArgs) Handles btnStudentAttendance.Click
+        Attendance.ShowDialog()
+    End Sub
+
+    'Course button
+    Private Sub btnManageCourses_Click_1(sender As Object, e As EventArgs) Handles btnManageCourses.Click
+        Courses.ShowDialog()
+    End Sub
+
+    'Report button
+    Private Sub btnGenerateReports_Click_1(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
+        Report.ShowDialog()
+    End Sub
+
+    Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
+        Dim path As String = "C:\Backup.sql"
+        Dim cmd = New MySqlCommand()
+
+
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim result As Integer
+
+        'for selected student
+        If ComboBox.SelectedItem.Equals("Student") Then
+            Try
+                tab.ExecuteQuery("select student.stuID AS 'ID', student.fName AS 'FIRSTNAME',student.lName AS 'LASTNAME',
+                          student.DoB,gender.gender AS GENDER,programme.proName AS PROGRAMME,student.phone AS PHONE,student.email AS EMAIL
+                          from student,gender,programme WHERE student.genderID=gender.genderID AND student.programme=programme.proID 
+                            AND (fName Like'" & txtsearch.Text & "' OR lName Like'" & txtsearch.Text & "' OR stuID Like'" & txtsearch.Text & "');")
+                result = tab.DatabaseTable.Rows.Count
+                If result = 0 Then
+                    iExit = MessageBox.Show(txtsearch.Text & " " & "Student name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    DetailsView.DataSource = tab.DatabaseTable
+                    txtsearch.Clear()
+                End If
+
+            Catch ex As Exception
+                iExit = MessageBox.Show("Record NOT found ", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
+        ElseIf ComboBox.SelectedItem.Equals("Lecturer") Then
+            Try
+                tab.ExecuteQuery("select lecturer.lecID AS ID, lecturer.fullName AS NAME,lecturer.DoB AS BIRTHDATE,
+                          gender.gender AS GENDER,lecturer.phone AS PHONE, lecturer.email AS EMAIL
+                          from lecturer JOIN gender ON lecturer.gender=gender.genderID where
+                          fullName LIKE '" & txtsearch.Text & "' OR lecID LIKE'" & txtsearch.Text & "';")
+
+                result = tab.DatabaseTable.Rows.Count
+                If result = 0 Then
+                    iExit = MessageBox.Show(txtsearch.Text & " " & "Lecturer name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    DetailsView.DataSource = tab.DatabaseTable
+                    txtsearch.Clear()
+                End If
+
+            Catch ex As Exception
+                iExit = MessageBox.Show("Record NOT found ", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
+        studentDetails.Visible = True
+    End Sub
+
+    Private Sub btnCose_Click(sender As Object, e As EventArgs) Handles btnCose.Click
+        studentDetails.Visible = False
+    End Sub
+
 End Class

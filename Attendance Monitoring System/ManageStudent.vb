@@ -71,7 +71,7 @@
             tab.ExecuteQuery("select student.stuID AS 'STUDENT-ID', student.fName AS 'FIRSTNAME',student.lName AS 'LASTNAME',
                           student.DoB,gender.gender AS GENDER,programme.proName AS PROGRAMME,student.phone AS PHONE,student.email AS EMAIL
                           from student,gender,programme WHERE student.genderID=gender.genderID AND student.programme=programme.proID 
-                            AND (fName Like'" & txtsearch.Text & "' OR lName Like'" & txtsearch.Text & "' OR stuID Like'" & txtsearch.Text & "');")
+                            AND (fName Like'" & txtsearch.Text & "' OR lName Like'" & txtsearch.Text & "' OR stuID Like'" & txtsearch.Text & "'  OR programme.proName Like'" & txtsearch.Text & "');")
             result = tab.DatabaseTable.Rows.Count
             If result = 0 Then
                 iExit = MessageBox.Show(txtsearch.Text & " " & "Do not match Any record", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)

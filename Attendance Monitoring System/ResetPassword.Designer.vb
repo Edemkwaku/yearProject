@@ -35,9 +35,7 @@ Partial Class ResetPassword
         Me.txtpassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtpassconfirm = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnContinue = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnDone = New Guna.UI2.WinForms.Guna2Button()
         Me.lblerror = New System.Windows.Forms.Label()
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'Panel1
@@ -221,41 +219,20 @@ Partial Class ResetPassword
         Me.btnContinue.BorderThickness = 1
         Me.btnContinue.CheckedState.Parent = Me.btnContinue
         Me.btnContinue.CustomImages.Parent = Me.btnContinue
-        Me.btnContinue.FillColor = System.Drawing.Color.Lime
+        Me.btnContinue.FillColor = System.Drawing.Color.RoyalBlue
         Me.btnContinue.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnContinue.ForeColor = System.Drawing.Color.White
         Me.btnContinue.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnContinue.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnContinue.HoverState.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnContinue.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnContinue.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnContinue.HoverState.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnContinue.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnContinue.HoverState.Parent = Me.btnContinue
-        Me.btnContinue.Location = New System.Drawing.Point(42, 217)
+        Me.btnContinue.Location = New System.Drawing.Point(112, 214)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.ShadowDecoration.Parent = Me.btnContinue
         Me.btnContinue.Size = New System.Drawing.Size(76, 26)
         Me.btnContinue.TabIndex = 2
         Me.btnContinue.Text = "Submit"
-        '
-        'btnDone
-        '
-        Me.btnDone.BorderColor = System.Drawing.Color.Lime
-        Me.btnDone.BorderRadius = 5
-        Me.btnDone.BorderThickness = 1
-        Me.btnDone.CheckedState.Parent = Me.btnDone
-        Me.btnDone.CustomImages.Parent = Me.btnDone
-        Me.btnDone.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDone.ForeColor = System.Drawing.Color.White
-        Me.btnDone.HoverState.BorderColor = System.Drawing.Color.Lime
-        Me.btnDone.HoverState.FillColor = System.Drawing.Color.CornflowerBlue
-        Me.btnDone.HoverState.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDone.HoverState.ForeColor = System.Drawing.Color.Lime
-        Me.btnDone.HoverState.Parent = Me.btnDone
-        Me.btnDone.Location = New System.Drawing.Point(124, 217)
-        Me.btnDone.Name = "btnDone"
-        Me.btnDone.ShadowDecoration.Parent = Me.btnDone
-        Me.btnDone.Size = New System.Drawing.Size(76, 26)
-        Me.btnDone.TabIndex = 5
-        Me.btnDone.Text = "Done"
         '
         'lblerror
         '
@@ -267,38 +244,14 @@ Partial Class ResetPassword
         Me.lblerror.Size = New System.Drawing.Size(0, 17)
         Me.lblerror.TabIndex = 5
         '
-        'btnLogin
-        '
-        Me.btnLogin.BorderColor = System.Drawing.Color.Yellow
-        Me.btnLogin.BorderRadius = 5
-        Me.btnLogin.BorderThickness = 1
-        Me.btnLogin.CheckedState.Parent = Me.btnLogin
-        Me.btnLogin.CustomImages.Parent = Me.btnLogin
-        Me.btnLogin.FillColor = System.Drawing.Color.Orange
-        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.HoverState.BorderColor = System.Drawing.Color.Orange
-        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.Orange
-        Me.btnLogin.HoverState.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnLogin.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.HoverState.Parent = Me.btnLogin
-        Me.btnLogin.Location = New System.Drawing.Point(206, 217)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
-        Me.btnLogin.Size = New System.Drawing.Size(76, 26)
-        Me.btnLogin.TabIndex = 78
-        Me.btnLogin.Text = "Login"
-        '
         'ResetPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(316, 261)
-        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnclose)
         Me.Controls.Add(Me.lblerror)
-        Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.btnContinue)
         Me.Controls.Add(Me.txtpassconfirm)
         Me.Controls.Add(Me.txtpassword)
@@ -332,7 +285,5 @@ Partial Class ResetPassword
     Friend WithEvents txtpassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtpassconfirm As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnContinue As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnDone As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblerror As Label
-    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
 End Class

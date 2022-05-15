@@ -77,7 +77,7 @@ Partial Class Sign_In
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Purple
-        Me.Label1.Location = New System.Drawing.Point(185, 9)
+        Me.Label1.Location = New System.Drawing.Point(185, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 30)
         Me.Label1.TabIndex = 0
@@ -93,7 +93,6 @@ Partial Class Sign_In
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Location = New System.Drawing.Point(23, 74)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Enabled = True
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
         Me.Guna2Panel2.Size = New System.Drawing.Size(391, 203)
         Me.Guna2Panel2.TabIndex = 3
@@ -113,9 +112,9 @@ Partial Class Sign_In
         '
         Me.button_SignIn.CheckedState.Parent = Me.button_SignIn
         Me.button_SignIn.CustomImages.Parent = Me.button_SignIn
-        Me.button_SignIn.FillColor = System.Drawing.Color.White
+        Me.button_SignIn.FillColor = System.Drawing.Color.RoyalBlue
         Me.button_SignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button_SignIn.ForeColor = System.Drawing.Color.Green
+        Me.button_SignIn.ForeColor = System.Drawing.Color.White
         Me.button_SignIn.HoverState.Parent = Me.button_SignIn
         Me.button_SignIn.Location = New System.Drawing.Point(133, 141)
         Me.button_SignIn.Name = "button_SignIn"
