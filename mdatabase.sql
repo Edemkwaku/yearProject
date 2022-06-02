@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2022 at 02:59 PM
+-- Generation Time: May 16, 2022 at 11:40 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -30,12 +30,41 @@ SET time_zone = "+00:00";
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL,
   `stuID` varchar(10) NOT NULL,
-  `courseID` varchar(20) NOT NULL,
+  `class` varchar(20) NOT NULL,
+  `course` varchar(20) NOT NULL,
+  `attend` int(11) NOT NULL,
   `attend_date` date NOT NULL,
   `inTime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `outTime` timestamp NOT NULL DEFAULT current_timestamp(),
-  `remark` varchar(50) NOT NULL
+  `outTime` time DEFAULT NULL,
+  `remark` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`id`, `stuID`, `class`, `course`, `attend`, `attend_date`, `inTime`, `outTime`, `remark`) VALUES
+(26, '5675', 'ICT3', 'ICT022', 9, '2022-05-16', '2022-05-16 09:26:47', NULL, NULL),
+(27, '5675', 'ICT3', 'CSC', 2, '2022-05-16', '2022-05-16 09:24:13', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `class`
+--
+
+CREATE TABLE `class` (
+  `classID` varchar(20) NOT NULL,
+  `className` varchar(50) NOT NULL,
+  `programme` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`classID`, `className`, `programme`) VALUES
+('ICT3', 'HND ICT3', 'ict200');
 
 -- --------------------------------------------------------
 
@@ -59,9 +88,8 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`courseID`, `courseName`, `Duration`, `programme`, `lecID`, `venue`, `start_time`, `end_time`) VALUES
-('456', 'fsdfg', 3, 'csc100', '47', 'V13', '02:00:00', '04:00:00'),
-('457', 'ooo', 3, 'ict200', '47', 'v11', '04:00:00', '07:00:00'),
-('458', 'ddd', 3, 'ict200', '47', '67', '04:00:00', '07:00:00');
+('CSC', 'C++ Programming', 3, 'csc100', '345', 'v11', '09:00:00', '11:00:00'),
+('ICT022', 'C++', 3, 'ict200', '345', 'v11', '09:00:00', '11:00:00');
 
 -- --------------------------------------------------------
 
@@ -140,7 +168,8 @@ CREATE TABLE `lecturer` (
 --
 
 INSERT INTO `lecturer` (`lecID`, `fullName`, `DoB`, `email`, `gender`, `phone`) VALUES
-('47', 'Avorley ', '2022-04-12', 'sdfghjer', 1, '54568');
+('345', 'fdfd', '2022-04-12', 'debg', 1, '0223435544'),
+('453', 'Edem', '2022-04-06', 'edem@5', 1, '878990076665');
 
 -- --------------------------------------------------------
 
@@ -229,6 +258,8 @@ INSERT INTO `users` (`username`, `password`, `role`) VALUES
 ('edem', 'edem@kwaku', 1),
 ('edem1', '11111111', 2),
 ('edem2', 'edem@kwaku2', 3),
+('hakim', '6523ydwe63445', 3),
+('kwaku', 'MD5edemkwau@', 1),
 ('ytrtrtt', 'yyyyyyyyyyyy', 3);
 
 -- --------------------------------------------------------
@@ -261,7 +292,16 @@ INSERT INTO `venue` (`venueID`, `venueName`) VALUES
 ALTER TABLE `attendance`
   ADD PRIMARY KEY (`id`),
   ADD KEY `attendance_ibfk_1` (`stuID`),
-  ADD KEY `attendance_ibfk_2` (`courseID`);
+  ADD KEY `class` (`class`),
+  ADD KEY `course` (`course`);
+
+--
+-- Indexes for table `class`
+--
+ALTER TABLE `class`
+  ADD PRIMARY KEY (`classID`),
+  ADD UNIQUE KEY `className` (`className`),
+  ADD KEY `programme` (`programme`);
 
 --
 -- Indexes for table `course`
@@ -344,7 +384,7 @@ ALTER TABLE `venue`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
@@ -355,7 +395,14 @@ ALTER TABLE `attendance`
 --
 ALTER TABLE `attendance`
   ADD CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`stuID`) REFERENCES `student` (`stuID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`courseID`) REFERENCES `course` (`courseID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `class` FOREIGN KEY (`class`) REFERENCES `class` (`classID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `course` FOREIGN KEY (`course`) REFERENCES `course` (`courseID`);
+
+--
+-- Constraints for table `class`
+--
+ALTER TABLE `class`
+  ADD CONSTRAINT `programme` FOREIGN KEY (`programme`) REFERENCES `programme` (`proID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `course`

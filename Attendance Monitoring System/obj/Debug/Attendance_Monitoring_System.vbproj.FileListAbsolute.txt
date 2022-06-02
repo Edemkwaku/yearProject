@@ -44,3 +44,4 @@ C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance
 C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbproj.Attendance Monitoring System.exe.config
 C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.ResetPassword.resources
 C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.vbprojResolveAssemblyReference.cache
+C:\Users\Edem\Desktop\myFolders\Projects\Attendance Monitoring System\Attendance Monitoring System\obj\Debug\Attendance_Monitoring_System.ManageProgrammes.resources

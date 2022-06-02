@@ -23,10 +23,12 @@ Partial Class Lecturers_Page
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lecturers_Page))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.btnClose = New Guna.UI.WinForms.GunaButton()
         Me.lname = New Guna.UI.WinForms.GunaLabel()
         Me.btnLogout = New Guna.UI.WinForms.GunaButton()
@@ -46,6 +48,7 @@ Partial Class Lecturers_Page
         Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.GunaPanel1.SuspendLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GunaPanel5.SuspendLayout()
         Me.studentDetails.SuspendLayout()
         CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +57,7 @@ Partial Class Lecturers_Page
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
+        Me.GunaPanel1.Controls.Add(Me.GunaPictureBox1)
         Me.GunaPanel1.Controls.Add(Me.btnClose)
         Me.GunaPanel1.Controls.Add(Me.lname)
         Me.GunaPanel1.Controls.Add(Me.btnLogout)
@@ -63,6 +67,17 @@ Partial Class Lecturers_Page
         Me.GunaPanel1.Name = "GunaPanel1"
         Me.GunaPanel1.Size = New System.Drawing.Size(1071, 30)
         Me.GunaPanel1.TabIndex = 5
+        '
+        'GunaPictureBox1
+        '
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(751, 3)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox1.TabIndex = 17
+        Me.GunaPictureBox1.TabStop = False
         '
         'btnClose
         '
@@ -94,7 +109,7 @@ Partial Class Lecturers_Page
         Me.lname.AutoSize = True
         Me.lname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lname.ForeColor = System.Drawing.Color.Violet
-        Me.lname.Location = New System.Drawing.Point(677, 6)
+        Me.lname.Location = New System.Drawing.Point(781, 6)
         Me.lname.Name = "lname"
         Me.lname.Size = New System.Drawing.Size(65, 17)
         Me.lname.TabIndex = 6
@@ -138,7 +153,7 @@ Partial Class Lecturers_Page
         '
         'GunaPanel5
         '
-        Me.GunaPanel5.BackColor = System.Drawing.Color.Purple
+        Me.GunaPanel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GunaPanel5.Controls.Add(Me.btnGenerateReport)
         Me.GunaPanel5.Controls.Add(Me.btnMarkAttendance)
         Me.GunaPanel5.Controls.Add(Me.btnViewAttendance)
@@ -161,7 +176,7 @@ Partial Class Lecturers_Page
         Me.btnGenerateReport.ForeColor = System.Drawing.Color.White
         Me.btnGenerateReport.Image = Nothing
         Me.btnGenerateReport.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnGenerateReport.Location = New System.Drawing.Point(0, 350)
+        Me.btnGenerateReport.Location = New System.Drawing.Point(0, 299)
         Me.btnGenerateReport.Name = "btnGenerateReport"
         Me.btnGenerateReport.OnHoverBaseColor = System.Drawing.Color.CornflowerBlue
         Me.btnGenerateReport.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -171,7 +186,6 @@ Partial Class Lecturers_Page
         Me.btnGenerateReport.Size = New System.Drawing.Size(121, 45)
         Me.btnGenerateReport.TabIndex = 5
         Me.btnGenerateReport.Text = "Generate Report"
-        Me.btnGenerateReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnMarkAttendance
         '
@@ -196,7 +210,6 @@ Partial Class Lecturers_Page
         Me.btnMarkAttendance.Size = New System.Drawing.Size(121, 45)
         Me.btnMarkAttendance.TabIndex = 5
         Me.btnMarkAttendance.Text = "Mark Attendance"
-        Me.btnMarkAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnViewAttendance
         '
@@ -211,7 +224,7 @@ Partial Class Lecturers_Page
         Me.btnViewAttendance.ForeColor = System.Drawing.Color.White
         Me.btnViewAttendance.Image = Nothing
         Me.btnViewAttendance.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnViewAttendance.Location = New System.Drawing.Point(-2, 225)
+        Me.btnViewAttendance.Location = New System.Drawing.Point(-2, 209)
         Me.btnViewAttendance.Name = "btnViewAttendance"
         Me.btnViewAttendance.OnHoverBaseColor = System.Drawing.Color.CornflowerBlue
         Me.btnViewAttendance.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -221,7 +234,6 @@ Partial Class Lecturers_Page
         Me.btnViewAttendance.Size = New System.Drawing.Size(121, 45)
         Me.btnViewAttendance.TabIndex = 5
         Me.btnViewAttendance.Text = "Attendance"
-        Me.btnViewAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnStudentDetails
         '
@@ -236,7 +248,7 @@ Partial Class Lecturers_Page
         Me.btnStudentDetails.ForeColor = System.Drawing.Color.White
         Me.btnStudentDetails.Image = Nothing
         Me.btnStudentDetails.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnStudentDetails.Location = New System.Drawing.Point(-2, 285)
+        Me.btnStudentDetails.Location = New System.Drawing.Point(-2, 254)
         Me.btnStudentDetails.Name = "btnStudentDetails"
         Me.btnStudentDetails.OnHoverBaseColor = System.Drawing.Color.CornflowerBlue
         Me.btnStudentDetails.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -246,11 +258,10 @@ Partial Class Lecturers_Page
         Me.btnStudentDetails.Size = New System.Drawing.Size(121, 45)
         Me.btnStudentDetails.TabIndex = 5
         Me.btnStudentDetails.Text = "Student Details"
-        Me.btnStudentDetails.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GunaPanel2
         '
-        Me.GunaPanel2.BackColor = System.Drawing.Color.Purple
+        Me.GunaPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.GunaPanel2.Location = New System.Drawing.Point(0, 704)
         Me.GunaPanel2.Name = "GunaPanel2"
@@ -320,31 +331,31 @@ Partial Class Lecturers_Page
         '
         'DetailsView
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.DetailsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DetailsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DetailsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DetailsView.BackgroundColor = System.Drawing.Color.White
         Me.DetailsView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DetailsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DetailsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DetailsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DetailsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DetailsView.ColumnHeadersHeight = 18
         Me.DetailsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DetailsView.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DetailsView.DefaultCellStyle = DataGridViewCellStyle3
         Me.DetailsView.EnableHeadersVisualStyles = False
         Me.DetailsView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DetailsView.Location = New System.Drawing.Point(37, 53)
@@ -435,6 +446,7 @@ Partial Class Lecturers_Page
         Me.Text = "Lecturers_Page"
         Me.GunaPanel1.ResumeLayout(False)
         Me.GunaPanel1.PerformLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GunaPanel5.ResumeLayout(False)
         Me.studentDetails.ResumeLayout(False)
         CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -461,4 +473,5 @@ Partial Class Lecturers_Page
     Friend WithEvents DetailsView As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
 End Class

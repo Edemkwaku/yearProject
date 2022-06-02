@@ -22,7 +22,9 @@ Partial Class Lecturers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.btnRefresh = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
@@ -50,7 +52,7 @@ Partial Class Lecturers
         Me.btnDelete = New Guna.UI.WinForms.GunaButton()
         Me.btnUpdate = New Guna.UI.WinForms.GunaButton()
         Me.LecturersDataGrid = New System.Windows.Forms.DataGridView()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.LecturersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +80,14 @@ Partial Class Lecturers
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(761, 204)
         Me.Panel1.TabIndex = 17
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(493, 150)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(194, 27)
+        Me.txtEmail.TabIndex = 33
         '
         'btnRefresh
         '
@@ -490,13 +500,9 @@ Partial Class Lecturers
         Me.LecturersDataGrid.Size = New System.Drawing.Size(723, 220)
         Me.LecturersDataGrid.TabIndex = 25
         '
-        'txtEmail
+        'GunaDragControl1
         '
-        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(493, 150)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(194, 27)
-        Me.txtEmail.TabIndex = 33
+        Me.GunaDragControl1.TargetControl = Me
         '
         'Lecturers
         '
@@ -552,4 +558,5 @@ Partial Class Lecturers
     Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents LecturersDataGrid As DataGridView
     Friend WithEvents txtEmail As TextBox
+    Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
 End Class

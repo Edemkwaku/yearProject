@@ -97,4 +97,8 @@
     Private Sub btnCose_Click(sender As Object, e As EventArgs) Handles btnCose.Click
         studentDetails.Visible = False
     End Sub
+
+    Private Sub studentDetails_Paint(sender As Object, e As PaintEventArgs) Handles studentDetails.Paint
+
+    End Sub
 End Class

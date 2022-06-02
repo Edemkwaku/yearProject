@@ -31,9 +31,10 @@ Partial Class TakeAttendance
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.DateTime = New System.Windows.Forms.DateTimePicker()
         Me.courseCombo = New System.Windows.Forms.ComboBox()
         Me.comboLecturer = New System.Windows.Forms.ComboBox()
-        Me.ClassComboBox = New System.Windows.Forms.ComboBox()
+        Me.ClassCombo = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -158,9 +159,10 @@ Partial Class TakeAttendance
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel3.BorderRadius = 5
+        Me.Guna2Panel3.Controls.Add(Me.DateTime)
         Me.Guna2Panel3.Controls.Add(Me.courseCombo)
         Me.Guna2Panel3.Controls.Add(Me.comboLecturer)
-        Me.Guna2Panel3.Controls.Add(Me.ClassComboBox)
+        Me.Guna2Panel3.Controls.Add(Me.ClassCombo)
         Me.Guna2Panel3.Controls.Add(Me.Label4)
         Me.Guna2Panel3.Controls.Add(Me.Label3)
         Me.Guna2Panel3.Controls.Add(Me.Label5)
@@ -172,6 +174,15 @@ Partial Class TakeAttendance
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
         Me.Guna2Panel3.Size = New System.Drawing.Size(297, 183)
         Me.Guna2Panel3.TabIndex = 6
+        '
+        'DateTime
+        '
+        Me.DateTime.CustomFormat = "yyyy-MM-dd"
+        Me.DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTime.Location = New System.Drawing.Point(125, 14)
+        Me.DateTime.Name = "DateTime"
+        Me.DateTime.Size = New System.Drawing.Size(151, 20)
+        Me.DateTime.TabIndex = 4
         '
         'courseCombo
         '
@@ -197,17 +208,17 @@ Partial Class TakeAttendance
         Me.comboLecturer.Size = New System.Drawing.Size(151, 29)
         Me.comboLecturer.TabIndex = 3
         '
-        'ClassComboBox
+        'ClassCombo
         '
-        Me.ClassComboBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ClassComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ClassComboBox.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClassComboBox.FormattingEnabled = True
-        Me.ClassComboBox.Location = New System.Drawing.Point(125, 40)
-        Me.ClassComboBox.Name = "ClassComboBox"
-        Me.ClassComboBox.Size = New System.Drawing.Size(151, 29)
-        Me.ClassComboBox.TabIndex = 2
+        Me.ClassCombo.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.ClassCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ClassCombo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ClassCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClassCombo.FormattingEnabled = True
+        Me.ClassCombo.Location = New System.Drawing.Point(125, 40)
+        Me.ClassCombo.Name = "ClassCombo"
+        Me.ClassCombo.Size = New System.Drawing.Size(151, 29)
+        Me.ClassCombo.TabIndex = 2
         '
         'Label4
         '
@@ -295,9 +306,10 @@ Partial Class TakeAttendance
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ClassComboBox As ComboBox
+    Friend WithEvents ClassCombo As ComboBox
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel2 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents comboLecturer As ComboBox
     Friend WithEvents courseCombo As ComboBox
+    Friend WithEvents DateTime As DateTimePicker
 End Class

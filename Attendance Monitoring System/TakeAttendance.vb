@@ -1,9 +1,9 @@
 ﻿Public Class TakeAttendance
     Dim tab As New Database
-    Private id, cclass, lec, course As String
+    Private id, cclass, lec, course, fname, lname As String
     Private daydate As Date
 
-    Dim fname, lname As String
+    Dim result As Integer
 
     Private Sub buttonClose_Click(sender As Object, e As EventArgs) Handles buttonClose.Click
         Me.Close()
@@ -12,21 +12,19 @@
 
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        If txtID.Text.Equals("") Or ClassComboBox.SelectedIndex = 0 Or comboLecturer.SelectedIndex = 0 Then
+        If txtID.Text.Equals("") Or ClassCombo.SelectedIndex = 0 Or comboLecturer.SelectedIndex = 0 Then
             MsgBox("All fields are Required", MsgBoxStyle.Critical, "Required fields")
         Else
-            id = txtID.Text.ToUpper
-            cclass = ClassComboBox.SelectedItem
+            id = txtID.Text
+            cclass = ClassCombo.SelectedItem
             lec = comboLecturer.SelectedItem
-            daydate = Today.Date.ToShortDateString
             course = courseCombo.SelectedItem
 
-            tab.ExecuteQuery("select * from class where className like '" & cclass & "'")
-            cclass = tab.DatabaseTable(0)(0)
 
             tab.ExecuteQuery("select * from student where stuID like '" & id & "'")
-            If tab.HasException Then
-                MsgBox(tab.exception)
+            Dim data As String = tab.RecordCount
+            If data = 0 Then
+                MsgBox("No student found", MsgBoxStyle.Critical, "Unknown")
             Else
                 fname = tab.DatabaseTable(0)(1)
                 lname = tab.DatabaseTable(0)(2)
@@ -38,15 +36,19 @@
             tab.ExecuteQuery("select * from course where courseName like '" & course & "'")
             course = tab.DatabaseTable(0)(0)
 
-            tab.ExecuteQuery("select * from attendance where stuID like '" & id & "' and class like '" & cclass & "' and course like '" & course & "'")
-            Dim result As Integer = tab.RecordCount
+            tab.ExecuteQuery("select * from class where className like '" & cclass & "'")
+            cclass = tab.DatabaseTable(0)(0)
+
+
+            tab.ExecuteQuery("select stuID from attendance where stuID='" & id & "' AND class='" & cclass & "' AND course='" & course & "';")
+            result = tab.RecordCount
 
             If result > 0 Then
                 Try
-                    tab.ExecuteQuery("select * from attendance where stuID='" & id & "' and class='" & cclass & "' and course='" & course & "';")
-                    Dim attendance As Integer = tab.DatabaseTable(0)(4)
+                    tab.ExecuteQuery("select attend from attendance where stuID='" & id & "' and class='" & cclass & "' and course='" & course & "';")
+                    Dim attendance As Integer = tab.DatabaseTable(0)(0)
 
-                    tab.ExecuteQuery("UPDATE `attendance` SET `attend` = '" & attendance + 1 & "', WHERE stuID like '" & id & "' and class like '" & cclass & "' and course like '" & course & "';")
+                    tab.ExecuteQuery("UPDATE `attendance` SET `attend` = '" & attendance + 1 & "', attend_date='" & DateTime.Text & "' WHERE stuID like '" & id & "' and class ='" & cclass & "' and course='" & course & "';")
                     If tab.HasException Then
                         tab.exception = "Failed to Mark attendance"
                         MsgBox(tab.exception, MsgBoxStyle.Critical, "Mark failed")
@@ -60,7 +62,8 @@
 
             Else
                 Try
-                    tab.ExecuteQuery("insert into attendance(stuID,class,course,attend,attend_date) values('" & id & "','" & cclass & "','" & course & "',1,'" & daydate & "')")
+                    daydate = Today.Date.ToShortDateString
+                    tab.ExecuteQuery("insert into attendance(stuID,class,course,attend,attend_date) values('" & id & "','" & cclass & "','" & course & "',1,'" & DateTime.Text & "')")
                     If tab.HasException Then
                         tab.exception = "Failed to Mark attendance"
                         MsgBox(tab.exception, MsgBoxStyle.Critical, "Mark failed")
@@ -86,22 +89,22 @@
 
     'load data into class combobox
     Sub loadClassComboBox()
-        tab.ExecuteQuery("SELECT * from class ;")
+        tab.ExecuteQuery("SELECT * from class where className ='" & s_class & "';")
         tab.HasException()
 
-        ClassComboBox.Items.Clear()
-        ClassComboBox.Items.Add("---class---")
-        ClassComboBox.SelectedIndex = 0
+        ClassCombo.Items.Clear()
+        ClassCombo.Items.Add("---class---")
+        ClassCombo.SelectedIndex = 0
 
         For i = 0 To tab.RecordCount - 1
             Dim x As Integer = 1
-            ClassComboBox.Items.Add(tab.DatabaseTable(i)(x))
+            ClassCombo.Items.Add(tab.DatabaseTable(i)(x))
         Next
     End Sub
 
-    'load data into class combobox
+    'load data into course combobox
     Sub loadCourseComboBox()
-        tab.ExecuteQuery("SELECT * from course ;")
+        tab.ExecuteQuery("SELECT * from course;")
         tab.HasException()
 
         courseCombo.Items.Clear()
@@ -114,7 +117,7 @@
         Next
     End Sub
 
-    'load data into class combobox
+    'load data into lecturer combobox
     Sub loadLecturerComboBox()
         tab.ExecuteQuery("SELECT * from lecturer ;")
         tab.HasException()

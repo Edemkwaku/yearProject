@@ -24,15 +24,15 @@ Partial Class NornalUserPage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.username = New Guna.UI.WinForms.GunaLabel()
         Me.btnLogout = New Guna.UI.WinForms.GunaButton()
         Me.btnClose = New Guna.UI.WinForms.GunaButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel4 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel5 = New Guna.UI.WinForms.GunaPanel()
-        Me.btnMarkAttendance = New Guna.UI.WinForms.GunaButton()
         Me.btnViewAttendance = New Guna.UI.WinForms.GunaButton()
+        Me.btnMarkAttendance = New Guna.UI.WinForms.GunaButton()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.GunaPanel1.SuspendLayout()
         Me.GunaPanel5.SuspendLayout()
@@ -41,26 +41,26 @@ Partial Class NornalUserPage
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.Purple
-        Me.GunaPanel1.Controls.Add(Me.GunaLabel1)
+        Me.GunaPanel1.Controls.Add(Me.username)
         Me.GunaPanel1.Controls.Add(Me.btnLogout)
         Me.GunaPanel1.Controls.Add(Me.btnClose)
         Me.GunaPanel1.Controls.Add(Me.Label1)
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GunaPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(1024, 30)
+        Me.GunaPanel1.Size = New System.Drawing.Size(1052, 30)
         Me.GunaPanel1.TabIndex = 0
         '
-        'GunaLabel1
+        'username
         '
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel1.ForeColor = System.Drawing.Color.Violet
-        Me.GunaLabel1.Location = New System.Drawing.Point(594, 4)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(74, 20)
-        Me.GunaLabel1.TabIndex = 6
-        Me.GunaLabel1.Text = "Welcome"
+        Me.username.AutoSize = True
+        Me.username.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.username.ForeColor = System.Drawing.Color.Violet
+        Me.username.Location = New System.Drawing.Point(594, 4)
+        Me.username.Name = "username"
+        Me.username.Size = New System.Drawing.Size(74, 20)
+        Me.username.TabIndex = 6
+        Me.username.Text = "Welcome"
         '
         'btnLogout
         '
@@ -100,7 +100,7 @@ Partial Class NornalUserPage
         Me.btnClose.ForeColor = System.Drawing.Color.White
         Me.btnClose.Image = Nothing
         Me.btnClose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnClose.Location = New System.Drawing.Point(984, 0)
+        Me.btnClose.Location = New System.Drawing.Point(1013, 0)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnClose.OnHoverBorderColor = System.Drawing.Color.Red
@@ -127,18 +127,18 @@ Partial Class NornalUserPage
         '
         Me.GunaPanel2.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GunaPanel2.Location = New System.Drawing.Point(0, 584)
+        Me.GunaPanel2.Location = New System.Drawing.Point(0, 673)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(1024, 5)
+        Me.GunaPanel2.Size = New System.Drawing.Size(1052, 5)
         Me.GunaPanel2.TabIndex = 1
         '
         'GunaPanel4
         '
         Me.GunaPanel4.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel4.Location = New System.Drawing.Point(1019, 30)
+        Me.GunaPanel4.Location = New System.Drawing.Point(1047, 30)
         Me.GunaPanel4.Name = "GunaPanel4"
-        Me.GunaPanel4.Size = New System.Drawing.Size(5, 554)
+        Me.GunaPanel4.Size = New System.Drawing.Size(5, 643)
         Me.GunaPanel4.TabIndex = 3
         '
         'GunaPanel5
@@ -149,33 +149,8 @@ Partial Class NornalUserPage
         Me.GunaPanel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel5.Location = New System.Drawing.Point(0, 30)
         Me.GunaPanel5.Name = "GunaPanel5"
-        Me.GunaPanel5.Size = New System.Drawing.Size(128, 554)
+        Me.GunaPanel5.Size = New System.Drawing.Size(128, 643)
         Me.GunaPanel5.TabIndex = 4
-        '
-        'btnMarkAttendance
-        '
-        Me.btnMarkAttendance.AnimationHoverSpeed = 0.07!
-        Me.btnMarkAttendance.AnimationSpeed = 0.03!
-        Me.btnMarkAttendance.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMarkAttendance.BorderColor = System.Drawing.Color.Blue
-        Me.btnMarkAttendance.BorderSize = 1
-        Me.btnMarkAttendance.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnMarkAttendance.FocusedColor = System.Drawing.Color.Empty
-        Me.btnMarkAttendance.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMarkAttendance.ForeColor = System.Drawing.Color.White
-        Me.btnMarkAttendance.Image = Nothing
-        Me.btnMarkAttendance.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnMarkAttendance.Location = New System.Drawing.Point(-1, 200)
-        Me.btnMarkAttendance.Name = "btnMarkAttendance"
-        Me.btnMarkAttendance.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMarkAttendance.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.btnMarkAttendance.OnHoverForeColor = System.Drawing.Color.White
-        Me.btnMarkAttendance.OnHoverImage = Nothing
-        Me.btnMarkAttendance.OnPressedColor = System.Drawing.Color.Black
-        Me.btnMarkAttendance.Size = New System.Drawing.Size(130, 46)
-        Me.btnMarkAttendance.TabIndex = 5
-        Me.btnMarkAttendance.Text = "Mark Attendance"
-        Me.btnMarkAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnViewAttendance
         '
@@ -202,6 +177,31 @@ Partial Class NornalUserPage
         Me.btnViewAttendance.Text = "View Attendance"
         Me.btnViewAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'btnMarkAttendance
+        '
+        Me.btnMarkAttendance.AnimationHoverSpeed = 0.07!
+        Me.btnMarkAttendance.AnimationSpeed = 0.03!
+        Me.btnMarkAttendance.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMarkAttendance.BorderColor = System.Drawing.Color.Blue
+        Me.btnMarkAttendance.BorderSize = 1
+        Me.btnMarkAttendance.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btnMarkAttendance.FocusedColor = System.Drawing.Color.Empty
+        Me.btnMarkAttendance.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMarkAttendance.ForeColor = System.Drawing.Color.White
+        Me.btnMarkAttendance.Image = Nothing
+        Me.btnMarkAttendance.ImageSize = New System.Drawing.Size(20, 20)
+        Me.btnMarkAttendance.Location = New System.Drawing.Point(-1, 200)
+        Me.btnMarkAttendance.Name = "btnMarkAttendance"
+        Me.btnMarkAttendance.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMarkAttendance.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.btnMarkAttendance.OnHoverForeColor = System.Drawing.Color.White
+        Me.btnMarkAttendance.OnHoverImage = Nothing
+        Me.btnMarkAttendance.OnPressedColor = System.Drawing.Color.Black
+        Me.btnMarkAttendance.Size = New System.Drawing.Size(130, 46)
+        Me.btnMarkAttendance.TabIndex = 5
+        Me.btnMarkAttendance.Text = "Mark Attendance"
+        Me.btnMarkAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'GunaDragControl1
         '
         Me.GunaDragControl1.TargetControl = Me.GunaPanel1
@@ -210,7 +210,7 @@ Partial Class NornalUserPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1024, 589)
+        Me.ClientSize = New System.Drawing.Size(1052, 678)
         Me.Controls.Add(Me.GunaPanel5)
         Me.Controls.Add(Me.GunaPanel4)
         Me.Controls.Add(Me.GunaPanel2)
@@ -235,6 +235,6 @@ Partial Class NornalUserPage
     Friend WithEvents btnViewAttendance As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnMarkAttendance As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnLogout As Guna.UI.WinForms.GunaButton
-    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents username As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
 End Class

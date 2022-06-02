@@ -25,6 +25,7 @@ Partial Class Users
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Users))
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -36,6 +37,7 @@ Partial Class Users
         Me.btnUpdate = New Guna.UI.WinForms.GunaButton()
         Me.btnAdd = New Guna.UI.WinForms.GunaButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.studentClass = New System.Windows.Forms.ComboBox()
         Me.studentRole = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.AdminRole = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.lectureRule = New Guna.UI2.WinForms.Guna2RadioButton()
@@ -44,9 +46,10 @@ Partial Class Users
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.UsersDataGrid = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.UsersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GunaPanel2
@@ -55,7 +58,7 @@ Partial Class Users
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel2.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(5, 368)
+        Me.GunaPanel2.Size = New System.Drawing.Size(5, 454)
         Me.GunaPanel2.TabIndex = 10
         '
         'GunaPanel1
@@ -64,14 +67,14 @@ Partial Class Users
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GunaPanel1.Location = New System.Drawing.Point(789, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 368)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 454)
         Me.GunaPanel1.TabIndex = 9
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Purple
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 373)
+        Me.Panel1.Location = New System.Drawing.Point(0, 459)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(794, 5)
         Me.Panel1.TabIndex = 8
@@ -81,7 +84,7 @@ Partial Class Users
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Purple
-        Me.Label1.Location = New System.Drawing.Point(325, 8)
+        Me.Label1.Location = New System.Drawing.Point(67, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 30)
         Me.Label1.TabIndex = 0
@@ -130,7 +133,7 @@ Partial Class Users
         Me.btnDelete.ForeColor = System.Drawing.Color.White
         Me.btnDelete.Image = Nothing
         Me.btnDelete.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnDelete.Location = New System.Drawing.Point(285, 312)
+        Me.btnDelete.Location = New System.Drawing.Point(285, 394)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnDelete.OnHoverBorderColor = System.Drawing.Color.Red
@@ -157,7 +160,7 @@ Partial Class Users
         Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.Image = Nothing
         Me.btnClear.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnClear.Location = New System.Drawing.Point(203, 312)
+        Me.btnClear.Location = New System.Drawing.Point(203, 394)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnClear.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -184,7 +187,7 @@ Partial Class Users
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
         Me.btnUpdate.Image = Nothing
         Me.btnUpdate.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnUpdate.Location = New System.Drawing.Point(121, 312)
+        Me.btnUpdate.Location = New System.Drawing.Point(121, 394)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Orange
@@ -210,7 +213,7 @@ Partial Class Users
         Me.btnAdd.ForeColor = System.Drawing.Color.White
         Me.btnAdd.Image = Nothing
         Me.btnAdd.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnAdd.Location = New System.Drawing.Point(39, 312)
+        Me.btnAdd.Location = New System.Drawing.Point(39, 394)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAdd.OnHoverBorderColor = System.Drawing.Color.Green
@@ -225,18 +228,28 @@ Partial Class Users
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.studentClass)
         Me.Panel2.Controls.Add(Me.studentRole)
         Me.Panel2.Controls.Add(Me.AdminRole)
         Me.Panel2.Controls.Add(Me.lectureRule)
-        Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.txtUsername)
         Me.Panel2.Controls.Add(Me.GunaLabel3)
         Me.Panel2.Controls.Add(Me.GunaLabel2)
-        Me.Panel2.Location = New System.Drawing.Point(25, 92)
+        Me.Panel2.Location = New System.Drawing.Point(37, 185)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(321, 160)
         Me.Panel2.TabIndex = 17
+        '
+        'studentClass
+        '
+        Me.studentClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.studentClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.studentClass.FormattingEnabled = True
+        Me.studentClass.Location = New System.Drawing.Point(109, 81)
+        Me.studentClass.Name = "studentClass"
+        Me.studentClass.Size = New System.Drawing.Size(156, 24)
+        Me.studentClass.TabIndex = 27
         '
         'studentRole
         '
@@ -308,6 +321,7 @@ Partial Class Users
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(192, 25)
         Me.txtPassword.TabIndex = 24
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'txtUsername
         '
@@ -365,7 +379,7 @@ Partial Class Users
         Me.UsersDataGrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.UsersDataGrid.EnableHeadersVisualStyles = False
         Me.UsersDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UsersDataGrid.Location = New System.Drawing.Point(385, 72)
+        Me.UsersDataGrid.Location = New System.Drawing.Point(385, 132)
         Me.UsersDataGrid.Name = "UsersDataGrid"
         Me.UsersDataGrid.RowHeadersVisible = False
         Me.UsersDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -394,19 +408,23 @@ Partial Class Users
         Me.UsersDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UsersDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'TextBox1
+        'GunaPictureBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(109, 81)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(192, 25)
-        Me.TextBox1.TabIndex = 24
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(364, 28)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(55, 55)
+        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox1.TabIndex = 19
+        Me.GunaPictureBox1.TabStop = False
         '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(794, 378)
+        Me.ClientSize = New System.Drawing.Size(794, 464)
+        Me.Controls.Add(Me.GunaPictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.UsersDataGrid)
@@ -426,6 +444,7 @@ Partial Class Users
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.UsersDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -450,5 +469,6 @@ Partial Class Users
     Friend WithEvents lectureRule As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents UsersDataGrid As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents AdminRole As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents studentClass As ComboBox
 End Class

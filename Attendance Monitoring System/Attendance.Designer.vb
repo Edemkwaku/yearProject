@@ -31,10 +31,11 @@ Partial Class Attendance
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridAttendance = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.CoursesCombo = New Guna.UI.WinForms.GunaComboBox()
-        Me.txtStudentID = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSearch = New Guna.UI.WinForms.GunaButton()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
+        Me.ClassCombo = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DataGridAttendance, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,7 +85,7 @@ Partial Class Attendance
         '
         Me.Panel1.BackColor = System.Drawing.Color.Purple
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 461)
+        Me.Panel1.Location = New System.Drawing.Point(0, 570)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(722, 5)
         Me.Panel1.TabIndex = 3
@@ -117,11 +118,11 @@ Partial Class Attendance
         Me.DataGridAttendance.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridAttendance.EnableHeadersVisualStyles = False
         Me.DataGridAttendance.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DataGridAttendance.Location = New System.Drawing.Point(147, 159)
+        Me.DataGridAttendance.Location = New System.Drawing.Point(94, 159)
         Me.DataGridAttendance.Name = "DataGridAttendance"
         Me.DataGridAttendance.RowHeadersVisible = False
         Me.DataGridAttendance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridAttendance.Size = New System.Drawing.Size(507, 261)
+        Me.DataGridAttendance.Size = New System.Drawing.Size(507, 344)
         Me.DataGridAttendance.TabIndex = 4
         Me.DataGridAttendance.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.DataGridAttendance.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -158,44 +159,45 @@ Partial Class Attendance
         Me.CoursesCombo.ForeColor = System.Drawing.Color.Black
         Me.CoursesCombo.FormattingEnabled = True
         Me.CoursesCombo.Items.AddRange(New Object() {"Select Course"})
-        Me.CoursesCombo.Location = New System.Drawing.Point(12, 74)
+        Me.CoursesCombo.Location = New System.Drawing.Point(18, 74)
         Me.CoursesCombo.Name = "CoursesCombo"
         Me.CoursesCombo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CoursesCombo.OnHoverItemForeColor = System.Drawing.Color.White
         Me.CoursesCombo.Size = New System.Drawing.Size(142, 28)
         Me.CoursesCombo.TabIndex = 5
         '
-        'txtStudentID
+        'txtsearch
         '
-        Me.txtStudentID.Animated = True
-        Me.txtStudentID.BackColor = System.Drawing.Color.Transparent
-        Me.txtStudentID.BorderRadius = 5
-        Me.txtStudentID.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtStudentID.DefaultText = ""
-        Me.txtStudentID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtStudentID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtStudentID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtStudentID.DisabledState.Parent = Me.txtStudentID
-        Me.txtStudentID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtStudentID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtStudentID.FocusedState.Parent = Me.txtStudentID
-        Me.txtStudentID.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStudentID.ForeColor = System.Drawing.Color.Gray
-        Me.txtStudentID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtStudentID.HoverState.Parent = Me.txtStudentID
-        Me.txtStudentID.Location = New System.Drawing.Point(262, 75)
-        Me.txtStudentID.Name = "txtStudentID"
-        Me.txtStudentID.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.txtStudentID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtStudentID.PlaceholderText = "Enter student number"
-        Me.txtStudentID.SelectedText = ""
-        Me.txtStudentID.ShadowDecoration.BorderRadius = 2
-        Me.txtStudentID.ShadowDecoration.Depth = 5
-        Me.txtStudentID.ShadowDecoration.Enabled = True
-        Me.txtStudentID.ShadowDecoration.Parent = Me.txtStudentID
-        Me.txtStudentID.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
-        Me.txtStudentID.Size = New System.Drawing.Size(200, 23)
-        Me.txtStudentID.TabIndex = 6
+        Me.txtsearch.Animated = True
+        Me.txtsearch.BackColor = System.Drawing.Color.Transparent
+        Me.txtsearch.BorderRadius = 5
+        Me.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtsearch.DefaultText = ""
+        Me.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearch.DisabledState.Parent = Me.txtsearch
+        Me.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearch.FocusedState.Parent = Me.txtsearch
+        Me.txtsearch.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtsearch.ForeColor = System.Drawing.Color.Gray
+        Me.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearch.HoverState.Parent = Me.txtsearch
+        Me.txtsearch.Location = New System.Drawing.Point(207, 75)
+        Me.txtsearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtsearch.Name = "txtsearch"
+        Me.txtsearch.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.txtsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtsearch.PlaceholderText = "Enter student number"
+        Me.txtsearch.SelectedText = ""
+        Me.txtsearch.ShadowDecoration.BorderRadius = 2
+        Me.txtsearch.ShadowDecoration.Depth = 5
+        Me.txtsearch.ShadowDecoration.Enabled = True
+        Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
+        Me.txtsearch.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
+        Me.txtsearch.Size = New System.Drawing.Size(200, 23)
+        Me.txtsearch.TabIndex = 6
         '
         'btnSearch
         '
@@ -210,7 +212,7 @@ Partial Class Attendance
         Me.btnSearch.ForeColor = System.Drawing.Color.White
         Me.btnSearch.Image = Nothing
         Me.btnSearch.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnSearch.Location = New System.Drawing.Point(463, 75)
+        Me.btnSearch.Location = New System.Drawing.Point(408, 75)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSearch.OnHoverBorderColor = System.Drawing.Color.Green
@@ -229,7 +231,7 @@ Partial Class Attendance
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GunaPanel1.Location = New System.Drawing.Point(717, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 456)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 565)
         Me.GunaPanel1.TabIndex = 8
         '
         'GunaPanel2
@@ -238,21 +240,41 @@ Partial Class Attendance
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel2.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(5, 456)
+        Me.GunaPanel2.Size = New System.Drawing.Size(5, 565)
         Me.GunaPanel2.TabIndex = 9
+        '
+        'ClassCombo
+        '
+        Me.ClassCombo.BackColor = System.Drawing.Color.Transparent
+        Me.ClassCombo.BaseColor = System.Drawing.Color.White
+        Me.ClassCombo.BorderColor = System.Drawing.Color.Silver
+        Me.ClassCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ClassCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ClassCombo.FocusedColor = System.Drawing.Color.Empty
+        Me.ClassCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClassCombo.ForeColor = System.Drawing.Color.Black
+        Me.ClassCombo.FormattingEnabled = True
+        Me.ClassCombo.Items.AddRange(New Object() {"Select Course"})
+        Me.ClassCombo.Location = New System.Drawing.Point(541, 75)
+        Me.ClassCombo.Name = "ClassCombo"
+        Me.ClassCombo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClassCombo.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.ClassCombo.Size = New System.Drawing.Size(142, 28)
+        Me.ClassCombo.TabIndex = 5
         '
         'Attendance
         '
         Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(722, 466)
+        Me.ClientSize = New System.Drawing.Size(722, 575)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GunaPanel2)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Controls.Add(Me.btnSearch)
-        Me.Controls.Add(Me.txtStudentID)
+        Me.Controls.Add(Me.txtsearch)
+        Me.Controls.Add(Me.ClassCombo)
         Me.Controls.Add(Me.CoursesCombo)
         Me.Controls.Add(Me.DataGridAttendance)
         Me.Controls.Add(Me.Panel1)
@@ -273,8 +295,9 @@ Partial Class Attendance
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridAttendance As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents CoursesCombo As Guna.UI.WinForms.GunaComboBox
-    Friend WithEvents txtStudentID As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnSearch As Guna.UI.WinForms.GunaButton
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel2 As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents ClassCombo As Guna.UI.WinForms.GunaComboBox
 End Class

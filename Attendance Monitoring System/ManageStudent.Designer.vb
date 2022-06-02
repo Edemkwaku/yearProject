@@ -22,7 +22,8 @@ Partial Class Manage_Student
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnDelete = New Guna.UI.WinForms.GunaButton()
         Me.btnClear = New Guna.UI.WinForms.GunaButton()
         Me.btnUpdate = New Guna.UI.WinForms.GunaButton()
@@ -58,6 +59,7 @@ Partial Class Manage_Student
         Me.btnRefresh = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
@@ -507,15 +509,15 @@ Partial Class Manage_Student
         Me.StudentsDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.StudentsDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
         Me.StudentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentsDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentsDataGrid.DefaultCellStyle = DataGridViewCellStyle1
         Me.StudentsDataGrid.Location = New System.Drawing.Point(5, 42)
         Me.StudentsDataGrid.Name = "StudentsDataGrid"
         Me.StudentsDataGrid.ReadOnly = True
@@ -579,6 +581,10 @@ Partial Class Manage_Student
         Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
         Me.txtsearch.Size = New System.Drawing.Size(200, 25)
         Me.txtsearch.TabIndex = 27
+        '
+        'GunaDragControl1
+        '
+        Me.GunaDragControl1.TargetControl = Me
         '
         'Manage_Student
         '
@@ -646,4 +652,5 @@ Partial Class Manage_Student
     Friend WithEvents btnRefresh As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
 End Class

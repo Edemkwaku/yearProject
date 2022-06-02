@@ -22,6 +22,7 @@ Partial Class Department
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnClear = New Guna.UI.WinForms.GunaButton()
         Me.btnAdd = New Guna.UI.WinForms.GunaButton()
         Me.btnDelete = New Guna.UI.WinForms.GunaButton()
@@ -44,6 +45,7 @@ Partial Class Department
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.DepartmentData = New System.Windows.Forms.DataGridView()
+        Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.Guna2Panel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DepartmentData, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -383,6 +385,10 @@ Partial Class Department
         Me.DepartmentData.Size = New System.Drawing.Size(490, 211)
         Me.DepartmentData.TabIndex = 32
         '
+        'GunaDragControl1
+        '
+        Me.GunaDragControl1.TargetControl = Me
+        '
         'Department
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -431,4 +437,5 @@ Partial Class Department
     Friend WithEvents btnRefresh As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
 End Class

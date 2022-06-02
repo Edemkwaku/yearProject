@@ -1,5 +1,7 @@
 ﻿Imports System.Security.Cryptography
 Public Class Users
+
+    ' Dim encrypt As New EncryptAnd_Decrypt()
     Dim query As New Database
     Dim iExit As DialogResult
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -17,30 +19,6 @@ Public Class Users
         UpdateDatabaseRecord()
     End Sub
 
-    'Decrypt function
-    Public Function DecryptData(ByVal encrypteddata As String) As String
-        Dim encryptedBytes() As Byte = Convert.FromBase64String(encrypteddata)
-        Dim ms As New System.IO.MemoryStream
-        Dim decStream As New CryptoStream(ms, TripleDES.Create, System.Security.Cryptography.CryptoStreamMode.Write)
-
-        decStream.Write(encryptedBytes, 0, encryptedBytes.Length)
-        decStream.FlushFinalBlock()
-
-        Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
-    End Function
-
-    'Encrypt Funtion
-    Public Function EncryptData(ByVal plaintext As String) As String
-        Dim plaintextBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(plaintext)
-        Dim ms As New System.IO.MemoryStream
-        Dim encStream As New CryptoStream(ms, TripleDES.Create(), System.Security.Cryptography.CryptoStreamMode.Read)
-
-        encStream.Write(plaintextBytes, 0, plaintextBytes.Length)
-        encStream.FlushFinalBlock()
-        Return Convert.ToBase64String(ms.ToArray)
-    End Function
-
-
 
     'validate input box
     Sub InsertIntoUserTable()
@@ -55,6 +33,8 @@ Public Class Users
                     MessageBox.Show("Username can't be more than 20 characters ", "Username Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ElseIf txtPassword.Text.Length < 8 Then
                     MessageBox.Show("Password must atleast 8 characters ", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ElseIf IsNumeric(txtPassword) Then
+                    MessageBox.Show("Password can't be numbers only", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     Dim username As String = txtUsername.Text
                     Dim password As String = txtPassword.Text
@@ -71,19 +51,25 @@ Public Class Users
                     End If
 
                     Try
-                        'Insert data into User Table
-                        query.ExecuteQuery("INSERT INTO users(username,password,role) values ('" & username & "','" & password & "','" & role & "')")
+                        'check if username already exist
+                        query.ExecuteQuery("select * from users where username like '" & username & "';")
+                        Dim result As Integer = query.RecordCount
 
-                        MsgBox("Record Inserted Successfully", MsgBoxStyle.Information)
+                        If result > 0 Then
+                            MsgBox("username is already taken", MsgBoxStyle.Critical, "Username exist")
+                        Else
+                            'Insert data into User Table
+                            query.ExecuteQuery("INSERT INTO users(username,password,role,class) values ('" & username & "','" & password & "','" & role & "','" & studentClass.SelectedItem & "')")
 
-                        'update Table
-                        updateTable("select users.username AS USERNAME,
-                                    role.role AS ROLE from users JOIN role ON users.role=role.roleID")
+                            MsgBox("Record Inserted Successfully", MsgBoxStyle.Information)
+
+                            'update Table
+                            updateTable()
+                        End If
 
                     Catch ex As Exception
                         'Error message
-                        query.exception = "Record Not Inserted"
-                        query.HasException()
+                        MsgBox(ex.ToString)
                     End Try
 
                 End If
@@ -97,16 +83,18 @@ Public Class Users
     End Sub
 
     'sub to updating tables
-    Sub updateTable(queryString As String)
-        query.ExecuteQuery(queryString)
+    Sub updateTable()
+        query.ExecuteQuery("select users.username AS USERNAME,
+                    role.role AS ROLE from users JOIN role ON users.role=role.roleID")
         UsersDataGrid.DataSource = query.DatabaseTable
     End Sub
 
     'form Onload
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Load user data
-        updateTable("select users.username AS USERNAME,
-                    role.role AS ROLE from users JOIN role ON users.role=role.roleID")
+        updateTable()
+
+        studentClass.Visible = False
     End Sub
 
 
@@ -138,6 +126,7 @@ Public Class Users
                     End If
 
                     Try
+
                         'Update data into User Table
                         query.ExecuteQuery("UPDATE users SET username= '" & username & "',
                                             password='" & password & "',role='" & role & "'
@@ -148,8 +137,7 @@ Public Class Users
                         MsgBox("Record Updated Successfully", MsgBoxStyle.Information)
 
                         'update Table
-                        updateTable("select users.username AS USERNAME,
-                                    role.role AS ROLE from users JOIN role ON users.role=role.roleID")
+                        updateTable()
 
                     Catch ex As Exception
                         'Error message
@@ -167,4 +155,40 @@ Public Class Users
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
 
     End Sub
+
+    Private Sub studentRole_CheckedChanged(sender As Object, e As EventArgs) Handles studentRole.CheckedChanged
+        If CheckState.Checked Then
+            studentClass.Visible = True
+            loadStydentClass()
+        End If
+    End Sub
+
+    Private Sub lectureRule_CheckedChanged(sender As Object, e As EventArgs) Handles lectureRule.CheckedChanged
+        If CheckState.Checked Then
+            studentClass.Visible = False
+        End If
+    End Sub
+
+    Private Sub AdminRole_CheckedChanged(sender As Object, e As EventArgs) Handles AdminRole.CheckedChanged
+        If CheckState.Checked Then
+            studentClass.Visible = False
+        End If
+    End Sub
+
+
+    Sub loadStydentClass()
+        query.ExecuteQuery("SELECT * from class ;")
+        query.HasException()
+
+        studentClass.Items.Clear()
+        studentClass.Items.Add("---course or class---")
+        studentClass.SelectedIndex = 0
+
+        For i = 0 To query.RecordCount - 1
+            Dim x As Integer = 1
+            studentClass.Items.Add(query.DatabaseTable(i)(x))
+        Next
+    End Sub
+
+
 End Class

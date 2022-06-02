@@ -44,6 +44,7 @@
         End If
     End Sub
 
+    'on cell clicked
     Private Sub StudentsDataGrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles StudentsDataGrid.CellClick
         Dim selectedGD As DataGridViewRow
         Dim index As Integer
@@ -100,6 +101,7 @@
     Private Sub Manage_Student_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadProgrammeComboBox()
         updateTable()
+        Me.StartPosition = FormStartPosition.CenterScreen
     End Sub
 
     'Load gender combobox with Data
@@ -120,6 +122,7 @@
         Next
     End Sub
 
+    'delete button
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         tab.ExecuteQuery("DELETE FROM student WHERE stuID='" & txtId.Text & "';")
 
@@ -129,6 +132,7 @@
         updateTable()
     End Sub
 
+    'Add button
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         If txtId.Text = "" Or txtFname.Text = "" Or txtLname.Text = "" Or txtDoB.Value.ToString = "" Or txtEmail.Text = "" Or txtPhone.Text = "" Or programmeCombo.SelectedIndex = 0 Then
@@ -169,11 +173,21 @@
 
     'update sub
     Sub updateTable()
-        tab.ExecuteQuery("select student.stuID AS 'STUDENT-ID', student.fName AS 'FIRSTNAME',student.lName AS 'LASTNAME',
-                          student.DoB,gender.gender AS GENDER,programme.proName AS PROGRAMME,student.phone AS PHONE,student.email AS EMAIL
-                          from student,gender,programme WHERE student.genderID=gender.genderID AND student.programme=programme.proID ;")
-        If tab.HasException(True) Then Exit Sub
-        studentsDataGrid.DataSource = tab.DatabaseTable
+        Try
+            tab.ExecuteQuery("SELECT `student`.`stuID` AS `ID`, `student`.`fName` AS `fName`, `student`.`lName` AS `LNAme`, `student`.`DoB`,
+                            `gender`.`gender` AS `gender`, `programme`.`proName` AS `Programme`, `student`.`phone` AS `Phone`, `student`.`email` AS `Email`
+                            FROM `student` AS `student` LEFT JOIN `gender`  ON `student`.`genderID` = `gender`.`genderID` 
+	                        LEFT JOIN `programme`  ON `student`.`programme` = `programme`.`proID`;")
+            If tab.HasException Then
+                MsgBox(tab.exception)
+            Else
+                StudentsDataGrid.DataSource = tab.DatabaseTable
+            End If
+
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
 
     End Sub
 

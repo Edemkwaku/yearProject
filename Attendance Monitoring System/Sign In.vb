@@ -1,5 +1,5 @@
 ﻿Public Class Sign_In
-    Public user As String
+    Public user, stuClass As String
     Dim iExit As DialogResult
     Dim sqlQuery As New Database
 
@@ -13,11 +13,8 @@
     End Sub
 
     Sub loginCheck()
-        If txtUsername.Text = "" Or txtUsername.Text.ToLower = "enter username" Then
-            iExit = MessageBox.Show("Enter Your Username To Login", "Missing Username", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-
-        ElseIf txtUserPassword.Text = "" Or txtUserPassword.Text.ToLower = "enter password" Then
-            iExit = MessageBox.Show("Enter Your Password To Login", "Missing Password", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+        If txtUsername.Text = "" Or txtUsername.Text.Equals("") Then
+            iExit = MessageBox.Show("Enter Your Username and password To Login", "Missing field", MessageBoxButtons.OK, MessageBoxIcon.Stop)
 
         Else
             If (txtUserPassword.Text.Length < 8) Then
@@ -28,15 +25,20 @@
                     sqlQuery.ExecuteQuery("select * from users where username LIKE '" & txtUsername.Text & "' AND password LIKE '" & txtUserPassword.Text & "';")
                     Dim result As Integer = sqlQuery.RecordCount
                     Dim role As Integer = sqlQuery.DatabaseTable.Rows(0)(2)
+                    stuClass = sqlQuery.DatabaseTable(0)(3).ToString
 
                     If result = 1 Then
                         user = sqlQuery.DatabaseTable(0)(0)
                         username = user
                         If role = 1 Then
+                            Me.Hide()
                             AdminMenu.Show()
                         ElseIf role = 2 Then
+                            Me.Hide()
                             Lecturers_Page.Show()
                         Else
+                            s_class = stuClass
+                            Me.Hide()
                             NornalUserPage.Show()
                         End If
                     Else
@@ -47,15 +49,20 @@
                     txtUserPassword.Clear()
 
                 Catch ex As Exception
-                    iExit = MessageBox.Show("Wrong username or password ", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    iExit = MessageBox.Show(ex.ToString, " ", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
 
             End If
         End If
     End Sub
 
+    Private Sub Sign_In_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Private Sub txtforgetpassword_Click(sender As Object, e As EventArgs) Handles txtforgetpassword.Click
         ResetPassword.Show()
         Me.Hide()
     End Sub
+
 End Class

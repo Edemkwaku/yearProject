@@ -25,9 +25,9 @@
                 Try
                     tab.ExecuteQuery("select * from users where username LIKE '" & txtusername.Text & "'")
                     Dim result As Integer = tab.RecordCount
-                    username = tab.DatabaseTable.Rows(0)(0)
 
                     If result = 1 Then
+                        username = tab.DatabaseTable.Rows(0)(0)
                         txtusername.BorderColor = Color.Green
                         txtusername.ForeColor = Color.Green
                         txtusername.Text = username
@@ -35,22 +35,21 @@
                         txtpassword.Visible = True
                         txtpassconfirm.Visible = True
                         lblpassconfirm.Visible = True
-                        'btnContinue.Visible = False
-                        'btnDone.Visible = True
+
                     Else
                         txtusername.BorderColor = Color.Red
                         txtusername.ForeColor = Color.Red
-                        txtusername.Text = "wrong username *"
+                        txtusername.Text = "username not found *"
                     End If
 
                 Catch ex As Exception
-                    txtusername.ForeColor = Color.Red
-                    txtusername.Text = "wrong username *"
+
+                    MsgBox("Ooops! something went wrong")
                 End Try
             End If
 
             btnContinue.Text = "Done"
-        ElseIf btnContinue.Text.Equals("Done") Then
+        ElseIf btnContinue.Text = "Done" Then
 
             Dim user As String = username
             If txtpassword.Text = " " Or txtpassword.Text.Trim("").ToLower.Equals("enternewpassword") Or txtpassconfirm.Text = " " Or txtpassconfirm.Text.Trim.ToLower.Equals("confirmpassword") Then
@@ -67,12 +66,20 @@
                 Catch ex As Exception
                     iExit = MessageBox.Show("Something went wrong", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
-            End If
 
+                txtpassword.Visible = False
+                txtpassconfirm.Visible = False
+                lblpassconfirm.Visible = False
+                lblpassword.Visible = False
+
+            End If
+            btnContinue.Text = "Sign In"
+        ElseIf btnContinue.Text.Equals("Sign In") Then
             clear()
             Sign_In.Show()
             Me.Hide()
-
+        Else
+            MsgBox("Ooops! something went wrong")
         End If
     End Sub
 

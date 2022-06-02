@@ -23,8 +23,12 @@ Partial Class AddClass
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.programmeCombo = New System.Windows.Forms.ComboBox()
         Me.buttonSubmit = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtClassID = New System.Windows.Forms.TextBox()
         Me.txtClassName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lable = New System.Windows.Forms.Label()
         Me.t = New System.Windows.Forms.Label()
         Me.buttonClose = New Guna.UI2.WinForms.Guna2Button()
@@ -32,10 +36,6 @@ Partial Class AddClass
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.programmeCombo = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtClassID = New System.Windows.Forms.TextBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,15 +59,26 @@ Partial Class AddClass
         Me.Guna2Panel2.Size = New System.Drawing.Size(379, 247)
         Me.Guna2Panel2.TabIndex = 1
         '
+        'programmeCombo
+        '
+        Me.programmeCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.programmeCombo.FormattingEnabled = True
+        Me.programmeCombo.Location = New System.Drawing.Point(166, 127)
+        Me.programmeCombo.Name = "programmeCombo"
+        Me.programmeCombo.Size = New System.Drawing.Size(163, 28)
+        Me.programmeCombo.TabIndex = 3
+        '
         'buttonSubmit
         '
+        Me.buttonSubmit.BackColor = System.Drawing.Color.White
+        Me.buttonSubmit.BorderRadius = 5
         Me.buttonSubmit.CheckedState.Parent = Me.buttonSubmit
         Me.buttonSubmit.CustomImages.Parent = Me.buttonSubmit
-        Me.buttonSubmit.FillColor = System.Drawing.Color.White
+        Me.buttonSubmit.FillColor = System.Drawing.Color.Green
         Me.buttonSubmit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonSubmit.ForeColor = System.Drawing.Color.Green
+        Me.buttonSubmit.ForeColor = System.Drawing.Color.White
         Me.buttonSubmit.HoverState.Parent = Me.buttonSubmit
-        Me.buttonSubmit.Location = New System.Drawing.Point(110, 180)
+        Me.buttonSubmit.Location = New System.Drawing.Point(110, 191)
         Me.buttonSubmit.Name = "buttonSubmit"
         Me.buttonSubmit.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.buttonSubmit.ShadowDecoration.Depth = 20
@@ -75,7 +86,15 @@ Partial Class AddClass
         Me.buttonSubmit.ShadowDecoration.Parent = Me.buttonSubmit
         Me.buttonSubmit.Size = New System.Drawing.Size(136, 36)
         Me.buttonSubmit.TabIndex = 2
-        Me.buttonSubmit.Text = "Submit"
+        Me.buttonSubmit.Text = "Add"
+        '
+        'txtClassID
+        '
+        Me.txtClassID.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtClassID.Location = New System.Drawing.Point(166, 50)
+        Me.txtClassID.Name = "txtClassID"
+        Me.txtClassID.Size = New System.Drawing.Size(163, 27)
+        Me.txtClassID.TabIndex = 1
         '
         'txtClassName
         '
@@ -84,6 +103,26 @@ Partial Class AddClass
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.Size = New System.Drawing.Size(163, 27)
         Me.txtClassName.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(58, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 20)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "ClassID"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(58, 127)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Programme"
         '
         'lable
         '
@@ -163,43 +202,6 @@ Partial Class AddClass
         Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
         Me.Guna2Panel4.Size = New System.Drawing.Size(564, 5)
         Me.Guna2Panel4.TabIndex = 11
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(58, 127)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Programme"
-        '
-        'programmeCombo
-        '
-        Me.programmeCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.programmeCombo.FormattingEnabled = True
-        Me.programmeCombo.Location = New System.Drawing.Point(166, 127)
-        Me.programmeCombo.Name = "programmeCombo"
-        Me.programmeCombo.Size = New System.Drawing.Size(163, 28)
-        Me.programmeCombo.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "ClassID"
-        '
-        'txtClassID
-        '
-        Me.txtClassID.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClassID.Location = New System.Drawing.Point(166, 50)
-        Me.txtClassID.Name = "txtClassID"
-        Me.txtClassID.Size = New System.Drawing.Size(163, 27)
-        Me.txtClassID.TabIndex = 1
         '
         'AddClass
         '

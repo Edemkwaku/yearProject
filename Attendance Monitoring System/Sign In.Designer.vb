@@ -23,6 +23,7 @@ Partial Class Sign_In
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Sign_In))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.buttonClose = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,8 +39,10 @@ Partial Class Sign_In
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel3 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.GunaPanel1.SuspendLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -77,7 +80,7 @@ Partial Class Sign_In
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Purple
-        Me.Label1.Location = New System.Drawing.Point(185, 16)
+        Me.Label1.Location = New System.Drawing.Point(74, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 30)
         Me.Label1.TabIndex = 0
@@ -205,11 +208,23 @@ Partial Class Sign_In
         '
         Me.GunaDragControl1.TargetControl = Me.Guna2Panel1
         '
+        'GunaPictureBox1
+        '
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(206, 26)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(55, 55)
+        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox1.TabIndex = 7
+        Me.GunaPictureBox1.TabStop = False
+        '
         'Sign_In
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(440, 316)
+        Me.Controls.Add(Me.GunaPictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.GunaPanel3)
@@ -224,6 +239,7 @@ Partial Class Sign_In
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.GunaPanel1.ResumeLayout(False)
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -244,4 +260,5 @@ Partial Class Sign_In
     Friend WithEvents GunaPanel3 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
     Friend WithEvents txtforgetpassword As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
 End Class

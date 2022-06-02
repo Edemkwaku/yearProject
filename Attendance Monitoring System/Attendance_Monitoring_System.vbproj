@@ -133,14 +133,13 @@
       <DependentUpon>AdminMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Attendance.Designer.vb">
       <DependentUpon>Attendance.vb</DependentUpon>
     </Compile>
     <Compile Include="Attendance.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassDetails.vb" />
-    <Compile Include="Connection.vb" />
     <Compile Include="Courses.Designer.vb">
       <DependentUpon>Courses.vb</DependentUpon>
     </Compile>
@@ -206,6 +205,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="passvalue.vb" />
+    <Compile Include="Programmes.Designer.vb">
+      <DependentUpon>Programmes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Programmes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Report.Designer.vb">
       <DependentUpon>Report.vb</DependentUpon>
     </Compile>
@@ -282,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NornalUserPage.resx">
       <DependentUpon>NornalUserPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programmes.resx">
+      <DependentUpon>Programmes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.vb</DependentUpon>
