@@ -13,7 +13,7 @@
     End Sub
 
     Sub loginCheck()
-        If txtUsername.Text = "" Or txtUsername.Text.Equals("") Then
+        If txtUsername.Text = "username" Or txtUsername.Text.Equals("") Or txtUserPassword.Text.Equals("") Or txtUserPassword.Text = "password" Then
             iExit = MessageBox.Show("Enter Your Username and password To Login", "Missing field", MessageBoxButtons.OK, MessageBoxIcon.Stop)
 
         Else

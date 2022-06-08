@@ -30,16 +30,14 @@ Partial Class Sign_In
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.txtforgetpassword = New Guna.UI.WinForms.GunaLabel()
         Me.button_SignIn = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtUserPassword = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel3 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtUserPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.GunaPanel1.SuspendLayout()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,22 +76,20 @@ Partial Class Sign_In
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.Purple
-        Me.Label1.Location = New System.Drawing.Point(74, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 30)
+        Me.Label1.Size = New System.Drawing.Size(95, 23)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Sign In"
+        Me.Label1.Text = "User Login"
         '
         'Guna2Panel2
         '
-        Me.Guna2Panel2.Controls.Add(Me.txtforgetpassword)
-        Me.Guna2Panel2.Controls.Add(Me.button_SignIn)
         Me.Guna2Panel2.Controls.Add(Me.txtUserPassword)
         Me.Guna2Panel2.Controls.Add(Me.txtUsername)
-        Me.Guna2Panel2.Controls.Add(Me.Label3)
-        Me.Guna2Panel2.Controls.Add(Me.Label2)
+        Me.Guna2Panel2.Controls.Add(Me.txtforgetpassword)
+        Me.Guna2Panel2.Controls.Add(Me.button_SignIn)
         Me.Guna2Panel2.Location = New System.Drawing.Point(23, 74)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
@@ -105,7 +101,7 @@ Partial Class Sign_In
         Me.txtforgetpassword.AutoSize = True
         Me.txtforgetpassword.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtforgetpassword.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.txtforgetpassword.Location = New System.Drawing.Point(223, 116)
+        Me.txtforgetpassword.Location = New System.Drawing.Point(200, 120)
         Me.txtforgetpassword.Name = "txtforgetpassword"
         Me.txtforgetpassword.Size = New System.Drawing.Size(107, 17)
         Me.txtforgetpassword.TabIndex = 4
@@ -119,7 +115,7 @@ Partial Class Sign_In
         Me.button_SignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button_SignIn.ForeColor = System.Drawing.Color.White
         Me.button_SignIn.HoverState.Parent = Me.button_SignIn
-        Me.button_SignIn.Location = New System.Drawing.Point(133, 141)
+        Me.button_SignIn.Location = New System.Drawing.Point(133, 155)
         Me.button_SignIn.Name = "button_SignIn"
         Me.button_SignIn.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.button_SignIn.ShadowDecoration.Depth = 20
@@ -128,44 +124,6 @@ Partial Class Sign_In
         Me.button_SignIn.Size = New System.Drawing.Size(105, 30)
         Me.button_SignIn.TabIndex = 3
         Me.button_SignIn.Text = "Login"
-        '
-        'txtUserPassword
-        '
-        Me.txtUserPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUserPassword.Location = New System.Drawing.Point(133, 80)
-        Me.txtUserPassword.MaxLength = 50
-        Me.txtUserPassword.Name = "txtUserPassword"
-        Me.txtUserPassword.Size = New System.Drawing.Size(201, 29)
-        Me.txtUserPassword.TabIndex = 1
-        Me.txtUserPassword.UseSystemPasswordChar = True
-        '
-        'txtUsername
-        '
-        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(133, 37)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(201, 29)
-        Me.txtUsername.TabIndex = 1
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(18, 87)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 20)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Password :"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 38)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Username :"
         '
         'Panel1
         '
@@ -219,6 +177,62 @@ Partial Class Sign_In
         Me.GunaPictureBox1.TabIndex = 7
         Me.GunaPictureBox1.TabStop = False
         '
+        'txtUsername
+        '
+        Me.txtUsername.BorderRadius = 8
+        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUsername.DefaultText = ""
+        Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.DisabledState.Parent = Me.txtUsername
+        Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.FocusedState.Parent = Me.txtUsername
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.HoverState.Parent = Me.txtUsername
+        Me.txtUsername.IconLeft = CType(resources.GetObject("txtUsername.IconLeft"), System.Drawing.Image)
+        Me.txtUsername.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txtUsername.Location = New System.Drawing.Point(73, 40)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsername.PlaceholderText = "username"
+        Me.txtUsername.SelectedText = ""
+        Me.txtUsername.ShadowDecoration.Parent = Me.txtUsername
+        Me.txtUsername.Size = New System.Drawing.Size(239, 33)
+        Me.txtUsername.TabIndex = 5
+        '
+        'txtUserPassword
+        '
+        Me.txtUserPassword.BorderRadius = 8
+        Me.txtUserPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUserPassword.DefaultText = ""
+        Me.txtUserPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUserPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUserPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUserPassword.DisabledState.Parent = Me.txtUserPassword
+        Me.txtUserPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUserPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUserPassword.FocusedState.Parent = Me.txtUserPassword
+        Me.txtUserPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtUserPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUserPassword.HoverState.Parent = Me.txtUserPassword
+        Me.txtUserPassword.IconLeft = CType(resources.GetObject("txtUserPassword.IconLeft"), System.Drawing.Image)
+        Me.txtUserPassword.IconLeftSize = New System.Drawing.Size(25, 25)
+        Me.txtUserPassword.Location = New System.Drawing.Point(73, 81)
+        Me.txtUserPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUserPassword.Name = "txtUserPassword"
+        Me.txtUserPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUserPassword.PlaceholderText = "password"
+        Me.txtUserPassword.SelectedText = ""
+        Me.txtUserPassword.ShadowDecoration.Parent = Me.txtUserPassword
+        Me.txtUserPassword.Size = New System.Drawing.Size(239, 33)
+        Me.txtUserPassword.TabIndex = 5
+        Me.txtUserPassword.UseSystemPasswordChar = True
+        Me.txtUserPassword.WordWrap = False
+        '
         'Sign_In
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,10 +263,6 @@ Partial Class Sign_In
     Friend WithEvents buttonClose As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents txtUserPassword As TextBox
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents button_SignIn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
@@ -261,4 +271,6 @@ Partial Class Sign_In
     Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
     Friend WithEvents txtforgetpassword As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents txtUserPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -50,13 +50,13 @@ Partial Class AddClass
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.Label1)
         Me.Guna2Panel2.Controls.Add(Me.lable)
-        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(95, 95)
+        Me.Guna2Panel2.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel2.Location = New System.Drawing.Point(38, 59)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(379, 247)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(379, 225)
         Me.Guna2Panel2.TabIndex = 1
         '
         'programmeCombo
@@ -70,7 +70,7 @@ Partial Class AddClass
         '
         'buttonSubmit
         '
-        Me.buttonSubmit.BackColor = System.Drawing.Color.White
+        Me.buttonSubmit.BackColor = System.Drawing.Color.Transparent
         Me.buttonSubmit.BorderRadius = 5
         Me.buttonSubmit.CheckedState.Parent = Me.buttonSubmit
         Me.buttonSubmit.CustomImages.Parent = Me.buttonSubmit
@@ -78,13 +78,13 @@ Partial Class AddClass
         Me.buttonSubmit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonSubmit.ForeColor = System.Drawing.Color.White
         Me.buttonSubmit.HoverState.Parent = Me.buttonSubmit
-        Me.buttonSubmit.Location = New System.Drawing.Point(110, 191)
+        Me.buttonSubmit.Location = New System.Drawing.Point(133, 179)
         Me.buttonSubmit.Name = "buttonSubmit"
         Me.buttonSubmit.ShadowDecoration.Color = System.Drawing.Color.Gray
         Me.buttonSubmit.ShadowDecoration.Depth = 20
         Me.buttonSubmit.ShadowDecoration.Enabled = True
         Me.buttonSubmit.ShadowDecoration.Parent = Me.buttonSubmit
-        Me.buttonSubmit.Size = New System.Drawing.Size(136, 36)
+        Me.buttonSubmit.Size = New System.Drawing.Size(113, 36)
         Me.buttonSubmit.TabIndex = 2
         Me.buttonSubmit.Text = "Add"
         '
@@ -137,11 +137,11 @@ Partial Class AddClass
         't
         '
         Me.t.AutoSize = True
-        Me.t.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.t.Font = New System.Drawing.Font("Segoe UI", 13.75!, System.Drawing.FontStyle.Bold)
         Me.t.ForeColor = System.Drawing.Color.Purple
-        Me.t.Location = New System.Drawing.Point(243, 18)
+        Me.t.Location = New System.Drawing.Point(33, 8)
         Me.t.Name = "t"
-        Me.t.Size = New System.Drawing.Size(61, 30)
+        Me.t.Size = New System.Drawing.Size(55, 25)
         Me.t.TabIndex = 9
         Me.t.Text = "Class"
         '
@@ -159,7 +159,7 @@ Partial Class AddClass
         Me.buttonClose.HoverState.FillColor = System.Drawing.Color.Red
         Me.buttonClose.HoverState.ForeColor = System.Drawing.Color.White
         Me.buttonClose.HoverState.Parent = Me.buttonClose
-        Me.buttonClose.Location = New System.Drawing.Point(516, 11)
+        Me.buttonClose.Location = New System.Drawing.Point(433, 11)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.ShadowDecoration.Parent = Me.buttonClose
         Me.buttonClose.Size = New System.Drawing.Size(36, 30)
@@ -170,9 +170,9 @@ Partial Class AddClass
         '
         Me.GunaPanel2.BackColor = System.Drawing.Color.Purple
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GunaPanel2.Location = New System.Drawing.Point(559, 5)
+        Me.GunaPanel2.Location = New System.Drawing.Point(477, 5)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(5, 375)
+        Me.GunaPanel2.Size = New System.Drawing.Size(5, 332)
         Me.GunaPanel2.TabIndex = 16
         '
         'GunaPanel1
@@ -181,16 +181,16 @@ Partial Class AddClass
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel1.Location = New System.Drawing.Point(0, 5)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(5, 375)
+        Me.GunaPanel1.Size = New System.Drawing.Size(5, 332)
         Me.GunaPanel1.TabIndex = 15
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Purple
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 380)
+        Me.Panel1.Location = New System.Drawing.Point(0, 337)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(564, 5)
+        Me.Panel1.Size = New System.Drawing.Size(482, 5)
         Me.Panel1.TabIndex = 12
         '
         'Guna2Panel4
@@ -200,14 +200,14 @@ Partial Class AddClass
         Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(564, 5)
+        Me.Guna2Panel4.Size = New System.Drawing.Size(482, 5)
         Me.Guna2Panel4.TabIndex = 11
         '
         'AddClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(564, 385)
+        Me.ClientSize = New System.Drawing.Size(482, 342)
         Me.Controls.Add(Me.t)
         Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.GunaPanel2)

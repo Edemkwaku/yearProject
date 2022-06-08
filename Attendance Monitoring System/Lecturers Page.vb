@@ -33,7 +33,7 @@
         Dim signin As New Sign_In
         Dim user As String = username
         lname.Text = "Welcome  " & user
-
+        txtDate.Text = ("0" & Today.Day & "-0" & Today.Month & "-" & Today.Year)
         studentDetails.Visible = False
 
         ComboBox.Items.Add("---select---")
