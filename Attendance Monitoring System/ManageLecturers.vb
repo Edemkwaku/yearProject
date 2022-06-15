@@ -5,19 +5,90 @@ Public Class Lecturers
     Dim tab As New Database
     Dim iExit As DialogResult
 
-    'Delete button
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        tab.ExecuteQuery("DELETE FROM lecturer WHERE lecID='" & txtId.Text & "';")
 
-        iExit = MessageBox.Show("Record Deleted Successfull", "Record Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        tab.HasException()
 
+    Private Sub LecturersDataGrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles LecturersDataGrid.CellClick
+        Dim selectedGD As DataGridViewRow
+        Dim index As Integer
+        index = e.RowIndex
+        selectedGD = LecturersDataGrid.Rows(index)
+
+        txtId.Text = selectedGD.Cells(0).Value.ToString
+        txtFname.Text = selectedGD.Cells(1).Value.ToString
+        txtDoB.Text = selectedGD.Cells(2).Value.ToString
+        txtEmail.Text = selectedGD.Cells(5).Value.ToString
+        txtPhone.Text = selectedGD.Cells(4).Value.ToString
+        If selectedGD.Cells(3).Value.ToString.Equals("male") Then
+            maleRadio.Checked = True
+        Else
+            femaleRadio.Checked = True
+        End If
+    End Sub
+
+    'refresh button
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs)
         updateTable()
+    End Sub
+
+    'email text box
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
+        Dim a As String
+        Dim count As Integer = 0
+        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
+            email = txtEmail.Text
+            If (email.Contains("@") = False Or email.Contains(".") = False) Then
+                MsgBox("Enter valid Email", MsgBoxStyle.Information, "Error")
+                txtEmail.Clear()
+            Else
+                For x = 0 To email.Length - 1
+                    a = email.Substring(x, 1)
+                    If a.Equals("@") Then
+                        count += 1
+                    End If
+                Next
+                If count > 1 Then
+                    MsgBox("Invalid Email format", MsgBoxStyle.Information, "Error")
+                    txtEmail.Clear()
+                End If
+            End If
+
+        End If
+    End Sub
+
+    'phone number validation
+    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs)
+        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
+
+        End If
+    End Sub
+
+    'clear button 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs)
         clear()
     End Sub
 
-    'Update Button
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    'clear button sub 
+    Sub clear()
+        txtPhone.Clear()
+        txtId.Clear()
+        txtFname.Clear()
+        txtEmail.Clear()
+        txtDoB.Text = Today.Date
+        txtsearch.Clear()
+        maleRadio.Checked = False
+        femaleRadio.Checked = False
+    End Sub
+
+    'button dashboard
+    Private Sub Dashboard_Click(sender As Object, e As EventArgs) Handles Dashboard.Click
+        AdminMenu.Show()
+        Me.Hide()
+    End Sub
+
+
+
+    'button update
+    Private Sub btnUpdate_Click_1(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If txtId.Text = "" Or txtFname.Text = "" Or txtDoB.Value.ToString = "" Or txtEmail.Text = "" Or txtPhone.Text = "" Then
             MsgBox("All fields are Required", MsgBoxStyle.Information, "Required fild")
 
@@ -49,80 +120,44 @@ Public Class Lecturers
         clear()
     End Sub
 
-    Private Sub LecturersDataGrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles LecturersDataGrid.CellClick
-        Dim selectedGD As DataGridViewRow
-        Dim index As Integer
-        index = e.RowIndex
-        selectedGD = LecturersDataGrid.Rows(index)
-
-        txtId.Text = selectedGD.Cells(0).Value.ToString
-        txtFname.Text = selectedGD.Cells(1).Value.ToString
-        txtDoB.Text = selectedGD.Cells(2).Value.ToString
-        txtEmail.Text = selectedGD.Cells(5).Value.ToString
-        txtPhone.Text = selectedGD.Cells(4).Value.ToString
-        If selectedGD.Cells(3).Value.ToString.Equals("male") Then
-            maleRadio.Checked = True
-        Else
-            femaleRadio.Checked = True
-        End If
-    End Sub
-
-    'refresh button
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        updateTable()
-    End Sub
-
-    'email text box
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
-        Dim a As String
-        Dim count As Integer = 0
-        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
-            email = txtEmail.Text
-            If (email.Contains("@") = False Or email.Contains(".") = False) Then
-                MsgBox("Enter valid Email", MsgBoxStyle.Information, "Error")
-                txtEmail.Clear()
-            Else
-                For x = 0 To email.Length - 1
-                    a = email.Substring(x, 1)
-                    If a.Equals("@") Then
-                        count += 1
-                    End If
-                Next
-                If count > 1 Then
-                    MsgBox("Invalid Email format", MsgBoxStyle.Information, "Error")
-                    txtEmail.Clear()
-                End If
-            End If
-
-        End If
-    End Sub
-
-    'phone number validation
-    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
-
-        End If
-    End Sub
-
-    'clear button 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    'button clear
+    Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
         clear()
     End Sub
 
-    'clear button sub 
-    Sub clear()
-        txtPhone.Clear()
-        txtId.Clear()
-        txtFname.Clear()
-        txtEmail.Clear()
-        txtDoB.Text = Today.Date
-        txtsearch.Clear()
-        maleRadio.Checked = False
-        femaleRadio.Checked = False
+    'button delete
+    Private Sub btnDelete_Click_1(sender As Object, e As EventArgs) Handles btnDelete.Click
+        tab.ExecuteQuery("DELETE FROM lecturer WHERE lecID='" & txtId.Text & "';")
+
+        If (tab.HasException) Then
+            MsgBox(tab.exception)
+        Else
+            iExit = MessageBox.Show("Record Deleted Successfull", "Record Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            updateTable()
+        End If
+
+        clear()
     End Sub
 
-    'search button
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    'button refresh
+    Private Sub btnRefresh_Click_1(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        updateTable()
+    End Sub
+
+    'button student
+    Private Sub btnManageStudent_Click(sender As Object, e As EventArgs) Handles btnManageStudent.Click
+        Manage_Student.Show()
+        Me.Hide()
+    End Sub
+
+    'button courses
+    Private Sub btnManageCourses_Click(sender As Object, e As EventArgs) Handles btnManageCourses.Click
+        Courses.Show()
+        Me.Hide()
+    End Sub
+
+    'button search
+    Private Sub btnSearch_Click_1(sender As Object, e As EventArgs) Handles btnSearch.Click
         Dim result As Integer
         Try
             tab.ExecuteQuery("select lecturer.lecID AS ID, lecturer.fullName AS NAME,lecturer.DoB AS BIRTHDATE,
@@ -142,21 +177,8 @@ Public Class Lecturers
         End Try
     End Sub
 
-    'Close button
-    Private Sub btnCose_Click(sender As Object, e As EventArgs) Handles btnCose.Click
-        Me.Close()
-    End Sub
-
-    Private Sub Lecturers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'fetch lectures data
-        updateTable()
-
-        'loadGenderComboBox()
-    End Sub
-
-    'Add record button
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-
+    'button add
+    Private Sub btnAdd_Click_1(sender As Object, e As EventArgs) Handles btnAdd.Click
         If txtId.Text = "" Or txtFname.Text = "" Or txtDoB.Value.ToString = "" Or txtEmail.Text = "" Or txtPhone.Text = "" Then
             MsgBox("All fields are Required", MsgBoxStyle.Information, "Required fild")
         ElseIf IsNumeric(txtPhone.Text) = False Then
@@ -196,6 +218,68 @@ Public Class Lecturers
         End If
         clear()
     End Sub
+
+    'Close button
+    Private Sub btnCose_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
+
+    'button user
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        Users.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Lecturers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtDate.Text = ("0" & Today.Day & "-0" & Today.Month & "-" & Today.Year)
+        ' txtDate.Text = Today.Year & "-" & Today.Month & "-" & Today.Day
+
+        Dim signin As New Sign_In
+        Dim user As String = username
+        lblusername.Text = "Welcome " & user
+
+        'fetch lectures data
+        updateTable()
+
+        'loadGenderComboBox()
+    End Sub
+
+
+    'button class
+    Private Sub btnClass_Click(sender As Object, e As EventArgs) Handles btnClass.Click
+        AddClass.Show()
+        Me.Hide()
+    End Sub
+
+    'button report
+    Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
+        Report.Show()
+        Me.Hide()
+    End Sub
+
+    'button faculty
+    Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
+        Faculty.Show()
+        Me.Hide()
+    End Sub
+
+    'button venue
+    Private Sub btnVenue_Click(sender As Object, e As EventArgs) Handles btnVenue.Click
+        Venue.Show()
+        Me.Hide()
+    End Sub
+
+    'student Details
+    Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
+
+    End Sub
+
+    'button attendance
+    Private Sub btnStudentAttendance_Click(sender As Object, e As EventArgs) Handles btnStudentAttendance.Click
+        Attendance.Show()
+        Me.Hide()
+    End Sub
+
 
     'update sub
     Sub updateTable()

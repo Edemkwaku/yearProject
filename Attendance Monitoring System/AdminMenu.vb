@@ -10,13 +10,13 @@ Public Class AdminMenu
     End Sub
 
     Private Sub AddStudent_Button_Click(sender As Object, e As EventArgs)
-        dashboard.Visible = False
-        Manage_Student.ShowDialog()
+        Manage_Student.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ViewAttendance_Button_Click(sender As Object, e As EventArgs)
-        dashboard.Visible = False
-        Attendance.ShowDialog()
+        Attendance.Show()
+        Me.Hide()
     End Sub
 
     Private Sub buttonLogout_Click(sender As Object, e As EventArgs)
@@ -40,46 +40,40 @@ Public Class AdminMenu
 
         fetchDataFromDatabase()
 
-        ComboBox.Items.Add("---select---")
-        ComboBox.Items.Add("Lecturer")
-        ComboBox.Items.Add("Student")
-        ComboBox.SelectedIndex = 0
-
     End Sub
 
     Private Sub btnManageStudent_Click(sender As Object, e As EventArgs)
-        dashboard.Visible = False
-        Manage_Student.ShowDialog()
+        Manage_Student.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnViewAttendance_Click(sender As Object, e As EventArgs)
-        dashboard.Visible = False
-        Lecturers.ShowDialog()
+        Lecturers.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
-        dashboard.Visible = False
-        Users.ShowDialog()
+        Users.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnDepartment_Click(sender As Object, e As EventArgs) Handles btnDepartment.Click
-        dashboard.Visible = False
-        Department.ShowDialog()
+        Department.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
-        dashboard.Visible = False
-        Faculty.ShowDialog()
+        Faculty.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnVenue_Click(sender As Object, e As EventArgs) Handles btnVenue.Click
-        dashboard.Visible = False
-        Venue.ShowDialog()
+        Venue.Show()
+        Me.Hide()
     End Sub
 
     Private Sub AdminMenu_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
         fetchDataFromDatabase()
-        dashboard.Visible = True
     End Sub
 
 
@@ -153,81 +147,35 @@ Public Class AdminMenu
 
     'Lecture button
     Private Sub btnManageLecturers_Click_1(sender As Object, e As EventArgs) Handles btnManageLecturers.Click
-        dashboard.Visible = False
-        Lecturers.ShowDialog()
+        Lecturers.Show()
+        Me.Hide()
     End Sub
 
     'Student Details button
     Private Sub btnManageStudent_Click_2(sender As Object, e As EventArgs) Handles btnManageStudent.Click
-        dashboard.Visible = False
-        Manage_Student.ShowDialog()
+        Manage_Student.Show()
+        Me.Hide()
     End Sub
 
     'Attendance button
     Private Sub btnStudentAttendance_Click_1(sender As Object, e As EventArgs) Handles btnStudentAttendance.Click
-        dashboard.Visible = False
         Attendance.ShowDialog()
     End Sub
 
     'Course button
     Private Sub btnManageCourses_Click_1(sender As Object, e As EventArgs) Handles btnManageCourses.Click
-        dashboard.Visible = False
-        Courses.ShowDialog()
+        Courses.Show()
+        Me.Hide()
     End Sub
 
     'Report button
     Private Sub btnGenerateReports_Click_1(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        dashboard.Visible = False
-        Report.ShowDialog()
+        Report.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
-
-
-    End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim result As Integer
-
-        'for selected student
-        If ComboBox.SelectedItem.Equals("Student") Then
-            Try
-                tab.ExecuteQuery("SELECT `student`.`stuID` AS `ID`, `student`.`fName` AS `FIRST NAME`, `student`.`lName` AS `LAST NAME`, `student`.`DoB`,
-                            `gender`.`gender` AS `GENDER`, `programme`.`proName` AS `PROGRAMME`, `student`.`phone` AS `PHONE`, `student`.`email` AS `EMAIL`
-                            FROM `student` LEFT JOIN `gender`  ON `student`.`genderID` = `gender`.`genderID` 
-	                        LEFT JOIN `programme`  ON `student`.`programme` = `programme`.`proID`
-                            WHERE (student.fName Like'" & txtsearch.Text & "' OR student.lName Like'" & txtsearch.Text & "' OR student.stuID Like'" & txtsearch.Text & "');")
-                result = tab.DatabaseTable.Rows.Count
-                If result < 1 Then
-                    iExit = MessageBox.Show(txtsearch.Text & " " & "Student name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Else
-                    DetailsView.DataSource = tab.DatabaseTable
-                    txtsearch.Clear()
-                End If
-
-            Catch ex As Exception
-                iExit = MessageBox.Show(ex.ToString)
-            End Try
-
-        ElseIf ComboBox.SelectedItem.Equals("Lecturer") Then
-            Try
-                tab.ExecuteQuery("select lecturer.lecID AS ID, lecturer.fullName AS NAME,lecturer.DoB AS BIRTHDATE,
-                          gender.gender AS GENDER,lecturer.phone AS PHONE, lecturer.email AS EMAIL
-                          from lecturer JOIN gender ON lecturer.gender=gender.genderID where
-                          fullName LIKE '" & txtsearch.Text & "' OR lecID LIKE'" & txtsearch.Text & "';")
-
-                result = tab.DatabaseTable.Rows.Count
-                If result = 0 Then
-                    iExit = MessageBox.Show(txtsearch.Text & " " & "Lecturer name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Else
-                    DetailsView.DataSource = tab.DatabaseTable
-                    txtsearch.Clear()
-                End If
-
-            Catch ex As Exception
-                iExit = MessageBox.Show("Sorry! something went wrong ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-        End If
 
     End Sub
 
@@ -243,56 +191,51 @@ Public Class AdminMenu
 
     'Class button
     Private Sub btnClass_Click(sender As Object, e As EventArgs) Handles btnClass.Click
-        dashboard.Visible = False
-        AddClass.ShowDialog()
-    End Sub
-
-    'Dashboard button
-    Private Sub GunaButton1_Click(sender As Object, e As EventArgs) Handles GunaButton1.Click
-        dashboard.Visible = True
+        AddClass.Show()
+        Me.Hide()
     End Sub
 
     'panel dashboard
-    Private Sub dashboard_Paint(sender As Object, e As PaintEventArgs) Handles dashboard.Paint
+    Private Sub dashboard_Paint(sender As Object, e As PaintEventArgs)
         fetchDataFromDatabase()
     End Sub
 
     'programme button
     Private Sub btnProgramme_Click(sender As Object, e As EventArgs) Handles btnProgramme.Click
-        ManageProgrammes.ShowDialog()
+        ManageProgrammes.Show()
         Me.Hide()
     End Sub
 
-    Private Sub StudentPanel_Click(sender As Object, e As EventArgs) Handles StudentPanel.Click
+    Private Sub StudentPanel_Click(sender As Object, e As EventArgs)
         Manage_Student.Show()
     End Sub
 
-    Private Sub LecturesPanel_Click(sender As Object, e As EventArgs) Handles LecturesPanel.Click
+    Private Sub LecturesPanel_Click(sender As Object, e As EventArgs)
         Lecturers.Show()
     End Sub
 
-    Private Sub DepartmentPanel_Click(sender As Object, e As EventArgs) Handles DepartmentPanel.Click
+    Private Sub DepartmentPanel_Click(sender As Object, e As EventArgs)
         Department.Show()
     End Sub
 
-    Private Sub FacultyPanel_Click(sender As Object, e As EventArgs) Handles FacultyPanel.Click
+    Private Sub FacultyPanel_Click(sender As Object, e As EventArgs)
         Faculty.Show()
     End Sub
 
-    Private Sub VenuePanel_Click(sender As Object, e As EventArgs) Handles VenuePanel.Click
+    Private Sub VenuePanel_Click(sender As Object, e As EventArgs)
         Venue.Show()
     End Sub
 
-    Private Sub CoursesPanel_Click(sender As Object, e As EventArgs) Handles CoursesPanel.Click
+    Private Sub CoursesPanel_Click(sender As Object, e As EventArgs)
         Courses.Show()
     End Sub
 
-    Private Sub ProgrammesPanel_Click(sender As Object, e As EventArgs) Handles ProgrammesPanel.Click
+    Private Sub ProgrammesPanel_Click(sender As Object, e As EventArgs)
         ManageProgrammes.Show()
     End Sub
 
 
-    Private Sub dashboard_MouseHover(sender As Object, e As EventArgs) Handles dashboard.MouseHover
+    Private Sub dashboard_MouseHover(sender As Object, e As EventArgs)
         fetchDataFromDatabase()
     End Sub
 

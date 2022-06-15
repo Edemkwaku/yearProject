@@ -57,23 +57,14 @@ Partial Class AdminMenu
         Me.btnRestore = New Guna.UI.WinForms.GunaButton()
         Me.btnUsers = New Guna.UI.WinForms.GunaButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.StudentPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.student = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.LecturesPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
         Me.lectures = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
-        Me.DepartmentPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.GunaPictureBox4 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.departments = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
-        Me.FacultyPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.GunaPictureBox5 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.faculties = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
-        Me.CoursesPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.GunaPictureBox7 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.course = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
         Me.VenuePanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.GunaPictureBox6 = New Guna.UI.WinForms.GunaPictureBox()
         Me.venues = New Guna.UI.WinForms.GunaLabel()
@@ -82,38 +73,45 @@ Partial Class AdminMenu
         Me.GunaPictureBox8 = New Guna.UI.WinForms.GunaPictureBox()
         Me.programmes = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
-        Me.StudentPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.studentDetails = New System.Windows.Forms.Panel()
-        Me.ComboBox = New System.Windows.Forms.ComboBox()
-        Me.btnCose = New Guna.UI.WinForms.GunaButton()
-        Me.DetailsView = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
+        Me.DepartmentPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.GunaPictureBox4 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.departments = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
+        Me.CoursesPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.GunaPictureBox7 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.course = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
+        Me.FacultyPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.GunaPictureBox5 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.faculties = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
         Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.dashboard = New System.Windows.Forms.Panel()
+        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
+        Me.DetailsView = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.btnCose = New Guna.UI.WinForms.GunaButton()
+        Me.ComboBox = New System.Windows.Forms.ComboBox()
+        Me.studentDetails = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StudentPanel.SuspendLayout()
+        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LecturesPanel.SuspendLayout()
         CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DepartmentPanel.SuspendLayout()
-        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FacultyPanel.SuspendLayout()
-        CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CoursesPanel.SuspendLayout()
-        CType(Me.GunaPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VenuePanel.SuspendLayout()
         CType(Me.GunaPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ProgrammesPanel.SuspendLayout()
         CType(Me.GunaPictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.StudentPanel.SuspendLayout()
-        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.studentDetails.SuspendLayout()
+        Me.DepartmentPanel.SuspendLayout()
+        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CoursesPanel.SuspendLayout()
+        CType(Me.GunaPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FacultyPanel.SuspendLayout()
+        CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dashboard.SuspendLayout()
+        Me.studentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -327,7 +325,7 @@ Partial Class AdminMenu
         '
         Me.GunaButton1.AnimationHoverSpeed = 0.07!
         Me.GunaButton1.AnimationSpeed = 0.03!
-        Me.GunaButton1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaButton1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GunaButton1.BorderColor = System.Drawing.Color.Black
         Me.GunaButton1.DialogResult = System.Windows.Forms.DialogResult.None
         Me.GunaButton1.FocusedColor = System.Drawing.Color.Empty
@@ -337,11 +335,11 @@ Partial Class AdminMenu
         Me.GunaButton1.ImageSize = New System.Drawing.Size(25, 25)
         Me.GunaButton1.Location = New System.Drawing.Point(1, 168)
         Me.GunaButton1.Name = "GunaButton1"
-        Me.GunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.GunaButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GunaButton1.OnHoverForeColor = System.Drawing.Color.White
         Me.GunaButton1.OnHoverImage = Nothing
-        Me.GunaButton1.OnPressedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaButton1.OnPressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GunaButton1.Size = New System.Drawing.Size(149, 35)
         Me.GunaButton1.TabIndex = 16
         Me.GunaButton1.Text = "Dashboard"
@@ -656,6 +654,33 @@ Partial Class AdminMenu
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'StudentPanel
+        '
+        Me.StudentPanel.BackColor = System.Drawing.Color.Transparent
+        Me.StudentPanel.Controls.Add(Me.GunaPictureBox2)
+        Me.StudentPanel.Controls.Add(Me.student)
+        Me.StudentPanel.Controls.Add(Me.GunaLabel1)
+        Me.StudentPanel.FillColor = System.Drawing.Color.White
+        Me.StudentPanel.Location = New System.Drawing.Point(221, 78)
+        Me.StudentPanel.Name = "StudentPanel"
+        Me.StudentPanel.Radius = 5
+        Me.StudentPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.StudentPanel.ShadowDepth = 50
+        Me.StudentPanel.ShadowShift = 8
+        Me.StudentPanel.Size = New System.Drawing.Size(239, 140)
+        Me.StudentPanel.TabIndex = 16
+        '
+        'GunaPictureBox2
+        '
+        Me.GunaPictureBox2.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox2.Image = CType(resources.GetObject("GunaPictureBox2.Image"), System.Drawing.Image)
+        Me.GunaPictureBox2.Location = New System.Drawing.Point(94, 19)
+        Me.GunaPictureBox2.Name = "GunaPictureBox2"
+        Me.GunaPictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.GunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox2.TabIndex = 17
+        Me.GunaPictureBox2.TabStop = False
+        '
         'student
         '
         Me.student.AutoSize = True
@@ -668,6 +693,18 @@ Partial Class AdminMenu
         Me.student.Text = "1000"
         Me.student.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.White
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaLabel1.Location = New System.Drawing.Point(77, 98)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(77, 23)
+        Me.GunaLabel1.TabIndex = 14
+        Me.GunaLabel1.Text = "Students"
+        '
         'LecturesPanel
         '
         Me.LecturesPanel.BackColor = System.Drawing.Color.Transparent
@@ -675,14 +712,14 @@ Partial Class AdminMenu
         Me.LecturesPanel.Controls.Add(Me.lectures)
         Me.LecturesPanel.Controls.Add(Me.GunaLabel2)
         Me.LecturesPanel.FillColor = System.Drawing.Color.White
-        Me.LecturesPanel.Location = New System.Drawing.Point(265, 26)
+        Me.LecturesPanel.Location = New System.Drawing.Point(479, 78)
         Me.LecturesPanel.Name = "LecturesPanel"
         Me.LecturesPanel.Radius = 5
         Me.LecturesPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LecturesPanel.ShadowDepth = 50
         Me.LecturesPanel.ShadowShift = 8
         Me.LecturesPanel.Size = New System.Drawing.Size(239, 140)
-        Me.LecturesPanel.TabIndex = 13
+        Me.LecturesPanel.TabIndex = 17
         '
         'GunaPictureBox3
         '
@@ -719,159 +756,6 @@ Partial Class AdminMenu
         Me.GunaLabel2.TabIndex = 14
         Me.GunaLabel2.Text = "Lectureres"
         '
-        'DepartmentPanel
-        '
-        Me.DepartmentPanel.BackColor = System.Drawing.Color.Transparent
-        Me.DepartmentPanel.Controls.Add(Me.GunaPictureBox4)
-        Me.DepartmentPanel.Controls.Add(Me.departments)
-        Me.DepartmentPanel.Controls.Add(Me.GunaLabel3)
-        Me.DepartmentPanel.FillColor = System.Drawing.SystemColors.Window
-        Me.DepartmentPanel.Location = New System.Drawing.Point(521, 26)
-        Me.DepartmentPanel.Name = "DepartmentPanel"
-        Me.DepartmentPanel.Radius = 5
-        Me.DepartmentPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DepartmentPanel.ShadowDepth = 50
-        Me.DepartmentPanel.ShadowShift = 8
-        Me.DepartmentPanel.Size = New System.Drawing.Size(239, 140)
-        Me.DepartmentPanel.TabIndex = 13
-        '
-        'GunaPictureBox4
-        '
-        Me.GunaPictureBox4.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox4.Image = CType(resources.GetObject("GunaPictureBox4.Image"), System.Drawing.Image)
-        Me.GunaPictureBox4.Location = New System.Drawing.Point(94, 19)
-        Me.GunaPictureBox4.Name = "GunaPictureBox4"
-        Me.GunaPictureBox4.Size = New System.Drawing.Size(40, 40)
-        Me.GunaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox4.TabIndex = 17
-        Me.GunaPictureBox4.TabStop = False
-        '
-        'departments
-        '
-        Me.departments.AutoSize = True
-        Me.departments.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.departments.ForeColor = System.Drawing.Color.Purple
-        Me.departments.Location = New System.Drawing.Point(100, 65)
-        Me.departments.Name = "departments"
-        Me.departments.Size = New System.Drawing.Size(67, 32)
-        Me.departments.TabIndex = 0
-        Me.departments.Text = "3000"
-        Me.departments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GunaLabel3
-        '
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.BackColor = System.Drawing.Color.White
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(72, 98)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(109, 23)
-        Me.GunaLabel3.TabIndex = 14
-        Me.GunaLabel3.Text = "Departments"
-        '
-        'FacultyPanel
-        '
-        Me.FacultyPanel.BackColor = System.Drawing.Color.Transparent
-        Me.FacultyPanel.Controls.Add(Me.GunaPictureBox5)
-        Me.FacultyPanel.Controls.Add(Me.faculties)
-        Me.FacultyPanel.Controls.Add(Me.GunaLabel4)
-        Me.FacultyPanel.FillColor = System.Drawing.SystemColors.Window
-        Me.FacultyPanel.Location = New System.Drawing.Point(781, 26)
-        Me.FacultyPanel.Name = "FacultyPanel"
-        Me.FacultyPanel.Radius = 5
-        Me.FacultyPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.FacultyPanel.ShadowDepth = 50
-        Me.FacultyPanel.ShadowShift = 8
-        Me.FacultyPanel.Size = New System.Drawing.Size(239, 140)
-        Me.FacultyPanel.TabIndex = 13
-        '
-        'GunaPictureBox5
-        '
-        Me.GunaPictureBox5.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox5.Image = CType(resources.GetObject("GunaPictureBox5.Image"), System.Drawing.Image)
-        Me.GunaPictureBox5.Location = New System.Drawing.Point(94, 19)
-        Me.GunaPictureBox5.Name = "GunaPictureBox5"
-        Me.GunaPictureBox5.Size = New System.Drawing.Size(40, 40)
-        Me.GunaPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox5.TabIndex = 17
-        Me.GunaPictureBox5.TabStop = False
-        '
-        'faculties
-        '
-        Me.faculties.AutoSize = True
-        Me.faculties.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.faculties.ForeColor = System.Drawing.Color.Purple
-        Me.faculties.Location = New System.Drawing.Point(100, 65)
-        Me.faculties.Name = "faculties"
-        Me.faculties.Size = New System.Drawing.Size(68, 32)
-        Me.faculties.TabIndex = 0
-        Me.faculties.Text = "4000"
-        Me.faculties.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GunaLabel4
-        '
-        Me.GunaLabel4.AutoSize = True
-        Me.GunaLabel4.BackColor = System.Drawing.Color.White
-        Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaLabel4.Location = New System.Drawing.Point(76, 98)
-        Me.GunaLabel4.Name = "GunaLabel4"
-        Me.GunaLabel4.Size = New System.Drawing.Size(75, 23)
-        Me.GunaLabel4.TabIndex = 14
-        Me.GunaLabel4.Text = "Faculties"
-        '
-        'CoursesPanel
-        '
-        Me.CoursesPanel.BackColor = System.Drawing.Color.Transparent
-        Me.CoursesPanel.Controls.Add(Me.GunaPictureBox7)
-        Me.CoursesPanel.Controls.Add(Me.course)
-        Me.CoursesPanel.Controls.Add(Me.GunaLabel6)
-        Me.CoursesPanel.FillColor = System.Drawing.SystemColors.Window
-        Me.CoursesPanel.Location = New System.Drawing.Point(265, 248)
-        Me.CoursesPanel.Name = "CoursesPanel"
-        Me.CoursesPanel.Radius = 5
-        Me.CoursesPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CoursesPanel.ShadowDepth = 50
-        Me.CoursesPanel.ShadowShift = 8
-        Me.CoursesPanel.Size = New System.Drawing.Size(239, 140)
-        Me.CoursesPanel.TabIndex = 13
-        '
-        'GunaPictureBox7
-        '
-        Me.GunaPictureBox7.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox7.Image = CType(resources.GetObject("GunaPictureBox7.Image"), System.Drawing.Image)
-        Me.GunaPictureBox7.Location = New System.Drawing.Point(94, 19)
-        Me.GunaPictureBox7.Name = "GunaPictureBox7"
-        Me.GunaPictureBox7.Size = New System.Drawing.Size(40, 40)
-        Me.GunaPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox7.TabIndex = 17
-        Me.GunaPictureBox7.TabStop = False
-        '
-        'course
-        '
-        Me.course.AutoSize = True
-        Me.course.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.course.ForeColor = System.Drawing.Color.Purple
-        Me.course.Location = New System.Drawing.Point(100, 65)
-        Me.course.Name = "course"
-        Me.course.Size = New System.Drawing.Size(67, 32)
-        Me.course.TabIndex = 0
-        Me.course.Text = "6000"
-        Me.course.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GunaLabel6
-        '
-        Me.GunaLabel6.AutoSize = True
-        Me.GunaLabel6.BackColor = System.Drawing.Color.White
-        Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaLabel6.Location = New System.Drawing.Point(76, 95)
-        Me.GunaLabel6.Name = "GunaLabel6"
-        Me.GunaLabel6.Size = New System.Drawing.Size(70, 23)
-        Me.GunaLabel6.TabIndex = 14
-        Me.GunaLabel6.Text = "Courses"
-        '
         'VenuePanel
         '
         Me.VenuePanel.BackColor = System.Drawing.Color.Transparent
@@ -879,14 +763,14 @@ Partial Class AdminMenu
         Me.VenuePanel.Controls.Add(Me.venues)
         Me.VenuePanel.Controls.Add(Me.GunaLabel5)
         Me.VenuePanel.FillColor = System.Drawing.SystemColors.Window
-        Me.VenuePanel.Location = New System.Drawing.Point(7, 248)
+        Me.VenuePanel.Location = New System.Drawing.Point(221, 300)
         Me.VenuePanel.Name = "VenuePanel"
         Me.VenuePanel.Radius = 5
         Me.VenuePanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.VenuePanel.ShadowDepth = 50
         Me.VenuePanel.ShadowShift = 8
         Me.VenuePanel.Size = New System.Drawing.Size(239, 140)
-        Me.VenuePanel.TabIndex = 13
+        Me.VenuePanel.TabIndex = 18
         '
         'GunaPictureBox6
         '
@@ -930,14 +814,14 @@ Partial Class AdminMenu
         Me.ProgrammesPanel.Controls.Add(Me.programmes)
         Me.ProgrammesPanel.Controls.Add(Me.GunaLabel7)
         Me.ProgrammesPanel.FillColor = System.Drawing.SystemColors.Window
-        Me.ProgrammesPanel.Location = New System.Drawing.Point(521, 248)
+        Me.ProgrammesPanel.Location = New System.Drawing.Point(735, 300)
         Me.ProgrammesPanel.Name = "ProgrammesPanel"
         Me.ProgrammesPanel.Radius = 5
         Me.ProgrammesPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ProgrammesPanel.ShadowDepth = 40
         Me.ProgrammesPanel.ShadowShift = 8
         Me.ProgrammesPanel.Size = New System.Drawing.Size(239, 140)
-        Me.ProgrammesPanel.TabIndex = 13
+        Me.ProgrammesPanel.TabIndex = 19
         '
         'GunaPictureBox8
         '
@@ -974,92 +858,201 @@ Partial Class AdminMenu
         Me.GunaLabel7.TabIndex = 14
         Me.GunaLabel7.Text = "Programmes"
         '
-        'GunaLabel1
+        'DepartmentPanel
         '
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.BackColor = System.Drawing.Color.White
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaLabel1.Location = New System.Drawing.Point(77, 98)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(77, 23)
-        Me.GunaLabel1.TabIndex = 14
-        Me.GunaLabel1.Text = "Students"
+        Me.DepartmentPanel.BackColor = System.Drawing.Color.Transparent
+        Me.DepartmentPanel.Controls.Add(Me.GunaPictureBox4)
+        Me.DepartmentPanel.Controls.Add(Me.departments)
+        Me.DepartmentPanel.Controls.Add(Me.GunaLabel3)
+        Me.DepartmentPanel.FillColor = System.Drawing.SystemColors.Window
+        Me.DepartmentPanel.Location = New System.Drawing.Point(735, 78)
+        Me.DepartmentPanel.Name = "DepartmentPanel"
+        Me.DepartmentPanel.Radius = 5
+        Me.DepartmentPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DepartmentPanel.ShadowDepth = 50
+        Me.DepartmentPanel.ShadowShift = 8
+        Me.DepartmentPanel.Size = New System.Drawing.Size(239, 140)
+        Me.DepartmentPanel.TabIndex = 20
         '
-        'StudentPanel
+        'GunaPictureBox4
         '
-        Me.StudentPanel.BackColor = System.Drawing.Color.Transparent
-        Me.StudentPanel.Controls.Add(Me.GunaPictureBox2)
-        Me.StudentPanel.Controls.Add(Me.student)
-        Me.StudentPanel.Controls.Add(Me.GunaLabel1)
-        Me.StudentPanel.FillColor = System.Drawing.Color.White
-        Me.StudentPanel.Location = New System.Drawing.Point(7, 26)
-        Me.StudentPanel.Name = "StudentPanel"
-        Me.StudentPanel.Radius = 5
-        Me.StudentPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.StudentPanel.ShadowDepth = 50
-        Me.StudentPanel.ShadowShift = 8
-        Me.StudentPanel.Size = New System.Drawing.Size(239, 140)
-        Me.StudentPanel.TabIndex = 13
+        Me.GunaPictureBox4.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox4.Image = CType(resources.GetObject("GunaPictureBox4.Image"), System.Drawing.Image)
+        Me.GunaPictureBox4.Location = New System.Drawing.Point(94, 19)
+        Me.GunaPictureBox4.Name = "GunaPictureBox4"
+        Me.GunaPictureBox4.Size = New System.Drawing.Size(40, 40)
+        Me.GunaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox4.TabIndex = 17
+        Me.GunaPictureBox4.TabStop = False
         '
-        'GunaPictureBox2
+        'departments
         '
-        Me.GunaPictureBox2.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox2.Image = CType(resources.GetObject("GunaPictureBox2.Image"), System.Drawing.Image)
-        Me.GunaPictureBox2.Location = New System.Drawing.Point(94, 19)
-        Me.GunaPictureBox2.Name = "GunaPictureBox2"
-        Me.GunaPictureBox2.Size = New System.Drawing.Size(40, 40)
-        Me.GunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox2.TabIndex = 17
-        Me.GunaPictureBox2.TabStop = False
+        Me.departments.AutoSize = True
+        Me.departments.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.departments.ForeColor = System.Drawing.Color.Purple
+        Me.departments.Location = New System.Drawing.Point(100, 65)
+        Me.departments.Name = "departments"
+        Me.departments.Size = New System.Drawing.Size(67, 32)
+        Me.departments.TabIndex = 0
+        Me.departments.Text = "3000"
+        Me.departments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'studentDetails
+        'GunaLabel3
         '
-        Me.studentDetails.BackColor = System.Drawing.Color.Silver
-        Me.studentDetails.Controls.Add(Me.ComboBox)
-        Me.studentDetails.Controls.Add(Me.btnCose)
-        Me.studentDetails.Controls.Add(Me.DetailsView)
-        Me.studentDetails.Controls.Add(Me.btnSearch)
-        Me.studentDetails.Controls.Add(Me.txtsearch)
-        Me.studentDetails.Location = New System.Drawing.Point(285, 471)
-        Me.studentDetails.Name = "studentDetails"
-        Me.studentDetails.Size = New System.Drawing.Size(870, 330)
-        Me.studentDetails.TabIndex = 15
+        Me.GunaLabel3.AutoSize = True
+        Me.GunaLabel3.BackColor = System.Drawing.Color.White
+        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaLabel3.Location = New System.Drawing.Point(72, 98)
+        Me.GunaLabel3.Name = "GunaLabel3"
+        Me.GunaLabel3.Size = New System.Drawing.Size(109, 23)
+        Me.GunaLabel3.TabIndex = 14
+        Me.GunaLabel3.Text = "Departments"
         '
-        'ComboBox
+        'CoursesPanel
         '
-        Me.ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox.FormattingEnabled = True
-        Me.ComboBox.Location = New System.Drawing.Point(37, 18)
-        Me.ComboBox.Name = "ComboBox"
-        Me.ComboBox.Size = New System.Drawing.Size(162, 29)
-        Me.ComboBox.TabIndex = 36
+        Me.CoursesPanel.BackColor = System.Drawing.Color.Transparent
+        Me.CoursesPanel.Controls.Add(Me.GunaPictureBox7)
+        Me.CoursesPanel.Controls.Add(Me.course)
+        Me.CoursesPanel.Controls.Add(Me.GunaLabel6)
+        Me.CoursesPanel.FillColor = System.Drawing.SystemColors.Window
+        Me.CoursesPanel.Location = New System.Drawing.Point(479, 300)
+        Me.CoursesPanel.Name = "CoursesPanel"
+        Me.CoursesPanel.Radius = 5
+        Me.CoursesPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CoursesPanel.ShadowDepth = 50
+        Me.CoursesPanel.ShadowShift = 8
+        Me.CoursesPanel.Size = New System.Drawing.Size(239, 140)
+        Me.CoursesPanel.TabIndex = 21
         '
-        'btnCose
+        'GunaPictureBox7
         '
-        Me.btnCose.AnimationHoverSpeed = 0.07!
-        Me.btnCose.AnimationSpeed = 0.03!
-        Me.btnCose.BaseColor = System.Drawing.SystemColors.Control
-        Me.btnCose.BorderColor = System.Drawing.Color.Red
-        Me.btnCose.BorderSize = 1
-        Me.btnCose.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnCose.FocusedColor = System.Drawing.Color.Empty
-        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCose.ForeColor = System.Drawing.Color.Black
-        Me.btnCose.Image = Nothing
-        Me.btnCose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnCose.Location = New System.Drawing.Point(821, 9)
-        Me.btnCose.Name = "btnCose"
-        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.Red
-        Me.btnCose.OnHoverBorderColor = System.Drawing.Color.Red
-        Me.btnCose.OnHoverForeColor = System.Drawing.Color.White
-        Me.btnCose.OnHoverImage = Nothing
-        Me.btnCose.OnPressedColor = System.Drawing.Color.Black
-        Me.btnCose.Size = New System.Drawing.Size(37, 26)
-        Me.btnCose.TabIndex = 35
-        Me.btnCose.Text = "X"
-        Me.btnCose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.GunaPictureBox7.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox7.Image = CType(resources.GetObject("GunaPictureBox7.Image"), System.Drawing.Image)
+        Me.GunaPictureBox7.Location = New System.Drawing.Point(94, 19)
+        Me.GunaPictureBox7.Name = "GunaPictureBox7"
+        Me.GunaPictureBox7.Size = New System.Drawing.Size(40, 40)
+        Me.GunaPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox7.TabIndex = 17
+        Me.GunaPictureBox7.TabStop = False
+        '
+        'course
+        '
+        Me.course.AutoSize = True
+        Me.course.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.course.ForeColor = System.Drawing.Color.Purple
+        Me.course.Location = New System.Drawing.Point(100, 65)
+        Me.course.Name = "course"
+        Me.course.Size = New System.Drawing.Size(67, 32)
+        Me.course.TabIndex = 0
+        Me.course.Text = "6000"
+        Me.course.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'GunaLabel6
+        '
+        Me.GunaLabel6.AutoSize = True
+        Me.GunaLabel6.BackColor = System.Drawing.Color.White
+        Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaLabel6.Location = New System.Drawing.Point(76, 95)
+        Me.GunaLabel6.Name = "GunaLabel6"
+        Me.GunaLabel6.Size = New System.Drawing.Size(70, 23)
+        Me.GunaLabel6.TabIndex = 14
+        Me.GunaLabel6.Text = "Courses"
+        '
+        'FacultyPanel
+        '
+        Me.FacultyPanel.BackColor = System.Drawing.Color.Transparent
+        Me.FacultyPanel.Controls.Add(Me.GunaPictureBox5)
+        Me.FacultyPanel.Controls.Add(Me.faculties)
+        Me.FacultyPanel.Controls.Add(Me.GunaLabel4)
+        Me.FacultyPanel.FillColor = System.Drawing.SystemColors.Window
+        Me.FacultyPanel.Location = New System.Drawing.Point(995, 78)
+        Me.FacultyPanel.Name = "FacultyPanel"
+        Me.FacultyPanel.Radius = 5
+        Me.FacultyPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.FacultyPanel.ShadowDepth = 50
+        Me.FacultyPanel.ShadowShift = 8
+        Me.FacultyPanel.Size = New System.Drawing.Size(239, 140)
+        Me.FacultyPanel.TabIndex = 22
+        '
+        'GunaPictureBox5
+        '
+        Me.GunaPictureBox5.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox5.Image = CType(resources.GetObject("GunaPictureBox5.Image"), System.Drawing.Image)
+        Me.GunaPictureBox5.Location = New System.Drawing.Point(94, 19)
+        Me.GunaPictureBox5.Name = "GunaPictureBox5"
+        Me.GunaPictureBox5.Size = New System.Drawing.Size(40, 40)
+        Me.GunaPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox5.TabIndex = 17
+        Me.GunaPictureBox5.TabStop = False
+        '
+        'faculties
+        '
+        Me.faculties.AutoSize = True
+        Me.faculties.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.faculties.ForeColor = System.Drawing.Color.Purple
+        Me.faculties.Location = New System.Drawing.Point(100, 65)
+        Me.faculties.Name = "faculties"
+        Me.faculties.Size = New System.Drawing.Size(68, 32)
+        Me.faculties.TabIndex = 0
+        Me.faculties.Text = "4000"
+        Me.faculties.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'GunaLabel4
+        '
+        Me.GunaLabel4.AutoSize = True
+        Me.GunaLabel4.BackColor = System.Drawing.Color.White
+        Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaLabel4.Location = New System.Drawing.Point(76, 98)
+        Me.GunaLabel4.Name = "GunaLabel4"
+        Me.GunaLabel4.Size = New System.Drawing.Size(75, 23)
+        Me.GunaLabel4.TabIndex = 14
+        Me.GunaLabel4.Text = "Faculties"
+        '
+        'txtsearch
+        '
+        Me.txtsearch.BorderRadius = 5
+        Me.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtsearch.DefaultText = ""
+        Me.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearch.DisabledState.Parent = Me.txtsearch
+        Me.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearch.FocusedState.Parent = Me.txtsearch
+        Me.txtsearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtsearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtsearch.HoverState.Parent = Me.txtsearch
+        Me.txtsearch.Location = New System.Drawing.Point(352, 20)
+        Me.txtsearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtsearch.Name = "txtsearch"
+        Me.txtsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtsearch.PlaceholderText = "search for student"
+        Me.txtsearch.SelectedText = ""
+        Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
+        Me.txtsearch.Size = New System.Drawing.Size(200, 25)
+        Me.txtsearch.TabIndex = 32
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BorderRadius = 5
+        Me.btnSearch.CheckedState.Parent = Me.btnSearch
+        Me.btnSearch.CustomImages.Parent = Me.btnSearch
+        Me.btnSearch.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.HoverState.Parent = Me.btnSearch
+        Me.btnSearch.Location = New System.Drawing.Point(550, 20)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
+        Me.btnSearch.Size = New System.Drawing.Size(75, 25)
+        Me.btnSearch.TabIndex = 33
+        Me.btnSearch.Text = "OK"
         '
         'DetailsView
         '
@@ -1119,62 +1112,53 @@ Partial Class AdminMenu
         Me.DetailsView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DetailsView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'btnSearch
+        'btnCose
         '
-        Me.btnSearch.BorderRadius = 5
-        Me.btnSearch.CheckedState.Parent = Me.btnSearch
-        Me.btnSearch.CustomImages.Parent = Me.btnSearch
-        Me.btnSearch.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.HoverState.Parent = Me.btnSearch
-        Me.btnSearch.Location = New System.Drawing.Point(550, 20)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
-        Me.btnSearch.Size = New System.Drawing.Size(75, 25)
-        Me.btnSearch.TabIndex = 33
-        Me.btnSearch.Text = "OK"
+        Me.btnCose.AnimationHoverSpeed = 0.07!
+        Me.btnCose.AnimationSpeed = 0.03!
+        Me.btnCose.BaseColor = System.Drawing.SystemColors.Control
+        Me.btnCose.BorderColor = System.Drawing.Color.Red
+        Me.btnCose.BorderSize = 1
+        Me.btnCose.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btnCose.FocusedColor = System.Drawing.Color.Empty
+        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCose.ForeColor = System.Drawing.Color.Black
+        Me.btnCose.Image = Nothing
+        Me.btnCose.ImageSize = New System.Drawing.Size(20, 20)
+        Me.btnCose.Location = New System.Drawing.Point(821, 9)
+        Me.btnCose.Name = "btnCose"
+        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.Red
+        Me.btnCose.OnHoverBorderColor = System.Drawing.Color.Red
+        Me.btnCose.OnHoverForeColor = System.Drawing.Color.White
+        Me.btnCose.OnHoverImage = Nothing
+        Me.btnCose.OnPressedColor = System.Drawing.Color.Black
+        Me.btnCose.Size = New System.Drawing.Size(37, 26)
+        Me.btnCose.TabIndex = 35
+        Me.btnCose.Text = "X"
+        Me.btnCose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtsearch
+        'ComboBox
         '
-        Me.txtsearch.BorderRadius = 5
-        Me.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtsearch.DefaultText = ""
-        Me.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsearch.DisabledState.Parent = Me.txtsearch
-        Me.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsearch.FocusedState.Parent = Me.txtsearch
-        Me.txtsearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtsearch.HoverState.Parent = Me.txtsearch
-        Me.txtsearch.Location = New System.Drawing.Point(352, 20)
-        Me.txtsearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtsearch.PlaceholderText = "search for student"
-        Me.txtsearch.SelectedText = ""
-        Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
-        Me.txtsearch.Size = New System.Drawing.Size(200, 25)
-        Me.txtsearch.TabIndex = 32
+        Me.ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox.FormattingEnabled = True
+        Me.ComboBox.Location = New System.Drawing.Point(37, 18)
+        Me.ComboBox.Name = "ComboBox"
+        Me.ComboBox.Size = New System.Drawing.Size(162, 29)
+        Me.ComboBox.TabIndex = 36
         '
-        'dashboard
+        'studentDetails
         '
-        Me.dashboard.Controls.Add(Me.StudentPanel)
-        Me.dashboard.Controls.Add(Me.LecturesPanel)
-        Me.dashboard.Controls.Add(Me.VenuePanel)
-        Me.dashboard.Controls.Add(Me.ProgrammesPanel)
-        Me.dashboard.Controls.Add(Me.DepartmentPanel)
-        Me.dashboard.Controls.Add(Me.CoursesPanel)
-        Me.dashboard.Controls.Add(Me.FacultyPanel)
-        Me.dashboard.Location = New System.Drawing.Point(231, 51)
-        Me.dashboard.Name = "dashboard"
-        Me.dashboard.Size = New System.Drawing.Size(1045, 395)
-        Me.dashboard.TabIndex = 16
+        Me.studentDetails.BackColor = System.Drawing.Color.Silver
+        Me.studentDetails.Controls.Add(Me.ComboBox)
+        Me.studentDetails.Controls.Add(Me.btnCose)
+        Me.studentDetails.Controls.Add(Me.DetailsView)
+        Me.studentDetails.Controls.Add(Me.btnSearch)
+        Me.studentDetails.Controls.Add(Me.txtsearch)
+        Me.studentDetails.Location = New System.Drawing.Point(285, 471)
+        Me.studentDetails.Name = "studentDetails"
+        Me.studentDetails.Size = New System.Drawing.Size(870, 330)
+        Me.studentDetails.TabIndex = 15
         '
         'AdminMenu
         '
@@ -1182,8 +1166,14 @@ Partial Class AdminMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1323, 749)
+        Me.Controls.Add(Me.StudentPanel)
+        Me.Controls.Add(Me.LecturesPanel)
+        Me.Controls.Add(Me.VenuePanel)
+        Me.Controls.Add(Me.ProgrammesPanel)
+        Me.Controls.Add(Me.DepartmentPanel)
+        Me.Controls.Add(Me.CoursesPanel)
+        Me.Controls.Add(Me.FacultyPanel)
         Me.Controls.Add(Me.studentDetails)
-        Me.Controls.Add(Me.dashboard)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Controls.Add(Me.Panel2)
@@ -1201,30 +1191,29 @@ Partial Class AdminMenu
         Me.Panel4.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StudentPanel.ResumeLayout(False)
+        Me.StudentPanel.PerformLayout()
+        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LecturesPanel.ResumeLayout(False)
         Me.LecturesPanel.PerformLayout()
         CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DepartmentPanel.ResumeLayout(False)
-        Me.DepartmentPanel.PerformLayout()
-        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.FacultyPanel.ResumeLayout(False)
-        Me.FacultyPanel.PerformLayout()
-        CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CoursesPanel.ResumeLayout(False)
-        Me.CoursesPanel.PerformLayout()
-        CType(Me.GunaPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VenuePanel.ResumeLayout(False)
         Me.VenuePanel.PerformLayout()
         CType(Me.GunaPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ProgrammesPanel.ResumeLayout(False)
         Me.ProgrammesPanel.PerformLayout()
         CType(Me.GunaPictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.StudentPanel.ResumeLayout(False)
-        Me.StudentPanel.PerformLayout()
-        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.studentDetails.ResumeLayout(False)
+        Me.DepartmentPanel.ResumeLayout(False)
+        Me.DepartmentPanel.PerformLayout()
+        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CoursesPanel.ResumeLayout(False)
+        Me.CoursesPanel.PerformLayout()
+        CType(Me.GunaPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FacultyPanel.ResumeLayout(False)
+        Me.FacultyPanel.PerformLayout()
+        CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.dashboard.ResumeLayout(False)
+        Me.studentDetails.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1253,44 +1242,43 @@ Partial Class AdminMenu
     Friend WithEvents btnStudentDetail As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnManageStudent As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnManageLecturers As Guna.UI.WinForms.GunaButton
-    Friend WithEvents student As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LecturesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents lectures As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents DepartmentPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents departments As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents FacultyPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents faculties As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents CoursesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents course As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents VenuePanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents venues As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents ProgrammesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents programmes As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents StudentPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents studentDetails As Panel
-    Friend WithEvents DetailsView As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnCose As Guna.UI.WinForms.GunaButton
-    Friend WithEvents ComboBox As ComboBox
     Friend WithEvents btnClass As Guna.UI.WinForms.GunaButton
     Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents GunaButton1 As Guna.UI.WinForms.GunaButton
-    Friend WithEvents GunaPictureBox3 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox4 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox5 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox7 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox6 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox8 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents GunaPictureBox2 As Guna.UI.WinForms.GunaPictureBox
-    Friend WithEvents dashboard As Panel
     Friend WithEvents btnProgramme As Guna.UI.WinForms.GunaButton
     Friend WithEvents txtDate As Label
+    Friend WithEvents StudentPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox2 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents student As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LecturesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox3 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents lectures As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents VenuePanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox6 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents venues As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents ProgrammesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox8 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents programmes As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents DepartmentPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox4 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents departments As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents CoursesPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox7 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents course As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents FacultyPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents GunaPictureBox5 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents faculties As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents DetailsView As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents btnCose As Guna.UI.WinForms.GunaButton
+    Friend WithEvents ComboBox As ComboBox
+    Friend WithEvents studentDetails As Panel
 End Class

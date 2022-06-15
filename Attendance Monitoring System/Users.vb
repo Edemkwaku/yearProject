@@ -4,7 +4,7 @@ Public Class Users
     ' Dim encrypt As New EncryptAnd_Decrypt()
     Dim query As New Database
     Dim iExit As DialogResult
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -91,10 +91,71 @@ Public Class Users
 
     'form Onload
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        txtDate.Text = ("0" & Today.Day & "-0" & Today.Month & "-" & Today.Year)
+        ' txtDate.Text = Today.Year & "-" & Today.Month & "-" & Today.Day
+
+        Dim signin As New Sign_In
+        Dim user As String = username
+        lblusername.Text = "Welcome " & user
+
         'Load user data
         updateTable()
 
         studentClass.Visible = False
+    End Sub
+
+
+    'button dashboard
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        AdminMenu.Show()
+        Me.Hide()
+    End Sub
+
+    'button lecturer
+    Private Sub btnManageLecturers_Click(sender As Object, e As EventArgs) Handles btnManageLecturers.Click
+        Lecturers.Show()
+        Me.Hide()
+    End Sub
+
+    'button students
+    Private Sub btnManageStudent_Click(sender As Object, e As EventArgs) Handles btnManageStudent.Click
+        Manage_Student.Show()
+        Me.Hide()
+    End Sub
+
+    'button course
+    Private Sub btnManageCourses_Click(sender As Object, e As EventArgs) Handles btnManageCourses.Click
+        Courses.Show()
+        Me.Hide()
+    End Sub
+
+    'button class
+    Private Sub btnClass_Click(sender As Object, e As EventArgs) Handles btnClass.Click
+        AddClass.Show()
+        Me.Hide()
+    End Sub
+
+    'button report
+    Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
+        Report.Show()
+        Me.Hide()
+    End Sub
+
+    'button venue
+    Private Sub btnVenue_Click(sender As Object, e As EventArgs) Handles btnVenue.Click
+        Venue.Show()
+        Me.Hide()
+    End Sub
+
+    'student Details
+    Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
+
+    End Sub
+
+    'button attendance
+    Private Sub btnStudentAttendance_Click(sender As Object, e As EventArgs) Handles btnStudentAttendance.Click
+        Attendance.ShowDialog()
     End Sub
 
 
