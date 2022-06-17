@@ -23,9 +23,9 @@ Partial Class Details
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Details))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnProgramme = New Guna.UI.WinForms.GunaButton()
         Me.btnDashboard = New Guna.UI.WinForms.GunaButton()
@@ -613,9 +613,9 @@ Partial Class Details
         Me.studentDetails.Controls.Add(Me.DetailsView)
         Me.studentDetails.Controls.Add(Me.btnSearch)
         Me.studentDetails.Controls.Add(Me.txtsearch)
-        Me.studentDetails.Location = New System.Drawing.Point(204, 140)
+        Me.studentDetails.Location = New System.Drawing.Point(167, 140)
         Me.studentDetails.Name = "studentDetails"
-        Me.studentDetails.Size = New System.Drawing.Size(1081, 520)
+        Me.studentDetails.Size = New System.Drawing.Size(1128, 520)
         Me.studentDetails.TabIndex = 40
         '
         'ComboBox
@@ -625,43 +625,43 @@ Partial Class Details
         Me.ComboBox.FormattingEnabled = True
         Me.ComboBox.Location = New System.Drawing.Point(20, 20)
         Me.ComboBox.Name = "ComboBox"
-        Me.ComboBox.Size = New System.Drawing.Size(162, 29)
+        Me.ComboBox.Size = New System.Drawing.Size(196, 29)
         Me.ComboBox.TabIndex = 36
         '
         'DetailsView
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DetailsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.DetailsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DetailsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DetailsView.BackgroundColor = System.Drawing.Color.White
         Me.DetailsView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DetailsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DetailsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DetailsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DetailsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DetailsView.ColumnHeadersHeight = 18
         Me.DetailsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DetailsView.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DetailsView.DefaultCellStyle = DataGridViewCellStyle9
         Me.DetailsView.EnableHeadersVisualStyles = False
         Me.DetailsView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DetailsView.Location = New System.Drawing.Point(20, 62)
         Me.DetailsView.Name = "DetailsView"
         Me.DetailsView.RowHeadersVisible = False
         Me.DetailsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DetailsView.Size = New System.Drawing.Size(1047, 430)
+        Me.DetailsView.Size = New System.Drawing.Size(1084, 430)
         Me.DetailsView.TabIndex = 34
         Me.DetailsView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.DetailsView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -698,7 +698,7 @@ Partial Class Details
         Me.btnSearch.Location = New System.Drawing.Point(695, 20)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
-        Me.btnSearch.Size = New System.Drawing.Size(75, 25)
+        Me.btnSearch.Size = New System.Drawing.Size(100, 30)
         Me.btnSearch.TabIndex = 33
         Me.btnSearch.Text = "OK"
         '
@@ -726,7 +726,7 @@ Partial Class Details
         Me.txtsearch.PlaceholderText = "search for student"
         Me.txtsearch.SelectedText = ""
         Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
-        Me.txtsearch.Size = New System.Drawing.Size(344, 25)
+        Me.txtsearch.Size = New System.Drawing.Size(344, 30)
         Me.txtsearch.TabIndex = 32
         '
         'Label2

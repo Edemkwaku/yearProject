@@ -1,4 +1,5 @@
 ﻿Public Class Attendance
+    Dim data As String
     Dim tab As New Database
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Hide()
@@ -21,24 +22,26 @@
 
     'load data into class combobox
     Sub loadClassComboBox()
-        TAB.ExecuteQuery("SELECT * from class where className ='" & s_class & "';")
-        TAB.HasException()
+        tab.ExecuteQuery("SELECT * from class where className ='" & s_class & "';")
+        If tab.HasException() Then
+            MsgBox(tab.exception)
+        Else
+            ClassCombo.Items.Clear()
+            ClassCombo.Items.Add("---class---")
+            ClassCombo.SelectedIndex = 0
 
-        ClassCombo.Items.Clear()
-        ClassCombo.Items.Add("---class---")
-        ClassCombo.SelectedIndex = 0
-
-        For i = 0 To TAB.RecordCount - 1
-            Dim x As Integer = 1
-            ClassCombo.Items.Add(TAB.DatabaseTable(i)(x))
-        Next
+            For i = 0 To tab.RecordCount - 1
+                Dim x As Integer = 1
+                ClassCombo.Items.Add(tab.DatabaseTable(i)(x))
+            Next
+        End If
     End Sub
 
     'load data into course combobox
     Sub loadCourseComboBox()
         Try
-            tab.ExecuteQuery("SELECT * from class where class ='" & s_class & "';")
-            Dim data As String = tab.DatabaseTable(0)(1)
+            tab.ExecuteQuery("select * from class where className LIKE'" & s_class & "';")
+            data = tab.DatabaseTable(0)(1)
 
             tab.ExecuteQuery("SELECT course from attendance where class ='" & data & "';")
 
@@ -62,7 +65,7 @@
 
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs)
         If CoursesCombo.SelectedIndex = 0 And ClassCombo.SelectedIndex = 0 Then
             Try
                 tab.ExecuteQuery("select attendance.stuID AS 'INDEX NO' ,class.className AS CLASS,attendance.attend AS

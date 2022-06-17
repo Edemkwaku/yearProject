@@ -12,7 +12,7 @@
 
     'logout button
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Me.Close()
+        Me.Hide()
         Sign_In.Show()
     End Sub
 
@@ -24,8 +24,12 @@
     'on form load
     Private Sub NornalUserPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim signin As New Sign_In
-        txtDate.Text = ("0" & Today.Day & "-0" & Today.Month & "-" & Today.Year)
-        Dim user As String = passvalue.username
-        username.Text = "Welcome " & user
+        Dim user As String = username
+        lblusername.Text = "Welcome  " & user
+
+
+        txtDate.Text = (Today.Day & "-0" & Today.Month & "-" & Today.Year)
+
+
     End Sub
 End Class

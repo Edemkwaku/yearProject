@@ -24,9 +24,6 @@ Partial Class AdminMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminMenu))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtDate = New System.Windows.Forms.Label()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
@@ -44,7 +41,7 @@ Partial Class AdminMenu
         Me.btnProgramme = New Guna.UI.WinForms.GunaButton()
         Me.GunaButton1 = New Guna.UI.WinForms.GunaButton()
         Me.btnClass = New Guna.UI.WinForms.GunaButton()
-        Me.btnGenerateReports = New Guna.UI.WinForms.GunaButton()
+        Me.buttonReport = New Guna.UI.WinForms.GunaButton()
         Me.btnManageCourses = New Guna.UI.WinForms.GunaButton()
         Me.btnStudentAttendance = New Guna.UI.WinForms.GunaButton()
         Me.btnStudentDetail = New Guna.UI.WinForms.GunaButton()
@@ -85,12 +82,6 @@ Partial Class AdminMenu
         Me.GunaPictureBox5 = New Guna.UI.WinForms.GunaPictureBox()
         Me.faculties = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
-        Me.txtsearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
-        Me.DetailsView = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.btnCose = New Guna.UI.WinForms.GunaButton()
-        Me.ComboBox = New System.Windows.Forms.ComboBox()
-        Me.studentDetails = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -110,8 +101,6 @@ Partial Class AdminMenu
         CType(Me.GunaPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FacultyPanel.SuspendLayout()
         CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.studentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -279,7 +268,7 @@ Partial Class AdminMenu
         Me.Panel3.Controls.Add(Me.btnProgramme)
         Me.Panel3.Controls.Add(Me.GunaButton1)
         Me.Panel3.Controls.Add(Me.btnClass)
-        Me.Panel3.Controls.Add(Me.btnGenerateReports)
+        Me.Panel3.Controls.Add(Me.buttonReport)
         Me.Panel3.Controls.Add(Me.btnManageCourses)
         Me.Panel3.Controls.Add(Me.btnStudentAttendance)
         Me.Panel3.Controls.Add(Me.btnStudentDetail)
@@ -368,28 +357,28 @@ Partial Class AdminMenu
         Me.btnClass.TabIndex = 12
         Me.btnClass.Text = "Class"
         '
-        'btnGenerateReports
+        'buttonReport
         '
-        Me.btnGenerateReports.AnimationHoverSpeed = 0.07!
-        Me.btnGenerateReports.AnimationSpeed = 0.03!
-        Me.btnGenerateReports.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnGenerateReports.BorderColor = System.Drawing.Color.Black
-        Me.btnGenerateReports.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnGenerateReports.FocusedColor = System.Drawing.Color.Empty
-        Me.btnGenerateReports.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnGenerateReports.ForeColor = System.Drawing.Color.White
-        Me.btnGenerateReports.Image = CType(resources.GetObject("btnGenerateReports.Image"), System.Drawing.Image)
-        Me.btnGenerateReports.ImageSize = New System.Drawing.Size(25, 25)
-        Me.btnGenerateReports.Location = New System.Drawing.Point(0, 238)
-        Me.btnGenerateReports.Name = "btnGenerateReports"
-        Me.btnGenerateReports.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnGenerateReports.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.btnGenerateReports.OnHoverForeColor = System.Drawing.Color.White
-        Me.btnGenerateReports.OnHoverImage = Nothing
-        Me.btnGenerateReports.OnPressedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnGenerateReports.Size = New System.Drawing.Size(149, 35)
-        Me.btnGenerateReports.TabIndex = 0
-        Me.btnGenerateReports.Text = "Report"
+        Me.buttonReport.AnimationHoverSpeed = 0.07!
+        Me.buttonReport.AnimationSpeed = 0.03!
+        Me.buttonReport.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.buttonReport.BorderColor = System.Drawing.Color.Black
+        Me.buttonReport.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.buttonReport.FocusedColor = System.Drawing.Color.Empty
+        Me.buttonReport.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.buttonReport.ForeColor = System.Drawing.Color.White
+        Me.buttonReport.Image = CType(resources.GetObject("buttonReport.Image"), System.Drawing.Image)
+        Me.buttonReport.ImageSize = New System.Drawing.Size(25, 25)
+        Me.buttonReport.Location = New System.Drawing.Point(0, 238)
+        Me.buttonReport.Name = "buttonReport"
+        Me.buttonReport.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.buttonReport.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.buttonReport.OnHoverForeColor = System.Drawing.Color.White
+        Me.buttonReport.OnHoverImage = Nothing
+        Me.buttonReport.OnPressedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.buttonReport.Size = New System.Drawing.Size(149, 35)
+        Me.buttonReport.TabIndex = 0
+        Me.buttonReport.Text = "Report"
         '
         'btnManageCourses
         '
@@ -1011,155 +1000,6 @@ Partial Class AdminMenu
         Me.GunaLabel4.TabIndex = 14
         Me.GunaLabel4.Text = "Faculties"
         '
-        'txtsearch
-        '
-        Me.txtsearch.BorderRadius = 5
-        Me.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtsearch.DefaultText = ""
-        Me.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsearch.DisabledState.Parent = Me.txtsearch
-        Me.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsearch.FocusedState.Parent = Me.txtsearch
-        Me.txtsearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtsearch.HoverState.Parent = Me.txtsearch
-        Me.txtsearch.Location = New System.Drawing.Point(352, 20)
-        Me.txtsearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtsearch.PlaceholderText = "search for student"
-        Me.txtsearch.SelectedText = ""
-        Me.txtsearch.ShadowDecoration.Parent = Me.txtsearch
-        Me.txtsearch.Size = New System.Drawing.Size(200, 25)
-        Me.txtsearch.TabIndex = 32
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BorderRadius = 5
-        Me.btnSearch.CheckedState.Parent = Me.btnSearch
-        Me.btnSearch.CustomImages.Parent = Me.btnSearch
-        Me.btnSearch.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.HoverState.Parent = Me.btnSearch
-        Me.btnSearch.Location = New System.Drawing.Point(550, 20)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
-        Me.btnSearch.Size = New System.Drawing.Size(75, 25)
-        Me.btnSearch.TabIndex = 33
-        Me.btnSearch.Text = "OK"
-        '
-        'DetailsView
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DetailsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DetailsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DetailsView.BackgroundColor = System.Drawing.Color.White
-        Me.DetailsView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DetailsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DetailsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DetailsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DetailsView.ColumnHeadersHeight = 18
-        Me.DetailsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DetailsView.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DetailsView.EnableHeadersVisualStyles = False
-        Me.DetailsView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DetailsView.Location = New System.Drawing.Point(37, 53)
-        Me.DetailsView.Name = "DetailsView"
-        Me.DetailsView.RowHeadersVisible = False
-        Me.DetailsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DetailsView.Size = New System.Drawing.Size(804, 244)
-        Me.DetailsView.TabIndex = 34
-        Me.DetailsView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.DetailsView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DetailsView.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DetailsView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DetailsView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DetailsView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DetailsView.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DetailsView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DetailsView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DetailsView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DetailsView.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DetailsView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DetailsView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DetailsView.ThemeStyle.HeaderStyle.Height = 18
-        Me.DetailsView.ThemeStyle.ReadOnly = False
-        Me.DetailsView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DetailsView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DetailsView.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DetailsView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DetailsView.ThemeStyle.RowsStyle.Height = 22
-        Me.DetailsView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DetailsView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'btnCose
-        '
-        Me.btnCose.AnimationHoverSpeed = 0.07!
-        Me.btnCose.AnimationSpeed = 0.03!
-        Me.btnCose.BaseColor = System.Drawing.SystemColors.Control
-        Me.btnCose.BorderColor = System.Drawing.Color.Red
-        Me.btnCose.BorderSize = 1
-        Me.btnCose.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnCose.FocusedColor = System.Drawing.Color.Empty
-        Me.btnCose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCose.ForeColor = System.Drawing.Color.Black
-        Me.btnCose.Image = Nothing
-        Me.btnCose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnCose.Location = New System.Drawing.Point(821, 9)
-        Me.btnCose.Name = "btnCose"
-        Me.btnCose.OnHoverBaseColor = System.Drawing.Color.Red
-        Me.btnCose.OnHoverBorderColor = System.Drawing.Color.Red
-        Me.btnCose.OnHoverForeColor = System.Drawing.Color.White
-        Me.btnCose.OnHoverImage = Nothing
-        Me.btnCose.OnPressedColor = System.Drawing.Color.Black
-        Me.btnCose.Size = New System.Drawing.Size(37, 26)
-        Me.btnCose.TabIndex = 35
-        Me.btnCose.Text = "X"
-        Me.btnCose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'ComboBox
-        '
-        Me.ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox.FormattingEnabled = True
-        Me.ComboBox.Location = New System.Drawing.Point(37, 18)
-        Me.ComboBox.Name = "ComboBox"
-        Me.ComboBox.Size = New System.Drawing.Size(162, 29)
-        Me.ComboBox.TabIndex = 36
-        '
-        'studentDetails
-        '
-        Me.studentDetails.BackColor = System.Drawing.Color.Silver
-        Me.studentDetails.Controls.Add(Me.ComboBox)
-        Me.studentDetails.Controls.Add(Me.btnCose)
-        Me.studentDetails.Controls.Add(Me.DetailsView)
-        Me.studentDetails.Controls.Add(Me.btnSearch)
-        Me.studentDetails.Controls.Add(Me.txtsearch)
-        Me.studentDetails.Location = New System.Drawing.Point(285, 471)
-        Me.studentDetails.Name = "studentDetails"
-        Me.studentDetails.Size = New System.Drawing.Size(870, 330)
-        Me.studentDetails.TabIndex = 15
-        '
         'AdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1173,7 +1013,6 @@ Partial Class AdminMenu
         Me.Controls.Add(Me.DepartmentPanel)
         Me.Controls.Add(Me.CoursesPanel)
         Me.Controls.Add(Me.FacultyPanel)
-        Me.Controls.Add(Me.studentDetails)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Controls.Add(Me.Panel2)
@@ -1212,8 +1051,6 @@ Partial Class AdminMenu
         Me.FacultyPanel.ResumeLayout(False)
         Me.FacultyPanel.PerformLayout()
         CType(Me.GunaPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DetailsView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.studentDetails.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1236,7 +1073,7 @@ Partial Class AdminMenu
     Friend WithEvents btnMinimize As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents buttonLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblusername As Label
-    Friend WithEvents btnGenerateReports As Guna.UI.WinForms.GunaButton
+    Friend WithEvents buttonReport As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnManageCourses As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnStudentAttendance As Guna.UI.WinForms.GunaButton
     Friend WithEvents btnStudentDetail As Guna.UI.WinForms.GunaButton
@@ -1275,10 +1112,4 @@ Partial Class AdminMenu
     Friend WithEvents GunaPictureBox5 As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents faculties As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents txtsearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents DetailsView As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents btnCose As Guna.UI.WinForms.GunaButton
-    Friend WithEvents ComboBox As ComboBox
-    Friend WithEvents studentDetails As Panel
 End Class

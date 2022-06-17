@@ -5,7 +5,6 @@ Public Class AdminMenu
     Dim tab As New Database
     Dim iExit As DialogResult
     Private Sub AddClass_Button_Click(sender As Object, e As EventArgs)
-        'AddClass.ShowDialog()
         EmailForm.ShowDialog()
     End Sub
 
@@ -30,13 +29,10 @@ Public Class AdminMenu
 
     Private Sub AdminMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDate.Text = ("0" & Today.Day & "-0" & Today.Month & "-" & Today.Year)
-        ' txtDate.Text = Today.Year & "-" & Today.Month & "-" & Today.Day
-        studentDetails.Visible = False
 
         Dim signin As New Sign_In
         Dim user As String = username
         lblusername.Text = "Welcome " & user
-        'dashboard.Visible = False
 
         fetchDataFromDatabase()
 
@@ -168,27 +164,6 @@ Public Class AdminMenu
         Me.Hide()
     End Sub
 
-    'Report button
-    Private Sub btnGenerateReports_Click_1(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        Report.Show()
-        Me.Hide()
-    End Sub
-
-
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-
-    End Sub
-
-    'student details button
-    Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
-        studentDetails.Visible = True
-    End Sub
-
-    'close button
-    Private Sub btnCose_Click(sender As Object, e As EventArgs) Handles btnCose.Click
-        studentDetails.Visible = False
-    End Sub
-
     'Class button
     Private Sub btnClass_Click(sender As Object, e As EventArgs) Handles btnClass.Click
         AddClass.Show()
@@ -209,31 +184,6 @@ Public Class AdminMenu
     Private Sub StudentPanel_Click(sender As Object, e As EventArgs)
         Manage_Student.Show()
     End Sub
-
-    Private Sub LecturesPanel_Click(sender As Object, e As EventArgs)
-        Lecturers.Show()
-    End Sub
-
-    Private Sub DepartmentPanel_Click(sender As Object, e As EventArgs)
-        Department.Show()
-    End Sub
-
-    Private Sub FacultyPanel_Click(sender As Object, e As EventArgs)
-        Faculty.Show()
-    End Sub
-
-    Private Sub VenuePanel_Click(sender As Object, e As EventArgs)
-        Venue.Show()
-    End Sub
-
-    Private Sub CoursesPanel_Click(sender As Object, e As EventArgs)
-        Courses.Show()
-    End Sub
-
-    Private Sub ProgrammesPanel_Click(sender As Object, e As EventArgs)
-        ManageProgrammes.Show()
-    End Sub
-
 
     Private Sub dashboard_MouseHover(sender As Object, e As EventArgs)
         fetchDataFromDatabase()
@@ -267,5 +217,18 @@ Public Class AdminMenu
             myProcess.Close()
 
         End Using
+    End Sub
+
+
+
+    'button details
+    Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
+        Details.Show()
+        Me.Hide()
+    End Sub
+
+    'button report
+    Private Sub buttonReport_Click(sender As Object, e As EventArgs) Handles buttonReport.Click
+        Report.ShowDialog()
     End Sub
 End Class

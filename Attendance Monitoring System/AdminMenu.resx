@@ -1204,7 +1204,7 @@
         yiICIiBBmK/+/tiIGcREBIMRAhZlEQEREDEyREQJiIgJiYiBIkxEBIkxAx/8zKIgIiIH/9k=
 </value>
   </data>
-  <data name="btnGenerateReports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMwAAAD3CAMAAABmQUuuAAAABGdBTUEAALGPC/xhBQAAAIdQTFRFAAAA
         /v7+9vb2////+/v7BQUF4ODgoaGhtra2UlJS9PT0MTExLi4uKysrZmZm6urqmJiY2NjYg4ODfX19FRUV

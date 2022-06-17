@@ -253,8 +253,7 @@ Public Class Lecturers
 
     'button report
     Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        Report.Show()
-        Me.Hide()
+        Report.ShowDialog()
     End Sub
 
     'button faculty

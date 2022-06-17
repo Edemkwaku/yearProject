@@ -22,18 +22,18 @@
         Dim result As Integer
 
         'for selected student
-        If ComboBox.SelectedItem.Equals("Student") Then
+
+        If (ComboBox.SelectedItem.Equals("Student") And txtsearch.Text.Equals("")) Then
             Try
-                TAB.ExecuteQuery("SELECT `student`.`stuID` AS `ID`, `student`.`fName` AS `FIRST NAME`, `student`.`lName` AS `LAST NAME`, `student`.`DoB`,
+                tab.ExecuteQuery("Select `student`.`stuID` As `ID`, `student`.`fName` AS `FIRST NAME`, `student`.`lName` AS `LAST NAME`, `student`.`DoB`,
                             `gender`.`gender` AS `GENDER`,`faculty`.`facultyName` AS `FACULTY`, `department`.`deptName` AS DEPARTMENT, `programme`.`proName` AS `PROGRAMME`, `student`.`phone` AS `PHONE`, `student`.`email` AS `EMAIL`
                             FROM `student` LEFT JOIN `gender`  ON `student`.`genderID` = `gender`.`genderID` 
-	                        LEFT JOIN `programme`  ON `student`.`programme` = `programme`.`proID` JOIN `department` ON `programme`.`deptID` = `department`.`deptID` LEFT JOIN `faculty` ON `department`.`facultyID`=`faculty`.`facultyID`
-                            WHERE (student.fName Like'" & txtsearch.Text & "' OR student.lName Like'" & txtsearch.Text & "' OR student.stuID Like'" & txtsearch.Text & "');")
-                result = TAB.DatabaseTable.Rows.Count
+	                        LEFT JOIN `programme`  ON `student`.`programme` = `programme`.`proID` JOIN `department` ON `programme`.`deptID` = `department`.`deptID` LEFT JOIN `faculty` ON `department`.`facultyID`=`faculty`.`facultyID`")
+                result = tab.DatabaseTable.Rows.Count
                 If result < 1 Then
-                    iExit = MessageBox.Show(txtsearch.Text & " " & "Student name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    iExit = MessageBox.Show(txtsearch.Text & " " & "Student's record is Empty", "Record Empty", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    DetailsView.DataSource = TAB.DatabaseTable
+                    DetailsView.DataSource = tab.DatabaseTable
                     txtsearch.Clear()
                 End If
 
@@ -41,26 +41,45 @@
                 iExit = MessageBox.Show(ex.ToString)
             End Try
 
+
         ElseIf ComboBox.SelectedItem.Equals("Lecturer") Then
             Try
-                TAB.ExecuteQuery("select lecturer.lecID AS ID, lecturer.fullName AS NAME,lecturer.DoB AS BIRTHDATE,
+                tab.ExecuteQuery("select lecturer.lecID AS ID, lecturer.fullName AS NAME,lecturer.DoB AS BIRTHDATE,
                           gender.gender AS GENDER,lecturer.phone AS PHONE, lecturer.email AS EMAIL
                           from lecturer JOIN gender ON lecturer.gender=gender.genderID where
                           fullName LIKE '" & txtsearch.Text & "' OR lecID LIKE'" & txtsearch.Text & "';")
 
-                result = TAB.DatabaseTable.Rows.Count
+                result = tab.DatabaseTable.Rows.Count
                 If result = 0 Then
                     iExit = MessageBox.Show(txtsearch.Text & " " & "Lecturer name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    DetailsView.DataSource = TAB.DatabaseTable
+                    DetailsView.DataSource = tab.DatabaseTable
                     txtsearch.Clear()
                 End If
 
             Catch ex As Exception
                 iExit = MessageBox.Show("Sorry! something went wrong ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
-        End If
 
+        ElseIf (ComboBox.SelectedItem.Equals("Student") And Not txtsearch.Text.Equals("")) Then
+            Try
+                tab.ExecuteQuery("SELECT `student`.`stuID` AS `ID`, `student`.`fName` AS `FIRST NAME`, `student`.`lName` AS `LAST NAME`, `student`.`DoB`,
+                            `gender`.`gender` AS `GENDER`,`faculty`.`facultyName` AS `FACULTY`, `department`.`deptName` AS DEPARTMENT, `programme`.`proName` AS `PROGRAMME`, `student`.`phone` AS `PHONE`, `student`.`email` AS `EMAIL`
+                            FROM `student` LEFT JOIN `gender`  ON `student`.`genderID` = `gender`.`genderID` 
+	                        LEFT JOIN `programme`  ON `student`.`programme` = `programme`.`proID` JOIN `department` ON `programme`.`deptID` = `department`.`deptID` LEFT JOIN `faculty` ON `department`.`facultyID`=`faculty`.`facultyID`
+                            WHERE (student.fName Like'" & txtsearch.Text & "' OR student.lName Like'" & txtsearch.Text & "' OR student.stuID Like'" & txtsearch.Text & "');")
+                result = tab.DatabaseTable.Rows.Count
+                If result < 1 Then
+                    iExit = MessageBox.Show(txtsearch.Text & " " & "Student name not found", "Record Exist", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    DetailsView.DataSource = tab.DatabaseTable
+                    txtsearch.Clear()
+                End If
+
+            Catch ex As Exception
+                iExit = MessageBox.Show(ex.ToString)
+            End Try
+        End If
     End Sub
 
 
@@ -72,8 +91,7 @@
 
     'button report
     Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        Report.Show()
-        Me.Hide()
+        Report.ShowDialog()
     End Sub
 
     'button faculty
@@ -117,4 +135,9 @@
         Me.Hide()
     End Sub
 
+    'button venue
+    Private Sub btnVenue_Click(sender As Object, e As EventArgs)
+        Venue.Show()
+        Me.Hide()
+    End Sub
 End Class

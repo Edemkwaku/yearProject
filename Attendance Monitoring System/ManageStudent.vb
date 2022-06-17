@@ -23,25 +23,29 @@
             End If
 
             tab.ExecuteQuery("Select * from programme WHERE proName='" & programmeCombo.SelectedItem & "';")
-            tab.HasException()
+            If tab.HasException() Then
+                MsgBox(tab.exception)
+            Else
+                id = txtId.Text
+                fname = txtFname.Text
+                lname = txtLname.Text
+                program = tab.DatabaseTable(0)(0)
+                email = txtEmail.Text
+                phone = txtPhone.Text
 
-            id = txtId.Text
-            fname = txtFname.Text
-            lname = txtLname.Text
-            program = tab.DatabaseTable(0)(0)
-            email = txtEmail.Text
-            phone = txtPhone.Text
 
-
-            tab.ExecuteQuery("INSERT INTO `student` (`stuID`, `fName`, `lName`, `DoB`, `genderID`, `programme`, `phone`, `email`)
+                tab.ExecuteQuery("INSERT INTO `student` (`stuID`, `fName`, `lName`, `DoB`, `genderID`, `programme`, `phone`, `email`)
                                VALUES ('" & id & "', '" & fname & "', '" & lname & "', '" & txtDoB.Text & "', '" & gender & "', '" & program & "', '" & phone & "', '" & email & "');")
 
-            iExit = MessageBox.Show("Record Added Successfull", "Record Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            tab.HasException()
+                iExit = MessageBox.Show("Record Added Successfull", "Record Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                tab.HasException()
 
-            updateTable()
+                updateTable()
 
-            clearInput()
+                clearInput()
+            End If
+
+
         End If
     End Sub
 
@@ -208,7 +212,18 @@
 
     'button report
     Private Sub btnGenerateReports_Click(sender As Object, e As EventArgs) Handles btnGenerateReports.Click
-        Report.Show()
+        Report.ShowDialog()
+    End Sub
+
+    'lecturer button
+    Private Sub btnManageLecturers_Click(sender As Object, e As EventArgs) Handles btnManageLecturers.Click
+        Lecturers.Show()
+        Me.Hide()
+    End Sub
+
+    'department button
+    Private Sub btnDepartment_Click(sender As Object, e As EventArgs) Handles btnDepartment.Click
+        Department.Show()
         Me.Hide()
     End Sub
 
@@ -226,7 +241,8 @@
 
     'student Details
     Private Sub btnStudentDetail_Click(sender As Object, e As EventArgs) Handles btnStudentDetail.Click
-
+        Details.Show()
+        Me.Hide()
     End Sub
 
     'button attendance
